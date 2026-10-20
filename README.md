@@ -3,25 +3,6 @@
 Sitio de Gree Networks, proveedor de internet inalámbrico residencial en Chihuahua.
 Rediseño con el logo nuevo, adaptado a celular, tablet y escritorio.
 
-## Estructura
-
-```
-gree-networks/
-├── index.html              Página principal (planes, cobertura, pagos, contacto, legal)
-├── soporte.html            Soporte técnico (consulta de cuenta, facturación CFDI, asistente virtual)
-├── tienda.html             Tienda en línea (catálogo, carrito, pago con Mercado Pago / SPEI / WhatsApp)
-├── assets/
-│   └── img/
-│       ├── logo.svg               Logo horizontal para fondos claros
-│       ├── logo-fondo-oscuro.svg  Logo horizontal para fondos oscuros
-│       ├── simbolo.svg            Solo el símbolo (globo + señal)
-│       ├── icono-app.svg          Ícono cuadrado para app / redes sociales
-│       └── favicon.svg            Favicon de la pestaña del navegador
-└── README.md
-```
-
-Las dos páginas son HTML, CSS y JavaScript sin dependencias: no necesitan instalación ni compilación.
-
 ## Estilo
 
 | Uso | Color |
@@ -42,9 +23,6 @@ Tipografías de Google Fonts: **Days One** para títulos e **Inter** para el tex
   - `/tienda/productos.php` (productos del carrusel de la tienda)
   - `productos.php` y `mp_pago.php` (catálogo y pago de `tienda.html`, en tienda.tavgreenetworksti.net)
 
-  Funcionan al subir el sitio al mismo dominio. En GitHub Pages u otro hosting estático, la página se ve completa pero esas consultas no responden (el carrusel muestra los anuncios solo con texto y botón).
-- **Tienda en modo demo:** si `productos.php` no responde (al abrir el archivo localmente o en GitHub Pages), `tienda.html` muestra un catálogo de ejemplo de 56 productos sin fotos. En el servidor real siempre usa el catálogo y las fotos de `productos.php`.
-- **Emojis del asistente:** las respuestas del bot se escriben con emojis en el JavaScript; un script al final de `soporte.html` los cambia automáticamente por íconos SVG.
 
 ## Publicar en GitHub Pages (opcional)
 
