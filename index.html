@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internet Gree Networks</title>
+<meta name="description" content="Proveedor de internet inalámbrico en Chihuahua con planes desde $250 mensuales.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="https://tavgreenetworksti.net/wp-content/uploads/2026/03/cropped-greenetworks-favicon-180x180.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1E50D6;
+  --blue-dark:#163FAE;
+  --navy:#0B1E40;
+  --lime:#8CC63F;
+  --lime-dark:#4E7D06;
+  --ink:#0B1E40;
+  --muted:#4A5568;
+  --bg:#F4F6FA;
+  --white:#FFFFFF;
+  --radius:20px;
+  --display:'Days One', 'Inter', system-ui, sans-serif;
+  --body:'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0}
+p{margin:0}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+.section{padding:72px 0}
+.section-title{font-size:clamp(28px,5vw,44px);text-align:center;color:var(--blue);margin-bottom:40px}
+.on-blue .section-title{color:var(--white)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;transition:transform .15s ease,background .15s ease,color .15s ease;border:2px solid transparent}
+.btn:hover{transform:translateY(-1px)}
+.btn-lime{background:var(--lime);color:var(--navy)}
+.btn-lime:hover{background:#9BD34C}
+.btn-outline-light{border-color:var(--white);color:var(--white)}
+.btn-outline-light:hover{background:var(--white);color:var(--blue)}
+.btn-outline-dark{border-color:var(--navy);color:var(--navy)}
+.btn-outline-dark:hover{background:var(--navy);color:var(--white)}
+.icon{width:20px;height:20px;flex:none}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid #E3E8F0}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:44px;height:44px}
+.brand-text{display:flex;flex-direction:column;gap:3px}
+.brand-text b{font-family:var(--body);font-weight:800;font-size:24px;letter-spacing:-.02em;line-height:.9;color:var(--blue)}
+.brand-text small{font-weight:600;font-size:8px;letter-spacing:.34em;line-height:1;color:var(--lime-dark)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--navy)}
+.nav a:hover{color:var(--blue)}
+.nav .btn{font-size:13px;min-height:42px;padding:8px 20px}
+.menu-toggle{display:none;align-items:center;justify-content:center;width:48px;height:48px;border:0;border-radius:12px;background:var(--bg);color:var(--navy);cursor:pointer}
+.menu-toggle svg{width:24px;height:24px}
+
+@media (max-width:860px){
+  .menu-toggle{display:inline-flex}
+  .nav{position:absolute;left:0;right:0;top:72px;flex-direction:column;align-items:stretch;gap:0;background:var(--white);border-bottom:1px solid #E3E8F0;padding:8px 20px 20px;display:none;box-shadow:0 16px 30px rgba(11,30,64,.12)}
+  .nav.open{display:flex}
+  .nav a{padding:14px 4px;border-bottom:1px solid #EEF1F6;font-size:17px}
+  .nav .btn{margin-top:14px;border-bottom:0;min-height:50px;font-size:15px}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 85% 10%,#3A6FF0 0%,var(--blue) 45%,var(--blue-dark) 100%);color:var(--white)}
+.hero-deco{position:absolute;inset:0;pointer-events:none;opacity:.18}
+.slides{position:relative}
+.slide{display:none;grid-template-columns:1.05fr .95fr;align-items:center;gap:32px;padding:56px 0 64px}
+.slide.active{display:grid;animation:fade .5s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);background:var(--lime);padding:6px 14px;border-radius:999px;margin-bottom:18px}
+.hero h1{font-size:clamp(34px,6vw,64px);text-transform:uppercase}
+.hero h1 .accent{color:var(--lime)}
+.hero p.lead{font-size:clamp(16px,2.2vw,20px);margin-top:18px;max-width:30ch;color:#E6EDFF}
+.price-tag{display:flex;align-items:baseline;gap:10px;margin-top:6px;flex-wrap:wrap}
+.price-tag .amount{font-family:var(--display);font-size:clamp(56px,10vw,104px);color:var(--lime);line-height:1}
+.price-tag .per{font-size:20px;font-weight:600}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-img{justify-self:center;max-width:460px;width:100%}
+.hero-img img{width:100%;height:auto}
+.slider-ui{position:absolute;left:0;right:0;bottom:18px;display:flex;justify-content:center;align-items:center;gap:14px}
+.slider-ui button{width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,.6);background:transparent;color:var(--white);cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+.slider-ui button:hover{background:rgba(255,255,255,.15)}
+.dots{display:flex;gap:8px}
+.dots button{width:12px;height:12px;min-width:12px;border-radius:50%;border:0;background:rgba(255,255,255,.45);padding:0}
+.dots button[aria-current="true"]{background:var(--lime);width:28px;border-radius:999px}
+
+@media (max-width:860px){
+  .slide{grid-template-columns:1fr;text-align:center;padding:40px 0 88px;gap:24px}
+  .slide .hero-text{display:flex;flex-direction:column;align-items:center}
+  .hero p.lead{margin-left:auto;margin-right:auto}
+  .price-tag{justify-content:center}
+  .hero-actions{justify-content:center}
+  .hero-img{max-width:340px;order:-1;margin-bottom:-8px}
+}
+
+/* ---------- Nosotros ---------- */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-img{max-width:520px;width:100%;justify-self:center}
+.about-img img{width:100%;height:auto}
+.about-text{display:flex;flex-direction:column;gap:18px;font-size:17px;color:var(--muted)}
+.about-text .logo-big{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.about-text .logo-big svg{width:76px;height:76px}
+.about-text .logo-big b{font-family:var(--body);font-weight:800;font-size:44px;letter-spacing:-.02em;line-height:.9;color:var(--blue);display:block}
+.about-text .logo-big small{font-weight:600;font-size:13px;letter-spacing:.34em;color:var(--lime-dark);display:block;margin-top:6px}
+.about-text strong{color:var(--ink)}
+@media (max-width:860px){
+  .about{grid-template-columns:1fr;gap:32px}
+  .about-img{max-width:400px}
+}
+
+/* ---------- Inalámbrico ---------- */
+.wireless{background:var(--blue);color:var(--white);position:relative;overflow:hidden}
+.wireless .section-title{margin-bottom:16px}
+.wireless-sub{text-align:center;max-width:62ch;margin:0 auto 36px;color:#E6EDFF;font-size:17px}
+.features{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.feature{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.feature svg{width:32px;height:32px;color:var(--lime)}
+.feature b{font-size:17px}
+.feature span{font-size:14px;color:#DCE5FF}
+@media (max-width:960px){.features{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.features{grid-template-columns:1fr}}
+
+/* ---------- Planes ---------- */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch}
+.plan{background:var(--blue);color:var(--white);border-radius:28px;padding:32px 28px;display:flex;flex-direction:column;gap:20px;text-align:center;position:relative}
+.plan.featured{background:var(--lime);color:var(--navy);transform:translateY(-12px);box-shadow:0 24px 40px rgba(78,125,6,.25)}
+.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--navy);color:var(--white);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:999px;white-space:nowrap}
+.plan h3{font-size:24px;text-transform:uppercase}
+.plan .speed{font-family:var(--display);font-size:64px;line-height:.95;color:var(--lime)}
+.plan .speed small{display:block;font-size:30px}
+.plan.featured .speed{color:var(--white)}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;text-align:left;font-size:15px}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li svg{width:20px;height:20px;flex:none;margin-top:1px;color:var(--lime)}
+.plan.featured li svg{color:var(--navy)}
+.plan .price{font-family:var(--display);font-size:32px;margin-top:auto}
+.plan .price small{font-size:18px}
+.plan .fine{font-size:13px;opacity:.9}
+.plan .fine a{text-decoration:underline;text-underline-offset:2px}
+@media (max-width:960px){
+  .plans{grid-template-columns:1fr;max-width:440px;margin:0 auto;gap:32px}
+  .plan.featured{transform:none}
+}
+
+/* ---------- Aviso / info ---------- */
+.info{background:var(--navy);color:#DCE5FF;padding:48px 0;font-size:15px}
+.info-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.info a.link{color:var(--lime);font-weight:700}
+.info .wa-line{display:flex;flex-direction:column;gap:12px}
+.info .wa-line .btn{align-self:flex-start;text-transform:none;letter-spacing:0;font-size:20px}
+@media (max-width:860px){.info-grid{grid-template-columns:1fr;gap:28px}}
+
+/* ---------- Pagos ---------- */
+.pay{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.pay-card{background:var(--bg);border-radius:var(--radius);padding:28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
+.pay-card .pi{width:56px;height:56px;border-radius:16px;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.pay-card .pi svg{width:28px;height:28px}
+.pay-card h3{font-family:var(--body);font-weight:700;font-size:18px}
+.pay-card .label{font-size:14px;color:var(--muted)}
+.pay-card .num{font-family:ui-monospace,'SFMono-Regular',Menlo,monospace;font-size:18px;font-weight:600;color:var(--blue);letter-spacing:.04em;word-break:break-word}
+.pay-card .btn{margin-top:8px;text-transform:none;letter-spacing:0;font-size:18px}
+@media (max-width:860px){.pay{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+
+/* ---------- Cobertura ---------- */
+.coverage{background:var(--blue);color:var(--white)}
+.map-frame{border-radius:var(--radius);overflow:hidden;background:#dfe6f3;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+.map-frame iframe{display:block;width:100%;height:520px;border:0}
+.coverage-note{text-align:center;font-style:italic;font-size:14px;color:#DCE5FF;margin:20px auto 24px;max-width:70ch}
+.center{display:flex;justify-content:center}
+@media (max-width:600px){.map-frame iframe{height:380px}}
+
+/* ---------- Oficina ---------- */
+.office{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.office-info{display:flex;flex-direction:column;gap:28px}
+.office-info h2{font-size:30px;color:var(--blue);margin-bottom:10px}
+.office-info .addr{font-weight:600}
+.office-info .hours{color:var(--lime-dark);font-family:var(--display);font-size:22px;margin-top:6px}
+.office-info ul{margin:10px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.office .map-frame iframe{height:100%;min-height:340px}
+@media (max-width:860px){.office{grid-template-columns:1fr}}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--navy);color:#DCE5FF;padding:64px 0 0;font-size:15px}
+.footer-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr 1.4fr;gap:40px}
+.site-footer h3{color:var(--white);font-size:22px;margin-bottom:14px}
+.site-footer h4{color:var(--lime);font-size:16px;margin:0 0 6px;font-weight:700}
+.site-footer .brand-text b{color:var(--white)}
+.site-footer .brand-text small{color:var(--lime)}
+.f-col{display:flex;flex-direction:column;gap:10px}
+.f-col a{text-decoration:none}
+.f-col a:hover{color:var(--lime)}
+.f-line{display:flex;align-items:center;gap:10px;min-height:32px}
+.f-line svg{width:18px;height:18px;color:var(--lime);flex:none}
+.legal{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px}
+.legal a{text-decoration:none;font-size:14px;display:inline-block;padding:2px 0}
+.legal a:hover{color:var(--lime);text-decoration:underline}
+.social{display:inline-flex;align-items:center;gap:8px;margin-top:6px;width:fit-content;min-height:44px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.25);text-decoration:none}
+.social:hover{border-color:var(--lime);color:var(--lime)}
+.footer-bottom{margin-top:56px;border-top:1px solid rgba(255,255,255,.12);padding:20px 0 24px}
+.footer-bottom .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+.footer-bottom a{text-decoration:none}
+.footer-bottom a:hover{color:var(--lime)}
+@media (max-width:960px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.footer-grid{grid-template-columns:1fr;gap:36px}.footer-bottom .wrap{flex-direction:column;align-items:flex-start}}
+
+/* ---------- WhatsApp flotante ---------- */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- Símbolos reutilizables del logo -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="globe-clip"><circle cx="60" cy="70" r="38"/></clipPath>
+    <symbol id="mark-light" viewBox="0 0 120 120">
+      <circle cx="60" cy="70" r="38" fill="#1E50D6"/>
+      <g clip-path="url(#globe-clip)" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4"><ellipse cx="60" cy="70" rx="20" ry="38"/><path d="M18 88 Q60 104 102 88"/></g>
+      <g fill="none" stroke-linecap="round"><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#fff" stroke-width="14"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#fff" stroke-width="14"/><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#6BA30F" stroke-width="8"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#6BA30F" stroke-width="8"/></g>
+      <polygon points="60,64 51,98 69,98" fill="#6BA30F" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="60" r="8" fill="#6BA30F" stroke="#fff" stroke-width="3"/>
+    </symbol>
+    <symbol id="mark-dark" viewBox="0 0 120 120">
+      <circle cx="60" cy="70" r="38" fill="#2A6CE8"/>
+      <g clip-path="url(#globe-clip)" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="4"><ellipse cx="60" cy="70" rx="20" ry="38"/><path d="M18 88 Q60 104 102 88"/></g>
+      <g fill="none" stroke-linecap="round"><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#0B1E40" stroke-width="14"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#0B1E40" stroke-width="14"/><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#8CC63F" stroke-width="8"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#8CC63F" stroke-width="8"/></g>
+      <polygon points="60,64 51,98 69,98" fill="#8CC63F" stroke="#0B1E40" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="60" r="8" fill="#8CC63F" stroke="#0B1E40" stroke-width="3"/>
+    </symbol>
+    <symbol id="signal" viewBox="0 0 120 120">
+      <g fill="none" stroke="#8CC63F" stroke-linecap="round" stroke-width="10"><path d="M44.4 46.4 A22 22 0 0 1 75.6 46.4"/><path d="M33.1 35.1 A38 38 0 0 1 86.9 35.1"/></g>
+      <polygon points="60,68 50,100 70,100" fill="#fff"/>
+      <circle cx="60" cy="62" r="10" fill="#8CC63F"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.06.11.06.66-.18 1.34Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#inicio" aria-label="Gree Networks, inicio">
+      <svg aria-hidden="true"><use href="#mark-light"/></svg>
+      <span class="brand-text"><b>GREE</b><small>NETWORKS</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#planes">Planes</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#contacto">Contacto</a>
+      <a href="soporte.html">Soporte</a>
+      <a class="btn btn-lime" href="https://wisphub.io/accounts/login/" target="_blank" rel="noopener">Pagar servicio</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-roledescription="carrusel" aria-label="Promociones">
+    <svg class="hero-deco" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#fff" stroke-width="2"><ellipse cx="900" cy="320" rx="520" ry="150" transform="rotate(-12 900 320)"/><ellipse cx="900" cy="320" rx="420" ry="110" transform="rotate(-12 900 320)"/><ellipse cx="200" cy="560" rx="380" ry="90" transform="rotate(8 200 560)"/></g>
+    </svg>
+    <div class="wrap slides">
+      <div class="slide active" role="group" aria-roledescription="diapositiva" aria-label="1 de 2">
+        <div class="hero-text">
+          <span class="eyebrow">Internet residencial</span>
+          <h1>Planes a partir de</h1>
+          <div class="price-tag"><span class="amount">$250</span><span class="per">mensuales</span></div>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#planes">Ver planes</a>
+            <a class="btn btn-outline-light" href="https://wa.me/6144757914" target="_blank" rel="noopener">Contratar</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="https://tavgreenetworksti.net/wp-content/uploads/2026/03/slide-2-mujer.png"
+               srcset="https://tavgreenetworksti.net/wp-content/uploads/2026/03/slide-2-mujer-480x447.png 480w, https://tavgreenetworksti.net/wp-content/uploads/2026/03/slide-2-mujer.png 728w"
+               sizes="(max-width:860px) 320px, 460px" width="728" height="678" alt="Mujer navegando en internet desde su hogar">
+        </div>
+      </div>
+      <div class="slide" role="group" aria-roledescription="diapositiva" aria-label="2 de 2">
+        <div class="hero-text">
+          <span class="eyebrow">Chihuahua</span>
+          <h1><span class="accent">Servicio de internet</span><br>para el hogar</h1>
+          <p class="lead">Ofrecemos Internet inalámbrico de uso residencial en Chihuahua</p>
+          <div class="hero-actions">
+            <a class="btn btn-lime" href="#planes">Ver planes</a>
+            <a class="btn btn-outline-light" href="#cobertura">Cobertura</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="https://tavgreenetworksti.net/wp-content/uploads/2026/03/internet-greenetworks.png"
+               srcset="https://tavgreenetworksti.net/wp-content/uploads/2026/03/internet-greenetworks-480x554.png 480w, https://tavgreenetworksti.net/wp-content/uploads/2026/03/internet-greenetworks.png 547w"
+               sizes="(max-width:860px) 320px, 460px" width="547" height="631" alt="Hombre usando su laptop con internet Gree Networks" loading="lazy">
+        </div>
+      </div>
+    </div>
+    <div class="slider-ui">
+      <button type="button" class="prev" aria-label="Anterior"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></svg></button>
+      <div class="dots"><button type="button" aria-label="Ir a diapositiva 1" aria-current="true"></button><button type="button" aria-label="Ir a diapositiva 2" aria-current="false"></button></div>
+      <button type="button" class="next" aria-label="Siguiente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+  </section>
+
+  <!-- ===== NOSOTROS ===== -->
+  <section class="section" id="nosotros">
+    <div class="wrap about">
+      <div class="about-img">
+        <img src="https://tavgreenetworksti.net/wp-content/uploads/2026/03/familia-internet.png"
+             srcset="https://tavgreenetworksti.net/wp-content/uploads/2026/03/familia-internet-480x547.png 480w, https://tavgreenetworksti.net/wp-content/uploads/2026/03/familia-internet.png 829w"
+             sizes="(max-width:860px) 440px, 560px" width="829" height="945" alt="Padre e hijo usando una laptop al aire libre" loading="lazy">
+      </div>
+      <div class="about-text">
+        <div class="logo-big">
+          <svg aria-hidden="true"><use href="#mark-light"/></svg>
+          <div><b>GREE</b><small>NETWORKS</small></div>
+        </div>
+        <p>En <strong>Gree Networks</strong> ofrecemos servicios de internet enfocados en hogares que necesitan conectividad fuera de las redes tradicionales. Nuestro objetivo es brindar acceso a internet en zonas donde la cobertura es limitada o inexistente.</p>
+        <p>Trabajamos con tecnología inalámbrica para llevar conexión a distintas comunidades, permitiendo a los usuarios realizar sus actividades diarias como trabajo, estudio y entretenimiento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INALÁMBRICO ===== -->
+  <section class="section wireless on-blue">
+    <div class="wrap">
+      <h2 class="section-title">Internet inalámbrico</h2>
+      <p class="wireless-sub">Llevamos la señal por microondas hasta tu casa, sin cables ni líneas telefónicas.</p>
+      <div class="features">
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M7 17V7m0 0-3 3m3-3 3 3M17 7v10m0 0-3-3m3 3 3-3"/></svg>
+          <b>Velocidad simétrica</b><span>Misma velocidad de subida y de bajada.</span>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></g></svg>
+          <b>Sin plazo forzoso</b><span>Cancela cuando quieras.</span>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1-3 2.3c0 3.2 6 1.8 6 5 0 1.4-1.3 2.7-3 2.7s-3-1.1-3-2.5"/></g></svg>
+          <b>Mensualidades fijas</b><span>Pagas lo mismo cada mes, por adelantado.</span>
+        </div>
+        <div class="feature">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></g></svg>
+          <b>Uso residencial</b><span>Pensado para el consumo de un hogar.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANES ===== -->
+  <section class="section" id="planes" style="background:var(--bg)">
+    <div class="wrap">
+      <h2 class="section-title">Escoge el plan ideal para ti</h2>
+      <div class="plans">
+        <article class="plan">
+          <h3>Básico</h3>
+          <div class="speed">5<small>Mbps</small></div>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Velocidad de descarga 5 Mbps</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Velocidad de subida 5 Mbps</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sin plazo forzoso</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mensualidades fijas por adelantado</li>
+          </ul>
+          <div class="price">$250<small>/mes*</small></div>
+          <a class="btn btn-outline-light" href="https://wa.me/6144757914" target="_blank" rel="noopener">Contratar</a>
+          <p class="fine">*Precio en M.N. Impuesto incluido<br><a href="https://tavgreenetworksti.net/formatosimplificado_2892182/" target="_blank" rel="noopener">Folio de inscripción: 2892182</a></p>
+        </article>
+        <article class="plan featured">
+          <span class="plan-badge">Más rápido</span>
+          <h3>Premium</h3>
+          <div class="speed">20<small>Mbps</small></div>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Velocidad de descarga 20 Mbps</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Velocidad de subida 20 Mbps</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sin plazo forzoso</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mensualidades fijas por adelantado</li>
+          </ul>
+          <div class="price">$500<small>/mes*</small></div>
+          <a class="btn btn-outline-dark" href="https://wa.me/6144757914" target="_blank" rel="noopener">Contratar</a>
+          <p class="fine">*Precio en M.N. Impuesto incluido<br><a href="https://tavgreenetworksti.net/formatosimplificado_2892197/" target="_blank" rel="noopener">Folio de inscripción: 2892197</a></p>
+        </article>
+        <article class="plan">
+          <h3>Estándar</h3>
+          <div class="speed">10<small>Mbps</small></div>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Velocidad de descarga 10 Mbps</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Velocidad de subida 10 Mbps</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sin plazo forzoso</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Mensualidades fijas por adelantado</li>
+          </ul>
+          <div class="price">$350<small>/mes*</small></div>
+          <a class="btn btn-outline-light" href="https://wa.me/6144757914" target="_blank" rel="noopener">Contratar</a>
+          <p class="fine">*Precio en M.N. Impuesto incluido<br><a href="https://tavgreenetworksti.net/formatosimplificado_2892192/" target="_blank" rel="noopener">Folio de inscripción: 2892192</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVISO ===== -->
+  <section class="info">
+    <div class="wrap info-grid">
+      <p>El servicio de internet fijo se presta bajo tecnología inalámbrica, en la cual se transmiten datos a través de microondas, y es para uso residencial, es decir, debe utilizarse el servicio conforme al consumo de un sólo hogar sin fines de lucro. Las velocidades de subida y bajada (carga y descarga) ofertadas serán las mismas, debido a que el servicio es simétrico con entrega de mejor esfuerzo (Best Effort, por sus siglas en inglés).</p>
+      <div class="wa-line">
+        <p>Para más información respecto a las tarifas puedes consultar el Visor de Tarifas de la Comisión Reguladora de Telecomunicaciones dando <a class="link" href="https://tarifas.ift.org.mx/ift_visor/" target="_blank" rel="noopener">clic aquí</a>.</p>
+        <p>Revisa el estatus de tu reporte a través de WhatsApp al:</p>
+        <a class="btn btn-lime" href="https://wa.me/6144757914" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>614 475 7914</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAGOS ===== -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="section-title">Métodos de pago</h2>
+      <div class="pay">
+        <div class="pay-card">
+          <span class="pi"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 8h14m0 0-4-4m4 4-4 4M20 16H6m0 0 4-4m-4 4 4 4"/></svg></span>
+          <h3>Transferencia bancaria</h3>
+          <span class="label">Banco: BBVA</span>
+          <span class="num">4152 3138 3090 1216</span>
+          <span class="label">Beneficiario: Jesús Rubio</span>
+        </div>
+        <div class="pay-card">
+          <span class="pi"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0Z"/><path d="M5 14v6h14v-6"/></g></svg></span>
+          <h3>Pagos en OXXO</h3>
+          <span class="label">Pago a la tarjeta</span>
+          <span class="num">4217 4700 5294 1503</span>
+        </div>
+        <div class="pay-card">
+          <span class="pi"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></span>
+          <h3>Comparte tu comprobante</h3>
+          <span class="label">Envía tu ticket de pago al:</span>
+          <a class="btn btn-lime" href="https://wa.me/6144757914" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>614 475 7914</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COBERTURA ===== -->
+  <section class="section coverage on-blue" id="cobertura">
+    <div class="wrap">
+      <h2 class="section-title">Mapa de cobertura</h2>
+      <div class="map-frame">
+        <!-- REEMPLAZAR: pega aquí el enlace de inserción del mapa "Cobertura GREENETWORKS" de Google My Maps (https://www.google.com/maps/d/embed?mid=...) -->
+        <iframe src="https://maps.google.com/maps?q=Chihuahua,+Chihuahua&amp;z=11&amp;output=embed" title="Mapa de cobertura de Gree Networks" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="coverage-note">La prestación del servicio de acceso a internet fijo dentro de la cobertura del servicio está sujeta a factibilidad técnica.</p>
+      <div class="center"><a class="btn btn-lime" href="https://wa.me/6144757914" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>Consultar cobertura</a></div>
+    </div>
+  </section>
+
+  <!-- ===== OFICINA ===== -->
+  <section class="section">
+    <div class="wrap office">
+      <div class="office-info">
+        <div>
+          <h2>Oficina</h2>
+          <p class="addr">Amada Armendáriz No. 255, Revolución, Chihuahua, C.P. 31135, Chihuahua.</p>
+          <p style="margin-top:10px">Lunes a sábado</p>
+          <p class="hours">8:00 am a 5:30 pm</p>
+        </div>
+        <div>
+          <h2>Accesibilidad</h2>
+          <p>Para tu comodidad, en nuestra sucursal contamos con los siguientes elementos de accesibilidad:</p>
+          <ul>
+            <li>Rampa de acceso, así como ruta y señalización accesible.</li>
+            <li>Permite el acceso a usuarios con discapacidad acompañados por animales de servicio.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://maps.google.com/maps?q=Amada+Armendariz+255,+Revoluci%C3%B3n,+31135+Chihuahua,+Chih.&amp;z=16&amp;output=embed" title="Ubicación de la oficina de Gree Networks" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" id="contacto">
+  <div class="wrap footer-grid">
+    <div class="f-col">
+      <a class="brand" href="#inicio" aria-label="Gree Networks, inicio">
+        <svg aria-hidden="true"><use href="#mark-dark"/></svg>
+        <span class="brand-text"><b>GREE</b><small>NETWORKS</small></span>
+      </a>
+      <p style="margin-top:8px">Proveedor de internet inalámbrico en Chihuahua con planes desde los $250 mensuales.</p>
+      <a class="social" href="https://www.facebook.com/GreeNetwork" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M14 8V6.2c0-.8.2-1.2 1.4-1.2H17V2h-2.6C11.3 2 10 3.5 10 6v2H8v3h2v11h4V11h2.7l.3-3H14Z"/></svg>
+        Síguenos en Facebook
+      </a>
+    </div>
+    <div class="f-col">
+      <h3>Contacto</h3>
+      <h4>Atención a clientes</h4>
+      <p>Lunes a sábado<br><b style="color:#fff">8:00 am a 5:30 pm</b></p>
+      <a class="f-line" href="https://wa.me/6144757914" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>614 475 7914</a>
+      <a class="f-line" href="tel:6144757914"><svg aria-hidden="true"><use href="#i-phone"/></svg>614 475 7914</a>
+      <a class="f-line" href="mailto:contac@tavgreenetworksti.net"><svg aria-hidden="true"><use href="#i-mail"/></svg>contac@tavgreenetworksti.net</a>
+      <p style="font-size:14px">Amada Armendáriz No. 255, Revolución, Chihuahua, C.P. 31135, Chihuahua.</p>
+    </div>
+    <div class="f-col">
+      <h3>Soporte técnico</h3>
+      <h4>24 horas</h4>
+      <a class="f-line" href="https://wa.me/6144757914" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>614 475 7914</a>
+      <a class="f-line" href="tel:6144757914"><svg aria-hidden="true"><use href="#i-phone"/></svg>614 475 7914</a>
+      <a class="f-line" href="mailto:contac@tavgreenetworksti.net"><svg aria-hidden="true"><use href="#i-mail"/></svg>contac@tavgreenetworksti.net</a>
+      <p style="font-size:14px">Revisa el estatus de tu reporte por WhatsApp al 614 475 7914.</p>
+    </div>
+    <div class="f-col">
+      <h3>Legal</h3>
+      <ul class="legal">
+        <li><a href="soporte.html">Soporte técnico y facturación</a></li>
+        <li><a href="https://tavgreenetworksti.net/titulo-de-concesion/" target="_blank" rel="noopener">Título de Concesión Única Comercial</a></li>
+        <li><a href="https://tavgreenetworksti.net/contrato-de-adhesion-del-servicio-de-internet/" target="_blank" rel="noopener">Contrato de adhesión PROFECO</a></li>
+        <li><a href="https://tavgreenetworksti.net/contrato-de-adhesion-aprobado-por-profeco/" target="_blank" rel="noopener">Contrato de adhesión aprobado PROFECO</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Aviso-atencion-a-Usuarios.pdf" target="_blank" rel="noopener">Aviso atención a usuarios</a></li>
+        <li><a href="https://tavgreenetworksti.net/aviso-mapas-de-cobertura/" target="_blank" rel="noopener">Aviso de mapas de cobertura</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Codigo-de-Politicas-de-Gestion-de-Trafico-y-Administracion-de-la-Red.pdf" target="_blank" rel="noopener">Código gestión de tráfico</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Codigo-Practicas-Comerciales.pdf" target="_blank" rel="noopener">Código de prácticas comerciales</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/10/Lineamientos-informacion-transparente-1.pdf" target="_blank" rel="noopener">Lineamientos de información transparente</a></li>
+        <li><a href="https://tavgreenetworksti.net/carta-de-derechos-minimos-de-los-usuarios/" target="_blank" rel="noopener">Carta de derechos mínimos de los usuarios</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Colaboracion-en-Materia-de-Seguridad-y-Justicia.pdf" target="_blank" rel="noopener">Colaboración en materia de seguridad y justicia</a></li>
+        <li><a href="https://tarifas.ift.org.mx/ift_visor/" target="_blank" rel="noopener">Visualizador de tarifas</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Procedimiento-atencion-de-quejas.pdf" target="_blank" rel="noopener">Procedimiento de atención a quejas</a></li>
+        <li><a href="https://tavgreenetworksti.net/politica-de-uso-aceptable-de-internet/" target="_blank" rel="noopener">Política de uso aceptable de internet</a></li>
+        <li><a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Caracteristicas-Especificaciones-y-Alcances-de-los-Paquetes-de-Internet.pdf" target="_blank" rel="noopener">Características, especificaciones y alcances de los paquetes de internet</a></li>
+        <li><a href="https://tavgreenetworksti.net/aviso-de-privacidad-3/" target="_blank" rel="noopener">Aviso de privacidad</a></li>
+        <li><a href="https://tavgreenetworksti.net/velocidad-promedio-de-desacarga-en-hora-pico-1/" target="_blank" rel="noopener">Consulta aquí la velocidad mínima de descarga promedio en hora pico</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>Todos los derechos reservados por Gree Networks 2026 ©</span>
+      <a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Aviso-de-Privacidad.pdf" target="_blank" rel="noopener">Aviso de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6144757914" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+(function(){
+  // Menú móvil
+  var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('nav');
+  toggle.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open);
+    toggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');});});
+
+  // Carrusel
+  var slides=[].slice.call(document.querySelectorAll('.slide')), dots=[].slice.call(document.querySelectorAll('.dots button')), i=0, timer;
+  function go(n){
+    slides[i].classList.remove('active'); dots[i].setAttribute('aria-current','false');
+    i=(n+slides.length)%slides.length;
+    slides[i].classList.add('active'); dots[i].setAttribute('aria-current','true');
+  }
+  function start(){ if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; clearInterval(timer); timer=setInterval(function(){go(i+1)},6000); }
+  document.querySelector('.slider-ui .prev').addEventListener('click',function(){go(i-1);start();});
+  document.querySelector('.slider-ui .next').addEventListener('click',function(){go(i+1);start();});
+  dots.forEach(function(d,k){d.addEventListener('click',function(){go(k);start();});});
+  start();
+})();
+</script>
+</body>
+</html>

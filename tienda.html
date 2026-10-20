@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="facebook-domain-verification" content="fthodp4w7zxl1a1ty3zjzrnuho9ihd">
+<title>Tienda Gree Networks · Redes, seguridad y energía en Chihuahua</title>
+<meta name="description" content="Equipo de redes, cámaras de seguridad, control de acceso, energía solar y accesorios. Precios con IVA, entrega en Chihuahua y pago seguro.">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="apple-touch-icon" href="https://tavgreenetworksti.net/wp-content/uploads/2026/03/cropped-greenetworks-favicon-180x180.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1E50D6;--blue-dark:#163FAE;--navy:#0B1E40;--lime:#8CC63F;--lime-dark:#4E7D06;
+  --ink:#0B1E40;--muted:#4A5568;--line:#E3E8F0;--bg:#F4F6FA;--soft:#EEF3FF;--white:#fff;--red:#B42318;
+  --display:'Days One','Inter',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --header-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+a{color:inherit}
+button,input,select{font-family:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px;width:100%}
+.i{width:20px;height:20px;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ── Barra superior ── */
+.topbar{background:var(--navy);color:#DCE5FF;font-size:12.5px}
+.topbar .wrap{display:flex;align-items:center;justify-content:center;gap:22px;min-height:34px;flex-wrap:wrap}
+.topbar span{display:inline-flex;align-items:center;gap:6px}
+.topbar .i{width:15px;height:15px;color:var(--lime)}
+.topbar b{color:#fff}
+
+/* ── Header ── */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:18px;height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;flex:none}
+.brand svg{width:38px;height:38px}
+.brand-text{display:flex;flex-direction:column;gap:2px}
+.brand-text b{font-weight:800;font-size:21px;letter-spacing:-.02em;line-height:.9;color:var(--blue)}
+.brand-text small{font-weight:600;font-size:7px;letter-spacing:.34em;line-height:1;color:var(--lime-dark)}
+.brand-tag{font-family:var(--display);font-size:13px;color:var(--muted);padding-left:10px;border-left:2px solid var(--line);line-height:1.6}
+.search{flex:1;min-width:0;max-width:620px;margin:0 auto;display:flex;align-items:center;background:var(--bg);border:2px solid var(--line);border-radius:999px;transition:border-color .15s,background .15s}
+.search:focus-within{border-color:var(--blue);background:#fff}
+.search .i{margin-left:16px;color:var(--muted);width:18px;height:18px}
+.search input{flex:1;min-width:0;border:0;background:transparent;outline:none;padding:10px 12px;font-size:15px;color:var(--ink)}
+.search button{border:0;background:var(--blue);color:#fff;font-weight:700;font-size:13px;padding:0 18px;height:36px;margin:3px;border-radius:999px;cursor:pointer}
+.search button:hover{background:var(--blue-dark)}
+.hactions{display:flex;align-items:center;gap:6px;flex:none}
+.hbtn{display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 12px;border-radius:12px;text-decoration:none;font-weight:600;font-size:14px;color:var(--navy);background:none;border:0;cursor:pointer;position:relative}
+.hbtn:hover{background:var(--bg);color:var(--blue)}
+.hbtn.cart{background:var(--blue);color:#fff;padding:0 16px}
+.hbtn.cart:hover{background:var(--blue-dark);color:#fff}
+.badge{min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--lime);color:var(--navy);font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.badge.bump{animation:bump .35s ease}
+@keyframes bump{50%{transform:scale(1.35)}}
+
+/* ── Categorías ── */
+.catbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:var(--header-h);z-index:55}
+.cats{display:flex;gap:8px;overflow-x:auto;padding:10px 0;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.tab-btn{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:7px 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--muted);font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .15s}
+.tab-btn .i{width:17px;height:17px}
+.tab-btn:hover{border-color:var(--blue);color:var(--blue)}
+.tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ── Hero ── */
+.hero{background:radial-gradient(120% 160% at 90% 0%,#3A6FF0 0%,var(--blue) 45%,var(--blue-dark) 100%);color:#fff;position:relative;overflow:hidden}
+.hero .deco{position:absolute;inset:0;width:100%;height:100%;opacity:.15;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;padding-top:34px;padding-bottom:34px}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;background:var(--lime);color:var(--navy);font-weight:800;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.6vw,40px);line-height:1.08;margin:12px 0 10px}
+.hero h1 span{color:var(--lime)}
+.hero p{color:#E6EDFF;font-size:16px;max-width:52ch}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 22px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,transform .15s,color .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-lime{background:var(--lime);color:var(--navy)}
+.btn-lime:hover{background:#9BD34C}
+.btn-ghost{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+.btn-ghost:hover{background:#fff;color:var(--blue)}
+.hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:18px;display:grid;gap:12px}
+.hc-row{display:flex;align-items:center;gap:12px}
+.hc-ico{width:40px;height:40px;border-radius:12px;background:#fff;color:var(--blue);display:flex;align-items:center;justify-content:center;flex:none}
+.hc-row b{display:block;font-size:14.5px}
+.hc-row small{color:#DCE5FF;font-size:12.5px}
+
+/* ── Confianza ── */
+.trust{background:#fff;border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;padding-top:14px;padding-bottom:14px}
+.t-item{display:flex;align-items:center;gap:10px}
+.t-item .i{width:26px;height:26px;color:var(--blue)}
+.t-item b{display:block;font-size:13.5px;line-height:1.25}
+.t-item small{color:var(--muted);font-size:12px}
+
+/* ── Marcas ── */
+.marcas{padding:20px 0 6px}
+.marcas[hidden]{display:none}
+.marcas-titulo{text-align:center;color:var(--muted);font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+.marcas-viewport{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marcas-track{display:flex;gap:12px;width:max-content;animation:marcas-scroll var(--marcas-dur,40s) linear infinite}
+.marcas-viewport:hover .marcas-track{animation-play-state:paused}
+.marca{flex-shrink:0;height:52px;min-width:124px;padding:8px 18px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:14px;border:1px solid var(--line)}
+.marca img{max-height:32px;max-width:120px;object-fit:contain}
+.marca-texto{color:var(--navy);font-weight:800;font-size:15px;letter-spacing:.02em;white-space:nowrap}
+@keyframes marcas-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── Contenido ── */
+main{flex:1}
+.tab-content{display:none;padding:22px 0 56px}
+.tab-content.active{display:block}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.section-title{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:400;font-size:clamp(20px,2.4vw,26px);color:var(--ink);line-height:1.15}
+.section-title .i{width:26px;height:26px;color:var(--blue)}
+.desc{color:var(--muted);font-size:14px;margin-top:4px}
+.toolbar{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
+.toolbar select{min-height:38px;border:1.5px solid var(--line);border-radius:10px;padding:6px 10px;background:#fff;color:var(--ink);font-size:13.5px;font-weight:600;cursor:pointer}
+
+.destacados{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;margin-bottom:26px;position:relative;overflow:hidden}
+.destacados[hidden]{display:none}
+.destacados::before{content:"";position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--blue),var(--lime))}
+.destacados-titulo{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:400;font-size:18px;margin-bottom:14px}
+.destacados-titulo .i{color:#E0A100}
+
+/* ── Grid y tarjetas ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(11,30,64,.1);border-color:#C9D6F2}
+.card-media{position:relative;aspect-ratio:1/1;background:#fff;border-bottom:1px solid var(--line);cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-media img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .25s}
+.card:hover .card-media img{transform:scale(1.04)}
+.ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(160deg,var(--soft),#fff);color:var(--blue)}
+.ph .i{width:44px;height:44px;opacity:.85}
+.ph small{font-size:11.5px;color:var(--muted);font-weight:600}
+.tag{position:absolute;top:10px;left:10px;display:inline-flex;align-items:center;gap:5px;max-width:calc(100% - 20px);font-size:11px;font-weight:700;background:rgba(255,255,255,.95);color:var(--blue);border:1px solid var(--line);padding:4px 9px;border-radius:999px;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tag .i{width:13px;height:13px}
+.tag:hover{border-color:var(--blue)}
+.card-body{padding:12px 14px 14px;display:flex;flex-direction:column;flex-grow:1;gap:4px}
+.card-marca{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--lime-dark)}
+.card-body h4{font-size:14px;font-weight:600;line-height:1.38;color:var(--ink);cursor:pointer;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;min-height:3.9em}
+.card-body h4:hover{color:var(--blue)}
+.card-modelo{color:#6B7486;font-size:12px}
+.card-desc{font-size:12.5px;color:var(--muted);line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.price-row{margin-top:auto;padding-top:8px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.price{font-size:22px;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.iva{font-size:11.5px;color:var(--muted)}
+.btn-agregar{margin-top:8px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;width:100%;border:0;border-radius:12px;background:var(--blue);color:#fff;font-weight:700;font-size:14px;cursor:pointer;transition:background .15s}
+.btn-agregar:hover{background:var(--blue-dark)}
+.btn-agregar.added{background:var(--lime-dark)}
+.btn-agregar .i{width:18px;height:18px}
+
+.opciones-inst{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
+.op-inst{background:#fff;border:1.5px solid var(--line);color:var(--muted);border-radius:10px;padding:6px 4px;cursor:pointer;font-size:11.5px;line-height:1.25;text-align:center}
+.op-inst strong{display:block;font-size:13px;color:var(--ink)}
+.op-inst.active{border-color:var(--blue);color:var(--blue);background:var(--soft)}
+.op-inst.active strong{color:var(--blue)}
+
+.ver-mas{text-align:center;margin-top:24px}
+.ver-mas[hidden]{display:none}
+.ver-mas button{min-height:46px;background:#fff;color:var(--blue);border:2px solid var(--blue);padding:10px 26px;border-radius:999px;font-weight:700;cursor:pointer;font-size:14px}
+.ver-mas button:hover{background:var(--blue);color:#fff}
+.empty-msg{grid-column:1/-1;color:var(--muted);text-align:center;padding:40px 16px;background:#fff;border:1px dashed var(--line);border-radius:18px}
+.loading-card{border-radius:18px;background:linear-gradient(90deg,#eef1f6 0%,#f7f9fc 50%,#eef1f6 100%);background-size:200% 100%;animation:shimmer 1.2s infinite;height:340px}
+@keyframes shimmer{to{background-position:-200% 0}}
+
+/* ── Modal de producto ── */
+.modal-prod,.modal-spei{display:none;position:fixed;inset:0;background:rgba(11,30,64,.55);z-index:350;align-items:center;justify-content:center;padding:16px}
+.modal-prod.open,.modal-spei.open{display:flex}
+.modal-prod-box{background:#fff;border-radius:24px;max-width:880px;width:100%;max-height:92vh;overflow-y:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);position:relative}
+.mp-media{background:#fff;border-right:1px solid var(--line);display:flex;align-items:center;justify-content:center;min-height:360px;position:relative}
+.mp-media img{width:100%;height:100%;max-height:480px;object-fit:contain;padding:28px}
+.mp-media .ph{min-height:360px}
+.modal-prod-info{padding:28px;display:flex;flex-direction:column;gap:10px}
+.mp-cat{display:inline-flex;align-items:center;gap:6px;width:fit-content;font-size:12px;font-weight:700;color:var(--blue);background:var(--soft);padding:4px 10px;border-radius:999px}
+.mp-cat .i{width:14px;height:14px}
+.modal-prod-info h3{font-size:19px;font-weight:700;line-height:1.35;padding-right:36px}
+.modal-prod-info .price{font-size:30px}
+.modal-prod-desc{color:var(--muted);font-size:14px;line-height:1.6;white-space:pre-line}
+.modal-prod-info .op-inst{font-size:12.5px;padding:9px}
+.modal-prod-info .op-inst strong{font-size:15px}
+.mp-buy{display:flex;gap:10px;margin-top:6px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;flex:none}
+.qty button{width:40px;height:44px;border:0;background:#fff;color:var(--ink);font-size:18px;font-weight:700;cursor:pointer}
+.qty button:hover{background:var(--bg)}
+.qty span{min-width:34px;text-align:center;font-weight:700}
+.mp-buy .btn-agregar{margin:0;min-height:46px}
+.mp-trust{display:grid;gap:8px;margin-top:8px;padding-top:14px;border-top:1px solid var(--line)}
+.mp-trust div{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.mp-trust .i{width:18px;height:18px;color:var(--lime-dark)}
+.x-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:50%;border:0;background:var(--bg);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2}
+.x-close:hover{background:var(--line);color:var(--ink)}
+
+/* ── Carrito (panel lateral) ── */
+.cart-overlay{position:fixed;inset:0;background:rgba(11,30,64,.45);z-index:300;opacity:0;pointer-events:none;transition:opacity .2s}
+.cart-overlay.open{opacity:1;pointer-events:auto}
+.cart-panel{position:fixed;top:0;right:0;bottom:0;width:420px;max-width:100vw;background:#fff;z-index:310;display:flex;flex-direction:column;transform:translateX(100%);transition:transform .25s ease;box-shadow:-20px 0 40px rgba(11,30,64,.15)}
+.cart-panel.open{transform:none}
+.cart-header{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-bottom:1px solid var(--line)}
+.cart-header h4{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:400;font-size:19px}
+.cart-header h4 .i{color:var(--blue)}
+.cart-close{width:40px;height:40px;border-radius:50%;border:0;background:var(--bg);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.cart-body{flex:1;overflow-y:auto;padding:16px 20px}
+.envio-meter{background:var(--soft);border-radius:14px;padding:12px 14px;margin-bottom:14px;font-size:13px;color:var(--navy)}
+.envio-meter b{color:var(--blue)}
+.envio-meter .bar{height:7px;border-radius:999px;background:#fff;margin-top:8px;overflow:hidden}
+.envio-meter .bar span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--lime));border-radius:999px;transition:width .3s}
+.envio-meter.ok{background:#EEF7E1;color:var(--lime-dark)}
+.cart-item{display:grid;grid-template-columns:60px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.ci-img{width:60px;height:60px;border-radius:12px;border:1px solid var(--line);background:#fff;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--blue)}
+.ci-img img{width:100%;height:100%;object-fit:contain;padding:4px}
+.ci-name{font-size:13px;font-weight:600;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ci-inst{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;color:var(--lime-dark);font-weight:700;margin-top:2px}
+.ci-inst .i{width:13px;height:13px}
+.ci-qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:10px;margin-top:6px}
+.ci-qty button{width:30px;height:30px;border:0;background:none;cursor:pointer;font-weight:700;font-size:15px;color:var(--ink)}
+.ci-qty span{min-width:24px;text-align:center;font-size:13px;font-weight:700}
+.ci-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.ci-right b{font-size:14px;white-space:nowrap}
+.ci-del{border:0;background:none;color:#8A94A6;cursor:pointer;display:inline-flex;padding:4px;border-radius:8px}
+.ci-del:hover{color:var(--red);background:#FDECEC}
+.ci-del .i{width:17px;height:17px}
+.cart-empty{text-align:center;padding:40px 10px;color:var(--muted)}
+.cart-empty .i{width:56px;height:56px;color:#C9D2E0;margin:0 auto 10px}
+.cart-empty b{display:block;color:var(--ink);font-size:16px;margin-bottom:4px}
+.cart-entrega{margin-top:16px}
+.cart-entrega > strong{display:block;font-size:14px;margin-bottom:8px}
+.ent-op{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);border-radius:14px;padding:12px;margin-bottom:8px;cursor:pointer;font-size:13.5px;line-height:1.35}
+.ent-op:has(input:checked){border-color:var(--blue);background:var(--soft)}
+.ent-op input{margin-top:2px;accent-color:var(--blue);width:17px;height:17px;flex:none}
+.ent-op .i{color:var(--blue);width:20px;height:20px}
+.ent-op small{display:block;color:var(--muted);font-size:12px}
+.ent-nota{font-size:12px;color:var(--muted)}
+.cart-foot{border-top:1px solid var(--line);padding:16px 20px 20px;background:#fff}
+.cart-desglose{font-size:13.5px;color:var(--muted);display:grid;gap:4px}
+.cart-desglose div{display:flex;justify-content:space-between}
+.cart-total{display:flex;justify-content:space-between;align-items:baseline;font-weight:800;font-size:20px;margin:8px 0 12px}
+.cart-total small{font-size:12px;font-weight:500;color:var(--muted)}
+.pay-btn{display:none;align-items:center;justify-content:center;gap:9px;width:100%;min-height:48px;border-radius:14px;border:0;font-weight:700;font-size:14.5px;cursor:pointer;text-decoration:none;margin-top:8px}
+.pay-btn .i{width:19px;height:19px}
+.btn-mp{background:var(--blue);color:#fff}
+.btn-mp:hover{background:var(--blue-dark)}
+.btn-mp:disabled{opacity:.6;cursor:default}
+.btn-spei{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.btn-spei:hover{background:var(--navy);color:#fff}
+.btn-spei em{font-style:normal;font-size:11.5px;background:var(--lime);color:var(--navy);padding:2px 7px;border-radius:999px}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1EBE5A}
+.secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--muted);margin-top:12px}
+.secure .i{width:14px;height:14px;color:var(--lime-dark)}
+
+/* ── Modal SPEI ── */
+.spei-box{background:#fff;border-radius:22px;padding:24px;max-width:420px;width:100%;position:relative}
+.spei-box h4{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:400;font-size:20px;color:var(--blue);margin-bottom:6px}
+.spei-box > p{color:var(--muted);font-size:13.5px;margin-bottom:14px}
+.spei-datos{background:var(--bg);border-radius:14px;padding:14px;display:grid;gap:10px;margin-bottom:12px}
+.spei-datos div{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.spei-datos span:first-child{color:var(--muted)}
+.spei-datos span:last-child{font-weight:700;text-align:right}
+.clabe{color:var(--blue);letter-spacing:1px;font-family:ui-monospace,Menlo,monospace}
+.spei-total{color:var(--blue);font-size:17px}
+.btn-copiar{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;border:1.5px solid var(--line);border-radius:12px;background:#fff;font-weight:700;font-size:13.5px;cursor:pointer;color:var(--ink);margin-bottom:8px}
+.btn-copiar:hover{border-color:var(--blue);color:var(--blue)}
+.spei-box .pay-btn{display:flex}
+.spei-nota{color:var(--muted);font-size:12px;text-align:center;margin-top:10px}
+
+/* ── Dropshipping / contacto ── */
+.ds-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:14px}
+.ds-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.ds-header{padding:16px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line)}
+.ds-icon{width:44px;height:44px;border-radius:14px;background:var(--soft);color:var(--blue);display:flex;align-items:center;justify-content:center;flex:none}
+.ds-icon .i{width:24px;height:24px}
+.ds-name{font-weight:800;font-size:16px}
+.ds-badge{font-size:12px;color:var(--lime-dark);font-weight:700}
+.ds-body{padding:16px 18px;flex-grow:1;display:flex;flex-direction:column;gap:12px}
+.ds-body p{font-size:14px;color:var(--muted)}
+.ds-pros{list-style:none;display:grid;gap:6px}
+.ds-pros li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px}
+.ds-pros .i{width:17px;height:17px;margin-top:2px}
+.ok{color:var(--lime-dark)}.warn{color:#B7791F}
+.num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--lime);color:var(--navy);font-size:11px;font-weight:800;flex:none;margin-top:1px}
+.ds-btn{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:42px;border-radius:12px;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;font-size:14px}
+.ds-btn:hover{background:var(--blue-dark)}
+.ds-btn.wa{background:#25D366}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:14px}
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;display:flex;gap:14px;align-items:flex-start;text-decoration:none}
+.contact-card:hover{border-color:var(--blue)}
+.contact-card .ds-icon.wa{background:#E7F8EE;color:#1EBE5A}
+.contact-card b{display:block;font-size:15px}
+.contact-card span{color:var(--muted);font-size:14px;word-break:break-word}
+
+/* ── Footer ── */
+footer{background:var(--navy);color:#C9D5EE;font-size:14px;margin-top:auto}
+.f-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.2fr;gap:28px;padding-top:40px;padding-bottom:28px}
+footer h5{color:#fff;font-size:15px;margin-bottom:10px}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{color:var(--lime)}
+.f-col{display:flex;flex-direction:column;gap:8px}
+footer .brand-text b{color:#fff}
+footer .brand-text small{color:var(--lime)}
+.pay-chips{display:flex;flex-wrap:wrap;gap:6px}
+.pay-chips span{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:5px 10px;border-radius:999px;font-size:12.5px;color:#fff}
+.pay-chips .i{width:15px;height:15px;color:var(--lime)}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:16px 0 20px;font-size:13px}
+.f-bottom .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.f-bottom a{color:#C9D5EE;display:inline-flex;align-items:center;gap:5px}
+.f-bottom .i{width:14px;height:14px}
+
+/* ── Toast y carrito móvil ── */
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;pointer-events:none;z-index:500;background:var(--navy);color:#fff;border-radius:14px;padding:12px 14px 12px 16px;display:flex;align-items:center;gap:12px;font-size:14px;box-shadow:0 14px 30px rgba(11,30,64,.3);transition:all .25s;max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast .i{color:var(--lime)}
+.toast.error .i{color:#FF8A80}
+.toast button{border:0;background:var(--lime);color:var(--navy);font-weight:700;font-size:13px;padding:7px 12px;border-radius:10px;cursor:pointer;white-space:nowrap}
+.cart-fab{display:none;position:fixed;right:16px;bottom:16px;z-index:200;height:56px;padding:0 18px;border-radius:999px;border:0;background:var(--blue);color:#fff;font-weight:700;font-size:14px;align-items:center;gap:8px;box-shadow:0 12px 26px rgba(30,80,214,.35);cursor:pointer}
+
+/* ── Responsivo ── */
+@media(max-width:1024px){
+  .trust .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:860px){
+  .brand-tag,.hbtn .lbl{display:none}
+  .hero .wrap{grid-template-columns:1fr;padding-top:26px;padding-bottom:26px}
+  .hero-card{display:none}
+  .modal-prod-box{grid-template-columns:1fr}
+  .mp-media{border-right:0;border-bottom:1px solid var(--line);min-height:240px}
+  .mp-media img{max-height:280px}
+  .mp-media .ph{min-height:240px}
+  .modal-prod-info{padding:20px}
+}
+@media(max-width:720px){
+  :root{--header-h:auto}
+  .hrow{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px}
+  .search{order:3;flex:1 1 100%;width:100%;max-width:none}
+  .search button{padding:0 14px}
+  .hactions{margin-left:auto}
+  .hbtn.cart{display:none}
+  .catbar{top:0;position:relative}
+  .site-header{position:sticky}
+  .topbar .wrap{gap:4px 14px;padding-top:6px;padding-bottom:6px}
+  .topbar .hide-m{display:none}
+  .wrap{padding:0 14px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .card-body{padding:10px 11px 12px}
+  .card-body h4{font-size:13px}
+  .card-media img{padding:10px}
+  .price{font-size:18px}
+  .btn-agregar{font-size:13px;min-height:40px}
+  .tag{font-size:10px;padding:3px 7px;top:7px;left:7px}
+  .tag .i{display:none}
+  .card-desc{display:none}
+  .trust .wrap{gap:10px}
+  .t-item small{display:none}
+  .destacados{padding:14px;border-radius:18px}
+  .cart-fab{display:inline-flex}
+  .cart-panel{width:100vw}
+  .f-grid{grid-template-columns:1fr;gap:22px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.marcas-track{flex-wrap:wrap;justify-content:center;width:auto}.marcas-track .marca[aria-hidden="true"]{display:none}}
+</style>
+</head>
+<body>
+
+<!-- Íconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="globe-clip"><circle cx="60" cy="70" r="38"/></clipPath>
+    <symbol id="mark-light" viewBox="0 0 120 120">
+      <circle cx="60" cy="70" r="38" fill="#1E50D6"/>
+      <g clip-path="url(#globe-clip)" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4"><ellipse cx="60" cy="70" rx="20" ry="38"/><path d="M18 88 Q60 104 102 88"/></g>
+      <g fill="none" stroke-linecap="round"><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#fff" stroke-width="14"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#fff" stroke-width="14"/><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#6BA30F" stroke-width="8"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#6BA30F" stroke-width="8"/></g>
+      <polygon points="60,64 51,98 69,98" fill="#6BA30F" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="60" r="8" fill="#6BA30F" stroke="#fff" stroke-width="3"/>
+    </symbol>
+    <symbol id="mark-dark" viewBox="0 0 120 120">
+      <circle cx="60" cy="70" r="38" fill="#2A6CE8"/>
+      <g clip-path="url(#globe-clip)" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="4"><ellipse cx="60" cy="70" rx="20" ry="38"/><path d="M18 88 Q60 104 102 88"/></g>
+      <g fill="none" stroke-linecap="round"><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#0B1E40" stroke-width="14"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#0B1E40" stroke-width="14"/><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#8CC63F" stroke-width="8"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#8CC63F" stroke-width="8"/></g>
+      <polygon points="60,64 51,98 69,98" fill="#8CC63F" stroke="#0B1E40" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="60" r="8" fill="#8CC63F" stroke="#0B1E40" stroke-width="3"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></g></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></g></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></g></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></g></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4a1 1 0 0 0-.8-.4H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></g></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2V2Z"/><path d="M9 7h6M9 11h6M9 15h4"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10M19 21V10M9 21V10M15 21V10M2 10l10-7 10 7Z"/></g></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></g></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></g></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></g></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1Z" fill="currentColor"/></g></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></g></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6"/></g></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0Z"/><path d="M5 14v6h14v-6"/></g></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></g></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-2h14v2"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></g></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></g></symbol>
+    <symbol id="i-radio" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="14" rx="2"/><path d="M15 8V2M9 13h6M9 17h6"/></g></symbol>
+    <symbol id="i-plug" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a6 6 0 0 1-12 0V8Z"/></g></symbol>
+    <symbol id="i-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2Z"/></g></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1"/><circle cx="17.5" cy="10.5" r="1"/><circle cx="8.5" cy="7.5" r="1"/><path d="M12 2a10 10 0 0 0 0 20c1 0 1.7-.8 1.7-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1 0-.9.8-1.7 1.7-1.7h2a5.6 5.6 0 0 0 5.4-5.6C22 6 17.5 2 12 2Z"/></g></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></g></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/></g></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.06.11.06.66-.18 1.34Z"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><svg class="i"><use href="#i-truck"/></svg>Envío <b>gratis</b> en Chihuahua desde $1,500</span>
+    <span class="hide-m"><svg class="i"><use href="#i-receipt"/></svg>Precios con IVA incluido</span>
+    <span><svg class="i"><use href="#i-shield"/></svg>Pago seguro con Mercado Pago</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap hrow">
+    <a class="brand" href="index.html" aria-label="Gree Networks, página principal">
+      <svg aria-hidden="true"><use href="#mark-light"/></svg>
+      <span class="brand-text"><b>GREE</b><small>NETWORKS</small></span>
+    </a>
+    <span class="brand-tag">Tienda</span>
+    <form class="search" role="search" onsubmit="buscar();return false">
+      <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
+      <label class="sr" for="busqueda-input">Buscar productos</label>
+      <input type="search" id="busqueda-input" placeholder="Buscar por nombre, modelo o marca…" autocomplete="off">
+      <button type="submit">Buscar</button>
+    </form>
+    <div class="hactions">
+      <a class="hbtn" href="https://wa.me/526144757914" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg><span class="lbl">Ayuda</span></a>
+      <a class="hbtn" href="index.html"><svg class="i" aria-hidden="true"><use href="#i-home"/></svg><span class="lbl">Inicio</span></a>
+      <button class="hbtn cart" type="button" onclick="toggleCart(true)" aria-label="Abrir carrito"><svg class="i" aria-hidden="true"><use href="#i-cart"/></svg><span class="lbl">Carrito</span><span class="badge cart-count">0</span></button>
+    </div>
+  </div>
+  <nav class="catbar" aria-label="Categorías">
+    <div class="wrap cats">
+      <button class="tab-btn active" data-tab="productos" data-cat="" onclick="mostrarCategoria('')"><svg class="i" aria-hidden="true"><use href="#i-grid"/></svg>Todos</button>
+      <span id="tabs-categorias" style="display:contents"></span>
+      <button class="tab-btn" data-tab="dropshipping" onclick="abrirTab('dropshipping', this)"><svg class="i" aria-hidden="true"><use href="#i-package"/></svg>Dropshipping</button>
+      <button class="tab-btn" data-tab="contacto" onclick="abrirTab('contacto', this)"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Contacto</button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <svg class="deco" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2"><ellipse cx="960" cy="150" rx="470" ry="110" transform="rotate(-10 960 150)"/><ellipse cx="960" cy="150" rx="360" ry="80" transform="rotate(-10 960 150)"/></g></svg>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">#TiendaGreeNetworks</span>
+      <h1>Equipo de redes, seguridad y energía <span>con la confianza de tu proveedor de internet</span></h1>
+      <p>Repetidores WiFi, cámaras, control de acceso, energía solar y accesorios. Te confirmamos disponibilidad y te lo llevamos a domicilio.</p>
+      <div class="hero-cta">
+        <a class="btn btn-lime" href="#catalogo">Ver productos <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="https://wa.me/526144757914?text=Hola%2C%20quiero%20cotizar%20un%20producto%20de%20la%20tienda" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-wa"/></svg>Cotizar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hc-row"><span class="hc-ico"><svg class="i"><use href="#i-wrench"/></svg></span><div><b>Opción con instalación</b><small>En productos seleccionados, lo dejamos funcionando</small></div></div>
+      <div class="hc-row"><span class="hc-ico"><svg class="i"><use href="#i-truck"/></svg></span><div><b>Entrega a domicilio</b><small>Chihuahua capital · o recoge sin costo</small></div></div>
+      <div class="hc-row"><span class="hc-ico"><svg class="i"><use href="#i-card"/></svg></span><div><b>Tarjeta, SPEI o WhatsApp</b><small>Paga como prefieras</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" aria-label="Por qué comprar con nosotros">
+  <div class="wrap">
+    <div class="t-item"><svg class="i"><use href="#i-shield"/></svg><div><b>Pago seguro</b><small>Procesado por Mercado Pago</small></div></div>
+    <div class="t-item"><svg class="i"><use href="#i-bank"/></svg><div><b>SPEI sin comisión</b><small>Transferencia directa</small></div></div>
+    <div class="t-item"><svg class="i"><use href="#i-truck"/></svg><div><b>Entrega en Chihuahua</b><small>Gratis desde $1,500</small></div></div>
+    <div class="t-item"><svg class="i"><use href="#i-chat"/></svg><div><b>Atención por WhatsApp</b><small>Te asesoramos antes de comprar</small></div></div>
+  </div>
+</section>
+
+<section class="marcas" id="marcas" aria-label="Marcas que manejamos" hidden>
+  <p class="marcas-titulo">Marcas que manejamos</p>
+  <div class="marcas-viewport"><div class="marcas-track" id="marcas-track"></div></div>
+</section>
+
+<main id="catalogo">
+  <div class="wrap">
+
+    <!-- Resultados de búsqueda -->
+    <div class="tab-content" id="tab-busqueda">
+      <div class="sec-head">
+        <div><h2 class="section-title"><svg class="i"><use href="#i-search"/></svg>Resultados</h2><p class="desc" id="busqueda-desc"></p></div>
+      </div>
+      <div class="grid" id="grid-busqueda"></div>
+      <div class="ver-mas" id="ver-mas-busqueda" hidden><button type="button">Ver más</button></div>
+    </div>
+
+    <!-- Productos -->
+    <div class="tab-content active" id="tab-productos">
+      <div class="destacados" id="destacados" hidden>
+        <h3 class="destacados-titulo"><svg class="i"><use href="#i-star"/></svg>Destacados</h3>
+        <div class="grid" id="grid-destacados"></div>
+      </div>
+      <div class="sec-head">
+        <div>
+          <h2 class="section-title" id="titulo-productos"><svg class="i"><use href="#i-grid"/></svg>Todos los productos</h2>
+          <p class="desc" id="conteo-productos">Precios con IVA incluido. Pide por WhatsApp o paga en línea; te confirmamos disponibilidad y entrega.</p>
+        </div>
+        <label class="toolbar">Ordenar
+          <select id="orden" onchange="mostrarCategoria(categoriaActual)">
+            <option value="precio-asc">Menor precio</option>
+            <option value="precio-desc">Mayor precio</option>
+            <option value="nombre">Nombre (A–Z)</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid" id="grid-productos">
+        <div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div>
+      </div>
+      <div class="ver-mas" id="ver-mas-productos" hidden><button type="button">Ver más productos</button></div>
+    </div>
+
+    <!-- Dropshipping -->
+    <div class="tab-content" id="tab-dropshipping">
+      <h2 class="section-title"><svg class="i"><use href="#i-package"/></svg>Dropshipping</h2>
+      <p class="desc">Vende productos sin tener inventario: el proveedor envía directo a tu cliente. Estas son las mejores plataformas para empezar.</p>
+      <div class="ds-grid">
+        <div class="ds-card">
+          <div class="ds-header"><span class="ds-icon"><svg class="i"><use href="#i-cart"/></svg></span><div><div class="ds-name">AliExpress + DSers</div><div class="ds-badge">Más popular</div></div></div>
+          <div class="ds-body"><p>Miles de productos desde China con envío a México. DSers automatiza los pedidos a AliExpress directamente desde tu tienda Shopify o WooCommerce.</p><ul class="ds-pros"><li><svg class="i ok"><use href="#i-check"/></svg>Gratis para empezar</li><li><svg class="i ok"><use href="#i-check"/></svg>Millones de productos</li><li><svg class="i ok"><use href="#i-check"/></svg>Sin inventario mínimo</li><li><svg class="i warn"><use href="#i-alert"/></svg>Envíos de 2–4 semanas</li></ul>
+            <a href="https://www.dsers.com/" target="_blank" rel="noopener" class="ds-btn">Ver plataforma<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-header"><span class="ds-icon"><svg class="i"><use href="#i-rocket"/></svg></span><div><div class="ds-name">CJDropshipping</div><div class="ds-badge">Envíos rápidos</div></div></div>
+          <div class="ds-body"><p>Proveedor con bodegas en México y EE. UU. Permite personalizar productos y ofrece envíos más rápidos que AliExpress.</p><ul class="ds-pros"><li><svg class="i ok"><use href="#i-check"/></svg>Bodega en México</li><li><svg class="i ok"><use href="#i-check"/></svg>Envíos de 5–10 días</li><li><svg class="i ok"><use href="#i-check"/></svg>Integración con Shopify/WooCommerce</li><li><svg class="i ok"><use href="#i-check"/></svg>Personalización de productos</li></ul>
+            <a href="https://cjdropshipping.com/" target="_blank" rel="noopener" class="ds-btn">Ver plataforma<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-header"><span class="ds-icon"><svg class="i"><use href="#i-palette"/></svg></span><div><div class="ds-name">Printful</div><div class="ds-badge">Print on demand</div></div></div>
+          <div class="ds-body"><p>Ideal para vender ropa, tazas, camisetas y accesorios con tu diseño o logo. Solo pagas cuando vendes.</p><ul class="ds-pros"><li><svg class="i ok"><use href="#i-check"/></svg>Tu marca en cada producto</li><li><svg class="i ok"><use href="#i-check"/></svg>Sin inventario</li><li><svg class="i ok"><use href="#i-check"/></svg>Calidad premium</li><li><svg class="i warn"><use href="#i-alert"/></svg>Márgenes menores que otros</li></ul>
+            <a href="https://www.printful.com/" target="_blank" rel="noopener" class="ds-btn">Ver plataforma<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-header"><span class="ds-icon"><svg class="i"><use href="#i-store"/></svg></span><div><div class="ds-name">Shopify</div><div class="ds-badge">Tienda completa</div></div></div>
+          <div class="ds-body"><p>La plataforma más usada para crear tu tienda en línea. Se conecta con DSers, CJDropshipping, Printful y más. Acepta pagos con tarjeta, PayPal y OXXO.</p><ul class="ds-pros"><li><svg class="i ok"><use href="#i-check"/></svg>Fácil de usar</li><li><svg class="i ok"><use href="#i-check"/></svg>Pagos en MXN</li><li><svg class="i ok"><use href="#i-check"/></svg>App store enorme</li><li><svg class="i warn"><use href="#i-alert"/></svg>Costo desde $25 USD/mes</li></ul>
+            <a href="https://www.shopify.com/mx" target="_blank" rel="noopener" class="ds-btn">Ver plataforma<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-header"><span class="ds-icon"><svg class="i"><use href="#i-bag"/></svg></span><div><div class="ds-name">Mercado Libre</div><div class="ds-badge">Mejor para México</div></div></div>
+          <div class="ds-body"><p>El marketplace más grande de México. Puedes vender productos de dropshipping sin necesidad de una tienda propia. Millones de compradores activos.</p><ul class="ds-pros"><li><svg class="i ok"><use href="#i-check"/></svg>Sin costo de tienda</li><li><svg class="i ok"><use href="#i-check"/></svg>Pagos con Mercado Pago</li><li><svg class="i ok"><use href="#i-check"/></svg>Envíos con Mercado Envíos</li><li><svg class="i warn"><use href="#i-alert"/></svg>Comisión por venta (8–16%)</li></ul>
+            <a href="https://www.mercadolibre.com.mx/" target="_blank" rel="noopener" class="ds-btn">Ver plataforma<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </div>
+        <div class="ds-card">
+          <div class="ds-header"><span class="ds-icon"><svg class="i"><use href="#i-bulb"/></svg></span><div><div class="ds-name">¿Por dónde empezar?</div><div class="ds-badge">Recomendación</div></div></div>
+          <div class="ds-body"><p>Para México, la combinación ideal es:</p><ul class="ds-pros"><li><span class="num">1</span><span><strong>CJDropshipping</strong> como proveedor</span></li><li><span class="num">2</span><span><strong>Shopify</strong> como tienda</span></li><li><span class="num">3</span><span><strong>Mercado Libre</strong> para más alcance</span></li><li><span class="num">4</span><span><strong>Facebook/Instagram Ads</strong> para vender</span></li></ul>
+            <a href="https://wa.me/526144757914?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20dropshipping" target="_blank" rel="noopener" class="ds-btn wa"><svg class="i"><use href="#i-wa"/></svg>Contáctanos<svg class="i"><use href="#i-arrow"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contacto -->
+    <div class="tab-content" id="tab-contacto">
+      <h2 class="section-title"><svg class="i"><use href="#i-phone"/></svg>Contacto</h2>
+      <p class="desc">Envíanos tu pedido por WhatsApp o correo. Te confirmamos disponibilidad, costo de envío y forma de pago.</p>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://wa.me/526144757914" target="_blank" rel="noopener"><span class="ds-icon wa"><svg class="i"><use href="#i-wa"/></svg></span><div><b>WhatsApp</b><span>+52 614 475 7914</span></div></a>
+        <a class="contact-card" href="mailto:jesusrubio060295@gmail.com"><span class="ds-icon"><svg class="i"><use href="#i-mail"/></svg></span><div><b>Correo</b><span>jesusrubio060295@gmail.com</span></div></a>
+        <div class="contact-card"><span class="ds-icon"><svg class="i"><use href="#i-pin"/></svg></span><div><b>Recoge en sucursal</b><span>Amada Armendáriz No. 255, Revolución, Chihuahua · Lun a sáb 8:00 am – 5:30 pm</span></div></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap f-grid">
+    <div class="f-col">
+      <a class="brand" href="index.html" aria-label="Gree Networks"><svg aria-hidden="true" style="width:38px;height:38px"><use href="#mark-dark"/></svg><span class="brand-text"><b>GREE</b><small>NETWORKS</small></span></a>
+      <p>Tienda de Gree Networks, proveedor de internet inalámbrico en Chihuahua. Equipo de redes, seguridad y energía con asesoría directa.</p>
+    </div>
+    <div class="f-col">
+      <h5>Tienda</h5>
+      <a href="#catalogo" onclick="mostrarCategoria('')">Todos los productos</a>
+      <a href="#" onclick="abrirTabPorNombre('contacto');return false">Contacto</a>
+      <a href="#" onclick="abrirTabPorNombre('dropshipping');return false">Dropshipping</a>
+    </div>
+    <div class="f-col">
+      <h5>Gree Networks</h5>
+      <a href="index.html">Internet para el hogar</a>
+      <a href="soporte.html">Soporte técnico</a>
+      <a href="https://tavgreenetworksti.net/wp-content/uploads/2026/09/Aviso-de-Privacidad.pdf" target="_blank" rel="noopener">Aviso de privacidad</a>
+    </div>
+    <div class="f-col">
+      <h5>Formas de pago</h5>
+      <div class="pay-chips">
+        <span><svg class="i"><use href="#i-card"/></svg>Tarjeta · Mercado Pago</span>
+        <span><svg class="i"><use href="#i-bank"/></svg>SPEI</span>
+        <span><svg class="i"><use href="#i-wa"/></svg>WhatsApp</span>
+      </div>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <div class="wrap">
+      <span>© 2026 Gree Networks · tavgreenetworksti.net</span>
+      <a href="admin.html" rel="nofollow"><svg class="i"><use href="#i-lock"/></svg>Administrador</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal: detalle de producto -->
+<div class="modal-prod" id="modal-prod" onclick="if(event.target===this) cerrarDetalle()" role="dialog" aria-modal="true" aria-labelledby="mp-nombre">
+  <div class="modal-prod-box">
+    <button class="x-close" onclick="cerrarDetalle()" aria-label="Cerrar"><svg class="i"><use href="#i-x"/></svg></button>
+    <div class="mp-media" id="mp-media"></div>
+    <div class="modal-prod-info">
+      <span class="mp-cat" id="mp-cat"></span>
+      <h3 id="mp-nombre"></h3>
+      <small class="card-modelo" id="mp-modelo"></small>
+      <div class="price-row" style="margin-top:0"><div class="price" id="mp-precio"></div><span class="iva">IVA incluido</span></div>
+      <div class="opciones-inst" id="mp-opciones"></div>
+      <div class="modal-prod-desc" id="mp-desc"></div>
+      <div class="mp-buy">
+        <div class="qty"><button type="button" onclick="cambiarQtyModal(-1)" aria-label="Menos">−</button><span id="mp-qty">1</span><button type="button" onclick="cambiarQtyModal(1)" aria-label="Más">+</button></div>
+        <button class="btn-agregar" id="mp-agregar"><svg class="i"><use href="#i-cart"/></svg>Agregar al carrito</button>
+      </div>
+      <div class="mp-trust">
+        <div><svg class="i"><use href="#i-shield"/></svg>Pago seguro con Mercado Pago o SPEI sin comisión</div>
+        <div><svg class="i"><use href="#i-truck"/></svg>Entrega en Chihuahua capital · gratis desde $1,500</div>
+        <div><svg class="i"><use href="#i-chat"/></svg>¿Dudas? Te asesoramos por WhatsApp antes de comprar</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal SPEI -->
+<div class="modal-spei" id="modal-spei" onclick="if(event.target===this) cerrarSPEI()" role="dialog" aria-modal="true">
+  <div class="spei-box">
+    <button class="x-close" onclick="cerrarSPEI()" aria-label="Cerrar"><svg class="i"><use href="#i-x"/></svg></button>
+    <h4><svg class="i"><use href="#i-bank"/></svg>Pago por SPEI</h4>
+    <p>Realiza tu transferencia a estos datos y envíanos el comprobante por WhatsApp para validar tu pedido.</p>
+    <div class="spei-datos">
+      <div><span>Banco</span><span>SPIN by OXXO</span></div>
+      <div><span>CLABE</span><span class="clabe">728969000064036844</span></div>
+      <div><span>Beneficiario</span><span>Gree Networks</span></div>
+      <div><span>Total a pagar</span><span class="spei-total" id="spei-total"></span></div>
+    </div>
+    <button class="btn-copiar" onclick="copiarClabe()"><svg class="i"><use href="#i-copy"/></svg>Copiar CLABE</button>
+    <a class="pay-btn btn-wa" id="spei-wa-btn" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>Enviar comprobante por WhatsApp</a>
+    <p class="spei-nota">Tu pedido se confirma una vez que validemos el pago.</p>
+  </div>
+</div>
+
+<!-- Carrito -->
+<div class="cart-overlay" id="cart-overlay" onclick="toggleCart(false)"></div>
+<aside class="cart-panel" id="cart-panel" aria-label="Carrito de compras" aria-hidden="true">
+  <div class="cart-header">
+    <h4><svg class="i"><use href="#i-cart"/></svg>Tu pedido</h4>
+    <button class="cart-close" onclick="toggleCart(false)" aria-label="Cerrar carrito"><svg class="i"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="cart-body">
+    <div class="envio-meter" id="envio-meter" hidden></div>
+    <div id="cart-items"></div>
+    <div class="cart-entrega" id="cart-entrega" style="display:none">
+      <strong>¿Cómo lo recibes?</strong>
+      <label class="ent-op"><input type="radio" name="entrega" value="domicilio" checked onchange="renderCarrito()">
+        <svg class="i"><use href="#i-truck"/></svg><span>Entrega a domicilio en Chihuahua capital<small id="envio-leyenda"></small></span></label>
+      <label class="ent-op"><input type="radio" name="entrega" value="recoger" onchange="renderCarrito()">
+        <svg class="i"><use href="#i-store"/></svg><span>Recoger con nosotros<small>Sin costo · Amada Armendáriz No. 255</small></span></label>
+      <p class="ent-nota">¿Fuera de la ciudad? Pídelo por WhatsApp y te cotizamos el envío.</p>
+    </div>
+  </div>
+  <div class="cart-foot" id="cart-foot" hidden>
+    <div class="cart-desglose" id="cart-desglose"></div>
+    <div class="cart-total"><span>Total <small>IVA incluido</small></span><span id="cart-total"></span></div>
+    <button class="pay-btn btn-mp" id="mp-btn" onclick="pagarConMP()"><svg class="i"><use href="#i-card"/></svg><span>Pagar con tarjeta · Mercado Pago</span></button>
+    <button class="pay-btn btn-spei" id="spei-btn" onclick="mostrarSPEI()"><svg class="i"><use href="#i-bank"/></svg>Transferencia SPEI <em>Sin comisión</em></button>
+    <a class="pay-btn btn-wa" id="whatsapp-order" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>Pedir por WhatsApp</a>
+    <p class="secure"><svg class="i"><use href="#i-lock"/></svg>Pagos protegidos. No guardamos datos de tu tarjeta.</p>
+  </div>
+</aside>
+
+<button class="cart-fab" type="button" onclick="toggleCart(true)" aria-label="Abrir carrito"><svg class="i"><use href="#i-cart"/></svg>Carrito <span class="badge cart-count">0</span></button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><svg class="i"><use href="#i-check"/></svg><span id="toast-txt"></span><button type="button" id="toast-btn" hidden>Ver carrito</button></div>
+
+<script>
+  /* Catálogo de respaldo SOLO para la demo: se usa si productos.php no responde
+     (p. ej. al abrir el archivo localmente o en GitHub Pages). En el servidor real
+     el catálogo siempre viene de productos.php. */
+  const DEMO_CATALOGO = {"productos": [{"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Switch PoE+ Gigabit / 4 Puertos PoE+ / 1 Puerto Uplink / Monitoreable / Alcance Extendido 300 m (984.3 ft) / 45 W / Gestión Cloud", "modelo": "DS-3E1505P-EI/M", "precio": 922.0, "img": "", "destacado": true, "id": 1}, {"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Caja de Conexiones de Metal / IP66 / Aluminio Fundido / Carga 4.5 kg / 100 x 43.2 x 129 mm / 0.33 x 0.14 x 0.42 pies", "modelo": "DS-1280ZJ-XS", "precio": 268.0, "img": "", "destacado": true, "id": 2}, {"categoria": "Control de Acceso", "marca": "HIKVISION", "nombre": "Terminal Biométrica / Reconocimiento Facial Deep Learning / 500 Rostros / 1,000 Huellas / Wi-Fi / Batería Respaldo 3 h / MIFARE / Detección Cubrebocas", "modelo": "DS-K1T320MFWX-B/S", "precio": 2056.0, "img": "", "destacado": true, "id": 3}, {"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Cámara Bala TURBOHD / 2 MP 1080p / Color 24/7 / Lente 2.8 mm / Luz Blanca 20 m (65.6 ft) / IP67 / TVI-AHD-CVI-CVBS / Metal", "modelo": "DS-2CE10DF0T-F", "precio": 719.0, "img": "", "destacado": true, "id": 4}, {"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Kit de Alarma Inalámbrica / 48 Zonas / LAN y Wi-Fi 2.4 GHz / Sirena Exterior 110 dB / Batería de Respaldo 35 h / PIR 15 m (49.2 ft)", "modelo": "AXPRO-KIT", "precio": 6881.0, "img": "", "destacado": true, "id": 5}, {"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Router Inalámbrico / Doble Banda AC / 1200 Mbps / 4 Antenas 5 dBi / 3 Puertos LAN 10/100 Mbps / MU-MIMO 4×4 / WISP", "modelo": "DS-3WR12C", "precio": 484.0, "img": "", "destacado": true, "id": 6}, {"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Terminal de Control de Acceso / Reconocimiento Facial 2 MP / Lector MIFARE 13.56 MHz / Pantalla Táctil 4.3\" / PoE y Wi-Fi / IP65 / 1,500 Rostros / 3,000 Huellas / SIP", "modelo": "DS-K1T342MFWX-E1", "precio": 4221.0, "img": "", "destacado": true, "id": 7}, {"categoria": "Cámaras de Seguridad", "marca": "HIKVISION", "nombre": "Terminal de Control de Acceso Facial / Reconocimiento 1,500 Rostros / Lector Prox EM 125 kHz / 3,000 Huellas / Pantalla Táctil 4.3\" / PoE 802.3at / Wi-Fi / IP65 / -30°C a 60°C", "modelo": "DS-K1T342EFWX-E1", "precio": 4561.0, "img": "", "destacado": true, "id": 8}, {"categoria": "Control de Acceso", "marca": "ACCESSPRO", "nombre": "Tarjeta Proximidad / 125 kHz / EM4100 / 0.1 mm / Imprimible Doble Cara / 85.6 x 54 mm", "modelo": "ACCESS-ISO-CARD", "precio": 8.0, "img": "", "id": 9}, {"categoria": "Control de Acceso", "marca": "ACCESSPRO", "nombre": "Tarjeta de Proximidad MIFARE Classic / Memoria 1Kb / Frecuencia 13.56 MHz / ISO/IEC 14443 Type A / Doble Cara Imprimible / 34 Bits", "modelo": "ACCESS-CARD-M1K", "precio": 23.0, "img": "", "id": 10}, {"categoria": "Energía Solar", "marca": "EPCOM POWERLINE", "nombre": "Conector MC-4 para Módulos Fotovoltaicos / 1000 VCC / 30 A / IP67 / -40 a 90 °C / Resistencia UV", "modelo": "EPL-01", "precio": 30.0, "img": "", "id": 11}, {"categoria": "Control de Acceso", "marca": "ACCESSPRO", "nombre": "Tag UHF tipo Tarjeta / 960 MHz / EPC GEN 2 / ISO 18000-6C / 85.6 x 54 x 1 mm / Chip Alien H3", "modelo": "ACCESS-CARD-EPC", "precio": 33.0, "img": "", "id": 12}, {"categoria": "Redes e IT", "marca": "LINKEDPRO BY EPCOM", "nombre": "Módulo Jack / Cat6 Clase E / Keystone 110 / Impacto / RJ45 No Blindado / Azul", "modelo": "LP-KJ-601-BU", "precio": 36.0, "img": "", "id": 13}, {"categoria": "Control de Acceso", "marca": "ACCESSPRO", "nombre": "Tag UHF Adherible / 860-960 MHz / EPC GEN2 / Wiegand 26 Bits / 2.82-3.15 GHz", "modelo": "ACCESSTAGV2", "precio": 50.0, "img": "", "id": 14}, {"categoria": "Cámaras de Seguridad", "marca": "PRECISION", "nombre": "Caja de Derivación Estanca / 7 Glándulas de Goma / IP55 / 89 x 89 x 50 mm / -40 a 120°C / Protección EMI", "modelo": "PST-0808-ER", "precio": 57.0, "img": "", "id": 15}, {"categoria": "Cámaras de Seguridad", "marca": "EPCOM TITANIUM", "nombre": "Kit de Transceptores Pasivos / 4K / Transmisión 250 m (820.2 ft) / UTP Cat 5e/6/6a/7 / Audio por Coaxitron / Terminales Push-Pin / Pig Tail", "modelo": "TT101FTURBOZ", "precio": 58.0, "img": "", "id": 16}, {"categoria": "Control de Acceso", "marca": "ACCESSPRO", "nombre": "Módulo de Relé para Control de Acceso / Salida NO/NC/COM / 3A a 125 VCA / 12 VCC / -20°C a 70°C / Interbloqueo de Puertas", "modelo": "PRORELAY", "precio": 59.0, "img": "", "id": 17}, {"categoria": "Cámaras de Seguridad", "marca": "EPCOM TITANIUM", "nombre": "Kit de Transceptores Pasivos (Baluns) / Transmisión 4K / Distancia 250 m (820.2 ft) / Protección TVS / Inmunidad 60 dB / Conectores Cobre / HD-TVI CVI AHD CVBS", "modelo": "TT-101-F-TURBO", "precio": 63.0, "img": "", "id": 18}, {"categoria": "Energía Solar", "marca": "GEWISS", "nombre": "Caja Estanca de Derivación / 6 Entradas Ø23 mm / IP44 / IK07 / 80×80×40 mm / Tapa a Presión / Libre de Halógenos", "modelo": "GW-44-003", "precio": 65.0, "img": "", "id": 19}, {"categoria": "Cámaras de Seguridad", "marca": "PRECISION", "nombre": "Caja de Derivación / 7 Glándulas Recortables / IP55 / -40 a 120°C / 100 x 100 x 54 mm (3.9 x 3.9 x 2.1 in)", "modelo": "PST-1010-ER", "precio": 82.0, "img": "", "id": 20}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-A a USB-C / 1 Metro (3.28 Pies) / 480 Mbps / Carga Rápida 18W / QC 4.0/3.0/2.0 / Nylon Trenzado / Aluminio", "modelo": "60126", "precio": 96.0, "img": "", "id": 21}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / Carga Rápida 60W PD3.0 / Transferencia 480 Mbps / 1 Metro (3.3 ft) / 10,000+ Ciclos de Flexión / Cubierta TPE", "modelo": "60518", "precio": 104.0, "img": "", "id": 22}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / Carga Rápida 60W / Transferencia 480 Mbps / 1 m (3.3 ft) / PD3.0 / QC 4.0 / Triple Blindaje / 10,000 Flexiones", "modelo": "50997", "precio": 104.0, "img": "", "id": 23}, {"categoria": "Cámaras de Seguridad", "marca": "EPCOM POWERLINE", "nombre": "Fuente de Poder Regulada / 12 VCC / 2 A / Entrada 100-240 VCA / Cable 96 cm (3.15 ft) / -20°C a 45°C", "modelo": "PSD1202D", "precio": 109.0, "img": "", "id": 24}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-A a USB-C / Carga Rápida 60W / Transferencia 5 Gbps / 1 Metro (3.3 ft) / Blindaje Múltiple / 10,000 Inserciones", "modelo": "20882", "precio": 112.0, "img": "", "id": 25}, {"categoria": "Control de Acceso", "marca": "AccessPRO", "nombre": "Control Remoto Inalámbrico / 433.92 MHz / 4 Botones / 6V / Compatible con Motores y Barreras / -10°C a 50°C", "modelo": "XB-T23", "precio": 114.0, "img": "", "id": 26}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable HDMI 2.0 / 4K@60Hz / 18 Gbps / 2 m (6.56 ft) / HDR / ARC / HEC / 32 Canales / Dolby True HD 7.1 / 48 Bits / HDCP / 30AWG", "modelo": "10107", "precio": 131.0, "img": "", "id": 27}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / 1 Metro (3.28 Pies) / 60W PD / 480 Mbps / Nylon Trenzado / Aluminio", "modelo": "50150", "precio": 131.0, "img": "", "id": 28}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cargador USB-C / 20W / PD 3.0 / QC 4.0+ / PPS / BC1.2 / Diseño Compacto", "modelo": "60449B", "precio": 139.0, "img": "", "id": 29}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-A a Micro USB / 1 Metro (3.28 Pies) / Carga Rápida 18W / QC 3.0/2.0 / Transferencia 480 Mbps / Nylon Trenzado / Aluminio", "modelo": "60146", "precio": 142.0, "img": "", "id": 30}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / 1 Metro (3.28 Pies) / Conector 90° / Carga 60W / 480 Mbps / Nylon Trenzado / Aluminio", "modelo": "50123", "precio": 143.0, "img": "", "id": 31}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-A a USB-C / 2 Metros (6.56 Pies) / 480 Mbps / Carga Rápida 18W / Nylon Trenzado / Aluminio", "modelo": "60128", "precio": 149.0, "img": "", "id": 32}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cargador USB-C / 20 W Power Delivery / GaN II / Nivel 6 Eficiencia Energética / Compacto", "modelo": "55527", "precio": 152.0, "img": "", "id": 33}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / 2 Metros (6.56 Pies) / 60W PD3.0 / 480 Mbps / Nylon Trenzado / Aluminio", "modelo": "50152", "precio": 177.0, "img": "", "id": 34}, {"categoria": "Redes e IT", "marca": "HIKSEMI by HIKVISION", "nombre": "Memoria microSD / 32 GB / Clase 10 / Lectura 92 MB/s / Escritura 50 MB/s / NAND TLC / Adaptador SD Incluido", "modelo": "HS-TF-C1/32G/NEO/A", "precio": 183.0, "img": "", "id": 35}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / Carga Rápida 100W / Transferencia 480 Mbps / Nylon Trenzado / 1 m (3.3 ft) / PD3.0 y QC4.0", "modelo": "70427", "precio": 188.0, "img": "", "id": 36}, {"categoria": "Control de Acceso", "marca": "ACCESSPRO", "nombre": "Botón de Salida Sin Contacto / Sensor IR 4 a 15 cm / Acero Inoxidable / Contactos NO/COM/NC / 12 VDC / IP para Ambientes Higiénicos", "modelo": "ACCESSK1", "precio": 201.0, "img": "", "id": 37}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cargador de Pared / 30W / 1 Puerto USB-C / PD3.0 / QC3.0 / PPS / GaN II / Compacto", "modelo": "55530", "precio": 214.0, "img": "", "id": 38}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Hub USB-C / 4 Puertos USB-A 3.0 / 5Gbps / OTG / 15cm / 4.1x1.2x0.4in", "modelo": "70336", "precio": 220.0, "img": "", "id": 39}, {"categoria": "Energía Solar", "marca": "PRECISION", "nombre": "Caja de Derivación de Plástico / 10 Glándulas de Goma / IP55 / 140 x 190 x 76 mm / -40 a 120°C", "modelo": "PST-1419-ER", "precio": 221.0, "img": "", "id": 40}, {"categoria": "Energía Solar", "marca": "LINKEDPRO BY EPCOM", "nombre": "Batería de Respaldo AGM / 12 V / 5.5 Ah / Vida Útil 5 Años / Terminales F1 + Adaptador F2 / UL Certificada", "modelo": "LK5.512", "precio": 221.0, "img": "", "id": 41}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cargador Vehicular / 30W / Puertos USB-C PD 3.0 y USB-A QC 3.0 / Entrada 12-24V / Aluminio / Protección Integral", "modelo": "40858", "precio": 222.0, "img": "", "id": 42}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Switch HDMI Bidireccional / 4K 60Hz / HDR / 3D / Dolby Atmos / Metal / Sin Alimentación Externa", "modelo": "50966", "precio": 233.0, "img": "", "id": 43}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Mouse Inalámbrico / 2.4 GHz / 4 Niveles DPI 800-2400 / Alcance 10 m (32.8 ft) / 3 Botones Silenciosos / Multiplataforma", "modelo": "90550", "precio": 241.0, "img": "", "id": 44}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Carcasa de Disco Duro 2.5'' / USB 3.0 5 Gbps / SATA 3.0 6 Gbps / UASP / 10TB / 0.42 x 0.27 x 0.046 ft", "modelo": "30847", "precio": 243.0, "img": "", "id": 45}, {"categoria": "Cámaras de Seguridad", "marca": "EPCOM POWERLINE", "nombre": "Fuente de Poder CCTV / 4 Salidas / 11-15 Vcc Ajustable / 5 Amper Inteligente / Entrada 110-240 Vac / Fusible Térmico PTC 6A", "modelo": "PS-12-DC-4C", "precio": 252.0, "img": "", "id": 46}, {"categoria": "Radiocomunicación", "marca": "TXPRO", "nombre": "Micrófono-Audífono Profesional / Gancho Ajustable Tipo G / PTT de Solapa / Compatible Kenwood y TXPRO / Cable Kevlar Reforzado", "modelo": "TXEHK", "precio": 253.0, "img": "", "id": 47}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / Carga Rápida 100W / Transferencia 480 Mbps / Nylon Trenzado / 1 m (3.3 ft)", "modelo": "35501", "precio": 255.0, "img": "", "id": 48}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / Carga Rápida 100W / Transferencia 480 Mbps / PD3.0 / QC4.0 / Nylon Trenzado / 2 m (6.6 ft)", "modelo": "70429", "precio": 264.0, "img": "", "id": 49}, {"categoria": "Energía Solar", "marca": "EPCOM POWERLINE", "nombre": "Fuente de Poder / 12 VCC / 3 A / Entrada 100-240 VCA / -20°C a 45°C / 88 x 50 x 35 mm", "modelo": "P12DC3A", "precio": 265.0, "img": "", "id": 50}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "HUB USB-A 3.0 / 4 Puertos USB-A 3.0 5Gbps / Cable 25 cm (0.82 pies) / Alimentación USB-C / Indicador LED / Diseño Ultra Delgado", "modelo": "10915", "precio": 268.0, "img": "", "id": 51}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Cable USB-C a USB-C / 2 m (6.6 ft) / Carga 240W / PD3.1 / 480 Mbps / Aluminio / Nylon Trenzado", "modelo": "90440", "precio": 269.0, "img": "", "id": 52}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "HUB USB 3.2 Gen1 / 4 Puertos USB-A / 5Gbps / Carcasa ABS+PC Metalizado / Cable Nylon 20cm / OTG / LED Indicador", "modelo": "15548", "precio": 270.0, "img": "", "id": 53}, {"categoria": "Redes e IT", "marca": "HIKSEMI by HIKVISION", "nombre": "Memoria microSD con Adaptador / 64 GB / Clase 10 / Lectura 92 MB/s / Escritura 30 MB/s / NAND TLC / Resistente a Agua y Golpes", "modelo": "HS-TF-C1/64G/NEO/A", "precio": 273.0, "img": "", "id": 54}, {"categoria": "Cámaras de Seguridad", "marca": "LINKEDPRO BY EPCOM", "nombre": "Batería de Respaldo AGM-VRLA / 12 V / 7 Ah / Vida Útil 5 Años / Terminales F1 + Adaptador F2 / Certificación UL", "modelo": "LK712", "precio": 283.0, "img": "", "id": 55}, {"categoria": "Accesorios", "marca": "UGREEN", "nombre": "Mouse Inalámbrico / 2.4 GHz / Alcance 10 m (32.8 ft) / DPI 1000-4000 Ajustable / Ultra Delgado 3 cm / Silencioso 40 dB", "modelo": "90372", "precio": 284.0, "img": "", "id": 56}], "categorias": [{"nombre": "Redes e IT"}, {"nombre": "Energía Solar"}, {"nombre": "Cámaras de Seguridad"}, {"nombre": "Accesorios"}, {"nombre": "Control de Acceso"}, {"nombre": "Radiocomunicación"}, {"nombre": "Repetidores de señal WiFi"}], "marcas": [{"nombre": "Ubiquiti"}, {"nombre": "Hikvision"}, {"nombre": "UGREEN"}, {"nombre": "TP-Link"}, {"nombre": "MikroTik"}, {"nombre": "EZVIZ"}, {"nombre": "ZKTeco"}, {"nombre": "Cambium Networks"}, {"nombre": "Epcom"}, {"nombre": "Motorola"}, {"nombre": "Kenwood"}, {"nombre": "Hytera"}, {"nombre": "Grandstream"}]};
+</script>
+<script>
+  const carrito = {};
+
+  // ── Envío a domicilio (mantener igual que en mp_pago.php) ─────────
+  const ENVIO_COSTO        = 70;    // MXN con IVA, Chihuahua capital
+  const ENVIO_GRATIS_DESDE = 1500;  // subtotal con IVA a partir del cual el envío es gratis
+  function tipoEntrega() {
+    const r = document.querySelector('input[name="entrega"]:checked');
+    return r ? r.value : "domicilio";
+  }
+  function costoEnvio(subtotal) {
+    if (tipoEntrega() !== "domicilio") return 0;
+    return subtotal >= ENVIO_GRATIS_DESDE ? 0 : ENVIO_COSTO;
+  }
+  function textoEntrega(subtotal) {
+    const envio = costoEnvio(subtotal);
+    if (tipoEntrega() === "recoger") return "Entrega: Recoger con ustedes (sin costo)";
+    return "Entrega: A domicilio en Chihuahua capital (" + (envio ? fmt(envio) : "envío gratis") + ")";
+  }
+  let productos = [];
+  let categoriaActual = "";
+  let categorias = [];
+
+  // ── Íconos ────────────────────────────────────────────────────────
+  function ico(name, cls) { return `<svg class="i${cls ? " " + cls : ""}" aria-hidden="true"><use href="#i-${name}"/></svg>`; }
+  function iconoCategoria(nombre) {
+    const n = normalizar(nombre);
+    if (/repetidor|wifi|señal|senal/.test(n)) return "wifi";
+    if (/red|it\b|switch|router/.test(n)) return "network";
+    if (/solar|energ/.test(n)) return "sun";
+    if (/camara|seguridad|cctv|video/.test(n)) return "camera";
+    if (/acceso|cerradura/.test(n)) return "lock";
+    if (/radio/.test(n)) return "radio";
+    if (/accesorio|cable|cargador/.test(n)) return "plug";
+    return "package";
+  }
+  function placeholder(p) {
+    return `<div class="ph">${ico(iconoCategoria(p.categoria || ""))}<small>${esc(p.marca || "Gree Networks")}</small></div>`;
+  }
+  function ponerImagen(cont, p, eager) {
+    if (!p.img) { cont.insertAdjacentHTML("beforeend", placeholder(p)); return; }
+    const img = document.createElement("img");
+    img.src = p.img; img.alt = p.nombre; if (!eager) img.loading = "lazy";
+    img.onerror = () => { img.remove(); cont.insertAdjacentHTML("beforeend", placeholder(p)); };
+    cont.appendChild(img);
+  }
+
+  function fmt(n) {
+    const d = Number.isInteger(Number(n)) ? 0 : 2;
+    return "$" + Number(n).toLocaleString("es-MX", { minimumFractionDigits: d, maximumFractionDigits: 2 }) + " MXN";
+  }
+  function esc(t) {
+    return String(t ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+  }
+  function buscarProducto(id) { return productos.find(p => p.id === id); }
+
+  // ── Toast ─────────────────────────────────────────────────────────
+  let toastTimer;
+  function toast(msg, opts = {}) {
+    const t = document.getElementById("toast");
+    document.getElementById("toast-txt").textContent = msg;
+    t.classList.toggle("error", !!opts.error);
+    t.querySelector("use").setAttribute("href", "#i-" + (opts.error ? "alert" : (opts.icon || "check")));
+    const b = document.getElementById("toast-btn");
+    b.hidden = !opts.verCarrito;
+    b.onclick = () => { toggleCart(true); t.classList.remove("show"); };
+    t.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove("show"), opts.ms || 3200);
+  }
+
+  // ── Tabs ─────────────────────────────────────────────────────────
+  function abrirTab(id, btn) {
+    document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
+    document.getElementById("tab-" + id).classList.add("active");
+    if (btn) btn.classList.add("active");
+    irAlCatalogo();
+  }
+  function abrirTabPorNombre(nombre) {
+    abrirTab(nombre, document.querySelector(`.tab-btn[data-tab="${nombre}"]`));
+  }
+  function irAlCatalogo() {
+    const y = document.getElementById("catalogo").getBoundingClientRect().top + window.scrollY - document.querySelector(".site-header").offsetHeight - 8;
+    if (window.scrollY > y) window.scrollTo({ top: y, behavior: "smooth" });
+  }
+
+  // ── Tarjeta ───────────────────────────────────────────────────────
+  function crearTarjeta(p) {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="card-media" role="button" tabindex="0" aria-label="Ver detalle de ${esc(p.nombre)}">
+        ${p.categoria ? `<span class="tag" role="button">${ico(iconoCategoria(p.categoria))}${esc(p.categoria)}</span>` : ""}
+      </div>
+      <div class="card-body">
+        ${p.marca ? `<div class="card-marca">${esc(p.marca)}</div>` : ""}
+        <h4>${esc(p.nombre)}</h4>
+        ${p.modelo ? `<small class="card-modelo">Modelo: ${esc(p.modelo)}</small>` : ""}
+        ${p.descripcion ? `<div class="card-desc">${esc(p.descripcion)}</div>` : ""}
+        ${p.precio_instalacion ? `<div class="opciones-inst"></div>` : ""}
+        <div class="price-row"><div class="price">${fmt(p.precio)}</div><span class="iva">IVA incluido</span></div>
+        <button class="btn-agregar" type="button">${ico("cart")}Agregar</button>
+      </div>`;
+    const media = card.querySelector(".card-media");
+    ponerImagen(media, p);
+    media.onclick = () => verDetalle(p.id);
+    media.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); verDetalle(p.id); } };
+    card.querySelector("h4").onclick = () => verDetalle(p.id);
+    const sel = { inst: false };
+    const ops = card.querySelector(".opciones-inst");
+    if (ops) pintarOpciones(ops, p, sel, card.querySelector(".price"));
+    const btn = card.querySelector(".btn-agregar");
+    btn.onclick = () => {
+      agregarProducto(p.id, sel.inst);
+      btn.classList.add("added"); btn.innerHTML = ico("check") + "Agregado";
+      setTimeout(() => { btn.classList.remove("added"); btn.innerHTML = ico("cart") + "Agregar"; }, 1400);
+    };
+    const tag = card.querySelector(".tag");
+    if (tag) tag.onclick = (e) => { e.stopPropagation(); mostrarCategoria(p.categoria); };
+    return card;
+  }
+
+  const POR_PAGINA = 48;
+  function renderGrid(gridId, lista, vacio, verMasId) {
+    const grid = document.getElementById(gridId);
+    const verMas = verMasId ? document.getElementById(verMasId) : null;
+    grid.innerHTML = "";
+    if (verMas) verMas.hidden = true;
+    if (!lista || lista.length === 0) {
+      grid.innerHTML = `<p class="empty-msg">${vacio || "Sin productos disponibles."}</p>`;
+      return;
+    }
+    let mostrados = 0;
+    const siguiente = () => {
+      lista.slice(mostrados, mostrados + POR_PAGINA).forEach(p => grid.appendChild(crearTarjeta(p)));
+      mostrados = Math.min(lista.length, mostrados + POR_PAGINA);
+      if (verMas) {
+        verMas.hidden = mostrados >= lista.length;
+        verMas.querySelector("button").textContent = `Ver más productos (${lista.length - mostrados})`;
+      }
+    };
+    if (verMas) verMas.querySelector("button").onclick = siguiente;
+    siguiente();
+  }
+
+  // ── Cargar catálogo ───────────────────────────────────────────────
+  async function cargarProductos() {
+    let data;
+    try {
+      const res = await fetch("productos.php", { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      data = await res.json();
+    } catch (e) {
+      data = DEMO_CATALOGO;   // demo sin servidor
+    }
+    productos  = Array.isArray(data.productos) ? data.productos : [];
+    categorias = Array.isArray(data.categorias) ? data.categorias : [];
+    renderMarcas(Array.isArray(data.marcas) ? data.marcas : []);
+    renderPestanasCategorias();
+    mostrarCategoria("", true);
+    const qs = new URLSearchParams(location.search);
+    const qcat = qs.get("cat");
+    if (qcat && categorias.some(c => c.nombre === qcat)) mostrarCategoria(qcat);
+    const qp = qs.get("p");
+    if (qp) {
+      const pid = /^\d+$/.test(qp) ? Number(qp) : qp;
+      if (buscarProducto(pid)) verDetalle(pid);
+    }
+    const qprod = qs.get("products");
+    if (qprod) cargarCarritoDesdeMeta(qprod, qs.get("coupon"));
+  }
+
+  // ── Carrusel de marcas ────────────────────────────────────────────
+  function renderMarcas(marcas) {
+    const sec = document.getElementById("marcas");
+    const track = document.getElementById("marcas-track");
+    if (!marcas.length) { sec.hidden = true; return; }
+    const crear = (m, copia) => {
+      const d = document.createElement("div");
+      d.className = "marca";
+      if (copia) d.setAttribute("aria-hidden", "true");
+      const texto = () => { d.innerHTML = ""; const t = document.createElement("span"); t.className = "marca-texto"; t.textContent = m.nombre; d.appendChild(t); };
+      if (m.logo) {
+        const img = document.createElement("img");
+        img.src = m.logo; img.alt = copia ? "" : m.nombre; img.loading = "lazy";
+        img.onerror = texto;
+        d.appendChild(img);
+      } else texto();
+      return d;
+    };
+    track.innerHTML = "";
+    const vueltas = Math.max(1, Math.ceil(16 / marcas.length));
+    const base = [];
+    for (let i = 0; i < vueltas; i++) base.push(...marcas);
+    base.forEach((m, i) => track.appendChild(crear(m, i >= marcas.length)));
+    base.forEach(m => track.appendChild(crear(m, true)));
+    track.style.setProperty("--marcas-dur", Math.max(20, base.length * 3) + "s");
+    sec.hidden = false;
+  }
+
+  function renderPestanasCategorias() {
+    const cont = document.getElementById("tabs-categorias");
+    cont.innerHTML = "";
+    categorias.forEach(c => {
+      const b = document.createElement("button");
+      b.className = "tab-btn";
+      b.type = "button";
+      b.dataset.tab = "productos";
+      b.dataset.cat = c.nombre;
+      b.innerHTML = ico(iconoCategoria(c.nombre)) + esc(c.nombre);   // el emoji del panel se reemplaza por un ícono
+      b.onclick = () => mostrarCategoria(c.nombre);
+      cont.appendChild(b);
+    });
+  }
+
+  function ordenar(lista) {
+    const o = document.getElementById("orden").value;
+    const pr = p => Number(p.precio) || Infinity;
+    if (o === "precio-desc") return lista.sort((a, b) => (Number(b.precio) || 0) - (Number(a.precio) || 0));
+    if (o === "nombre") return lista.sort((a, b) => String(a.nombre).localeCompare(String(b.nombre), "es"));
+    return lista.sort((a, b) => pr(a) - pr(b));
+  }
+
+  function mostrarCategoria(cat, inicial) {
+    categoriaActual = cat;
+    document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+    document.getElementById("tab-productos").classList.add("active");
+    document.querySelectorAll(".tab-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.tab === "productos" && b.dataset.cat === cat));
+    document.getElementById("titulo-productos").innerHTML =
+      cat ? ico(iconoCategoria(cat)) + esc(cat) : ico("grid") + "Todos los productos";
+    const dest = cat ? [] : productos.filter(p => p.destacado).slice(0, 8);
+    document.getElementById("destacados").hidden = dest.length === 0;
+    if (dest.length) renderGrid("grid-destacados", dest);
+    const idsDest = new Set(dest.map(p => p.id));
+    const lista = ordenar(cat ? productos.filter(p => p.categoria === cat) : productos.filter(p => !idsDest.has(p.id)));
+    const total = cat ? lista.length : productos.length;
+    document.getElementById("conteo-productos").textContent =
+      `${total} producto${total === 1 ? "" : "s"} · Precios con IVA incluido. Te confirmamos disponibilidad y entrega.`;
+    renderGrid("grid-productos", lista, "Muy pronto tendremos productos aquí. Escríbenos por WhatsApp para cotizar.", "ver-mas-productos");
+    const btn = document.querySelector(".tab-btn.active");
+    if (btn) btn.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    if (!inicial) irAlCatalogo();
+  }
+
+  // ── Detalle ───────────────────────────────────────────────────────
+  function pintarOpciones(cont, p, sel, precioEl) {
+    cont.innerHTML = "";
+    [[false, "Sin instalación", p.precio], [true, "Con instalación", p.precio_instalacion]].forEach(([inst, txt, precio]) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "op-inst" + (sel.inst === inst ? " active" : "");
+      b.innerHTML = `${txt}<strong>${fmt(precio)}</strong>`;
+      b.onclick = (e) => {
+        e.stopPropagation();
+        sel.inst = inst;
+        cont.querySelectorAll(".op-inst").forEach(x => x.classList.toggle("active", x === b));
+        if (precioEl) precioEl.textContent = fmt(precio);
+      };
+      cont.appendChild(b);
+    });
+  }
+
+  let qtyModal = 1;
+  function cambiarQtyModal(d) { qtyModal = Math.min(99, Math.max(1, qtyModal + d)); document.getElementById("mp-qty").textContent = qtyModal; }
+
+  function verDetalle(id) {
+    const p = buscarProducto(id);
+    if (!p) return;
+    const media = document.getElementById("mp-media");
+    media.innerHTML = "";
+    ponerImagen(media, p, true);
+    const cat = document.getElementById("mp-cat");
+    cat.innerHTML = p.categoria ? ico(iconoCategoria(p.categoria)) + esc(p.categoria) : "";
+    cat.style.display = p.categoria ? "" : "none";
+    document.getElementById("mp-nombre").textContent = p.nombre;
+    document.getElementById("mp-modelo").textContent = [p.marca, p.modelo ? "Modelo: " + p.modelo : ""].filter(Boolean).join(" · ");
+    const precioEl = document.getElementById("mp-precio");
+    precioEl.textContent = fmt(p.precio);
+    const sel = { inst: false };
+    const ops = document.getElementById("mp-opciones");
+    ops.innerHTML = "";
+    ops.style.display = p.precio_instalacion ? "" : "none";
+    if (p.precio_instalacion) pintarOpciones(ops, p, sel, precioEl);
+    document.getElementById("mp-desc").textContent = p.descripcion ||
+      "Precio con IVA incluido, sujeto a existencia. Te confirmamos disponibilidad y tiempo de entrega al hacer tu pedido.";
+    qtyModal = 1; document.getElementById("mp-qty").textContent = 1;
+    document.getElementById("mp-agregar").onclick = () => { agregarProducto(p.id, sel.inst, qtyModal); cerrarDetalle(); };
+    document.getElementById("modal-prod").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function cerrarDetalle() { document.getElementById("modal-prod").classList.remove("open"); document.body.style.overflow = ""; }
+  document.addEventListener("keydown", e => { if (e.key === "Escape") { cerrarDetalle(); cerrarSPEI(); toggleCart(false); } });
+
+  // ── Búsqueda ──────────────────────────────────────────────────────
+  function normalizar(t) {
+    return String(t || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  }
+  function buscar() {
+    const term = document.getElementById("busqueda-input").value.trim();
+    if (!term) { mostrarCategoria(""); return; }
+    const palabras = normalizar(term).split(/\s+/);
+    const res = productos.filter(p => {
+      const texto = normalizar([p.nombre, p.modelo, p.marca, p.categoria, p.descripcion].join(" "));
+      return palabras.every(w => texto.includes(w));
+    });
+    document.querySelectorAll(".tab-content").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach(el => el.classList.remove("active"));
+    document.getElementById("tab-busqueda").classList.add("active");
+    document.getElementById("busqueda-desc").textContent = res.length
+      ? `${res.length} resultado${res.length === 1 ? "" : "s"} para "${term}"`
+      : `Sin resultados para "${term}"`;
+    renderGrid("grid-busqueda", res, "Prueba con otra palabra o escríbenos por WhatsApp y te lo conseguimos.", "ver-mas-busqueda");
+    irAlCatalogo();
+  }
+
+  // ── Carrito ───────────────────────────────────────────────────────
+  function agregarProducto(id, instalacion, cantidad) {
+    const p = buscarProducto(id);
+    if (!p) return;
+    const inst = !!(instalacion && p.precio_instalacion);
+    agregarAlCarrito(p.id + (inst ? "-inst" : ""), p.id, p.nombre + (inst ? " (con instalación)" : ""),
+                     inst ? p.precio_instalacion : p.precio, inst, cantidad || 1);
+  }
+  function agregarAlCarrito(clave, id, nombre, precio, instalacion, cantidad) {
+    if (!carrito[clave]) carrito[clave] = { id, nombre, base: nombre.replace(/ \(con instalación\)$/, ""), precio, instalacion: !!instalacion, cantidad: 0 };
+    carrito[clave].cantidad = Math.min(99, carrito[clave].cantidad + (cantidad || 1));
+    renderCarrito();
+    document.querySelectorAll(".cart-count").forEach(b => { b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); });
+    toast("Agregado al carrito", { verCarrito: true });
+  }
+  function quitarDelCarrito(id) { delete carrito[id]; renderCarrito(); }
+  function cambiarCantidad(id, d) {
+    if (!carrito[id]) return;
+    carrito[id].cantidad += d;
+    if (carrito[id].cantidad <= 0) delete carrito[id];
+    else carrito[id].cantidad = Math.min(99, carrito[id].cantidad);
+    renderCarrito();
+  }
+
+  function cargarCarritoDesdeMeta(param, cupon) {
+    Object.keys(carrito).forEach(k => delete carrito[k]);
+    const faltan = [];
+    param.split(",").forEach(par => {
+      const [rawId, rawCant] = par.split(":");
+      const idCat = (rawId || "").trim();
+      const cant  = Math.min(99, Math.max(1, parseInt(rawCant, 10) || 1));
+      if (!idCat) return;
+      const id = /^p\d+$/.test(idCat) ? Number(idCat.slice(1)) : idCat;
+      const prod = buscarProducto(id);
+      if (!prod) { faltan.push(idCat); return; }
+      carrito[prod.id] = { id: prod.id, nombre: prod.nombre, base: prod.nombre, precio: prod.precio, instalacion: false, cantidad: cant };
+    });
+    renderCarrito();
+    toggleCart(true);
+    const avisos = [];
+    if (faltan.length) avisos.push("Algunos productos ya no están disponibles. Escríbenos por WhatsApp y te ofrecemos una alternativa.");
+    if (cupon) avisos.push("El cupón «" + cupon + "» no es válido en este momento.");
+    if (avisos.length) setTimeout(() => toast(avisos.join(" "), { error: true, ms: 7000 }), 400);
+  }
+  function toggleCart(abrir) {
+    const panel = document.getElementById("cart-panel");
+    const open = typeof abrir === "boolean" ? abrir : !panel.classList.contains("open");
+    panel.classList.toggle("open", open);
+    panel.setAttribute("aria-hidden", String(!open));
+    document.getElementById("cart-overlay").classList.toggle("open", open);
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open) document.getElementById("toast").classList.remove("show");
+  }
+
+  function renderCarrito() {
+    const itemsDiv = document.getElementById("cart-items");
+    const waBtn    = document.getElementById("whatsapp-order");
+    const ids = Object.keys(carrito);
+    let totalCant = 0, totalPrecio = 0;
+    itemsDiv.innerHTML = "";
+    const entregaDiv  = document.getElementById("cart-entrega");
+    const foot        = document.getElementById("cart-foot");
+    const meter       = document.getElementById("envio-meter");
+
+    if (!ids.length) {
+      itemsDiv.innerHTML = `<div class="cart-empty">${ico("cart")}<b>Tu carrito está vacío</b>Agrega productos y aquí verás tu pedido.</div>`;
+      entregaDiv.style.display = "none";
+      foot.hidden = true;
+      meter.hidden = true;
+      document.querySelectorAll(".pay-btn").forEach(b => { if (!b.closest(".spei-box")) b.style.display = "none"; });
+    } else {
+      ids.forEach(id => {
+        const item = carrito[id];
+        const p = buscarProducto(item.id) || {};
+        totalCant   += item.cantidad;
+        totalPrecio += item.cantidad * item.precio;
+        const row = document.createElement("div");
+        row.className = "cart-item";
+        row.innerHTML = `
+          <div class="ci-img"></div>
+          <div>
+            <div class="ci-name">${esc(item.base)}</div>
+            ${item.instalacion ? `<span class="ci-inst">${ico("wrench")}Con instalación</span>` : ""}
+            <div><div class="ci-qty"><button type="button" aria-label="Menos">−</button><span>${item.cantidad}</span><button type="button" aria-label="Más">+</button></div></div>
+          </div>
+          <div class="ci-right">
+            <b>${fmt(item.cantidad * item.precio)}</b>
+            <button class="ci-del" type="button" aria-label="Quitar">${ico("trash")}</button>
+          </div>`;
+        const box = row.querySelector(".ci-img");
+        if (p.img) { const im = document.createElement("img"); im.src = p.img; im.alt = ""; im.onerror = () => { box.innerHTML = ico(iconoCategoria(p.categoria || "")); }; box.appendChild(im); }
+        else box.innerHTML = ico(iconoCategoria(p.categoria || ""));
+        const [menos, mas] = row.querySelectorAll(".ci-qty button");
+        menos.onclick = () => cambiarCantidad(id, -1);
+        mas.onclick = () => cambiarCantidad(id, 1);
+        row.querySelector(".ci-del").onclick = () => quitarDelCarrito(id);
+        itemsDiv.appendChild(row);
+      });
+      const envio = costoEnvio(totalPrecio);
+      const falta = ENVIO_GRATIS_DESDE - totalPrecio;
+      document.getElementById("envio-leyenda").textContent = falta > 0
+        ? fmt(ENVIO_COSTO) + " · gratis agregando " + fmt(falta) + " más"
+        : "¡Envío gratis!";
+      meter.hidden = tipoEntrega() !== "domicilio";
+      meter.classList.toggle("ok", falta <= 0);
+      meter.innerHTML = falta > 0
+        ? `Te faltan <b>${fmt(falta)}</b> para el envío gratis<div class="bar"><span style="width:${Math.min(100, totalPrecio / ENVIO_GRATIS_DESDE * 100)}%"></span></div>`
+        : `${ico("check")} <b style="color:inherit">¡Tu pedido tiene envío gratis!</b>`;
+      entregaDiv.style.display = "block";
+      foot.hidden = false;
+      document.getElementById("cart-desglose").innerHTML =
+        `<div><span>Productos (${totalCant})</span><span>${fmt(totalPrecio)}</span></div>` +
+        `<div><span>${tipoEntrega() === "recoger" ? "Recoger en sucursal" : "Envío"}</span><span>${tipoEntrega() === "recoger" || !envio ? "Gratis" : fmt(envio)}</span></div>`;
+      const subtotalProductos = totalPrecio;
+      totalPrecio += envio;
+      document.getElementById("cart-total").textContent = fmt(totalPrecio);
+      let msg = "Hola, quiero hacer este pedido:%0A";
+      ids.forEach(id => {
+        const i = carrito[id];
+        msg += `- ${encodeURIComponent(i.nombre.slice(0,50))} x${i.cantidad} (${encodeURIComponent(fmt(i.cantidad*i.precio))})%0A`;
+      });
+      msg += `%0A${encodeURIComponent(textoEntrega(subtotalProductos))}`;
+      msg += `%0ATotal: ${encodeURIComponent(fmt(totalPrecio))}`;
+      if (tipoEntrega() === "domicilio") msg += `%0A%0AMi dirección es: `;
+      waBtn.href = `https://wa.me/526144757914?text=${msg}`;
+      ["whatsapp-order", "mp-btn", "spei-btn"].forEach(i => document.getElementById(i).style.display = "flex");
+    }
+    document.querySelectorAll(".cart-count").forEach(b => b.textContent = totalCant);
+  }
+
+  // ── Pagar con MercadoPago ─────────────────────────────────────────
+  async function pagarConMP() {
+    const btn = document.getElementById("mp-btn");
+    const lbl = btn.querySelector("span");
+    btn.disabled = true;
+    lbl.textContent = "Procesando…";
+    const items = Object.values(carrito).map(i => ({ id: i.id, cantidad: i.cantidad, instalacion: i.instalacion }));
+    const restaurar = () => { btn.disabled = false; lbl.textContent = "Pagar con tarjeta · Mercado Pago"; };
+    try {
+      const res  = await fetch("mp_pago.php", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ items, entrega: tipoEntrega() }),
+      });
+      const data = await res.json();
+      if (data.init_point) {
+        window.location.href = data.init_point;
+      } else {
+        toast("Error al generar el pago: " + (data.error || "intenta de nuevo"), { error: true, ms: 5000 });
+        restaurar();
+      }
+    } catch (e) {
+      toast("No se pudo conectar con el pago. Intenta de nuevo o paga por SPEI.", { error: true, ms: 5000 });
+      restaurar();
+    }
+  }
+
+  // ── SPEI ──────────────────────────────────────────────────────────
+  function mostrarSPEI() {
+    const ids = Object.keys(carrito);
+    let total = 0;
+    let resumen = "Hola, realicé una transferencia SPEI y adjunto el comprobante.%0A%0A*Pedido:*%0A";
+    ids.forEach(id => {
+      const i = carrito[id];
+      total += i.precio * i.cantidad;
+      resumen += `- ${encodeURIComponent(i.nombre.slice(0,50))} x${i.cantidad} (${encodeURIComponent(fmt(i.precio * i.cantidad))})%0A`;
+    });
+    const subtotalSPEI = total;
+    total += costoEnvio(subtotalSPEI);
+    resumen += `%0A${encodeURIComponent(textoEntrega(subtotalSPEI))}`;
+    resumen += `%0A*Total pagado: ${encodeURIComponent(fmt(total))}*%0ACLABE: 728969000064036844`;
+    if (tipoEntrega() === "domicilio") resumen += `%0A%0AMi dirección es: `;
+    document.getElementById("spei-total").textContent = fmt(total);
+    document.getElementById("spei-wa-btn").href = `https://wa.me/526144757914?text=${resumen}`;
+    document.getElementById("modal-spei").classList.add("open");
+  }
+  function cerrarSPEI() { document.getElementById("modal-spei").classList.remove("open"); }
+  function copiarClabe() {
+    navigator.clipboard.writeText("728969000064036844")
+      .then(() => toast("CLABE copiada al portapapeles", { icon: "copy" }))
+      .catch(() => toast("CLABE: 728969000064036844", { icon: "copy", ms: 6000 }));
+  }
+
+  // Mensaje al regresar de Mercado Pago
+  (function() {
+    const p = new URLSearchParams(window.location.search).get("pago");
+    if (p === "exitoso")   setTimeout(() => toast("¡Pago exitoso! Nos pondremos en contacto contigo pronto.", { ms: 7000 }), 500);
+    else if (p === "fallido")   setTimeout(() => toast("El pago no se completó. Puedes intentarlo de nuevo.", { error: true, ms: 7000 }), 500);
+    else if (p === "pendiente") setTimeout(() => toast("Pago pendiente. Te avisaremos cuando se confirme.", { icon: "clock", ms: 7000 }), 500);
+  })();
+
+  // ── Init ─────────────────────────────────────────────────────────
+  renderCarrito();
+  cargarProductos();
+</script>
+</body>
+</html>
