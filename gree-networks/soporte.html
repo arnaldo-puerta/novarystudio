@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soporte Técnico — Gree Networks</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#1E50D6;--blue-dark:#163FAE;--navy:#0B1E40;--lime:#8CC63F;--lime-dark:#4E7D06;
+      --ink:#0B1E40;--muted:#4A5568;--line:#E3E8F0;--bg:#F4F6FA;--soft:#EEF3FF;--white:#fff;
+      --display:'Days One','Inter',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:100%}
+    body{font-family:var(--body);background:var(--bg);min-height:100vh;display:flex;flex-direction:column;color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+    h1,h2,h3{font-weight:400}
+    a{color:inherit}
+    button{font-family:inherit}
+
+    /* ── Header (igual que la página principal) ── */
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+    .header-row{max-width:1180px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .brand svg{width:36px;height:36px;flex:none}
+    .brand-text{display:flex;flex-direction:column;gap:3px}
+    .brand-text b{font-weight:800;font-size:20px;letter-spacing:-.02em;line-height:.9;color:var(--blue)}
+    .brand-text small{font-weight:600;font-size:7px;letter-spacing:.34em;line-height:1;color:var(--lime-dark)}
+    .brand-sep{font-family:var(--display);color:var(--muted);font-size:14px;padding-left:12px;margin-left:2px;border-left:2px solid var(--line);line-height:1.6}
+    .h-right{margin-left:auto;display:flex;align-items:center;gap:14px}
+    .h-online{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--lime-dark)}
+    .pv{width:9px;height:9px;border-radius:50%;background:var(--lime);animation:pulso 2.5s infinite;flex-shrink:0}
+    @keyframes pulso{0%,100%{box-shadow:0 0 0 2px rgba(140,198,63,.35)}50%{box-shadow:0 0 0 6px rgba(140,198,63,.08)}}
+    .h-link{font-weight:600;font-size:14px;text-decoration:none;color:var(--navy)}
+    .h-link:hover{color:var(--blue)}
+    .h-volver{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:6px 14px;border-radius:999px;background:var(--lime);color:var(--navy);text-decoration:none;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;transition:background .15s}
+    .h-volver:hover{background:#9BD34C}
+    .h-volver svg{width:16px;height:16px}
+
+    /* ── Título de la página ── */
+    .page-hero{background:radial-gradient(120% 140% at 85% 0%,#3A6FF0 0%,var(--blue) 45%,var(--blue-dark) 100%);color:#fff;position:relative;overflow:hidden}
+    .page-hero .ph-in{max-width:1180px;margin:0 auto;padding:22px 20px 70px;position:relative}
+    .page-hero h1{font-family:var(--display);font-size:clamp(24px,3.2vw,32px);line-height:1.08;text-transform:uppercase}
+    .page-hero h1 span{color:var(--lime)}
+    .page-hero p{margin-top:6px;color:#E6EDFF;font-size:15px;max-width:52ch}
+    .page-hero svg.deco{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
+
+    /* ── Promo Tienda ── */
+    .tienda-promo{max-width:1140px;width:calc(100% - 40px);margin:-50px auto 0;position:relative;z-index:2;border-radius:20px;overflow:hidden;background:var(--navy);color:#fff;box-shadow:0 24px 48px rgba(11,30,64,.25)}
+    .tp-top{display:flex;align-items:center;gap:14px;padding:16px 20px 10px;flex-wrap:wrap}
+    .tp-icon{width:42px;height:42px;border-radius:12px;background:var(--lime);color:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .tp-icon svg{width:22px;height:22px}
+    .tp-txt{flex:1;min-width:220px}
+    .tp-badge{display:inline-block;background:var(--lime);color:var(--navy);font-size:11px;font-weight:800;letter-spacing:.06em;padding:4px 10px;border-radius:999px;margin-bottom:5px}
+    .tp-txt h2{font-family:var(--display);font-size:clamp(16px,1.8vw,19px);line-height:1.15}
+    .tp-txt p{font-size:13px;color:#C9D5EE;margin-top:3px;line-height:1.5}
+    .tp-cta{display:inline-flex;align-items:center;justify-content:center;min-height:38px;background:var(--lime);color:var(--navy);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:8px 18px;border-radius:999px;white-space:nowrap;transition:transform .15s,background .15s}
+    .tp-cta:hover{transform:translateY(-1px);background:#9BD34C}
+    .tp-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 20px 12px}
+    .tp-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;color:#E6EDFF}
+    .tp-ads{position:relative;margin:0 20px 16px;overflow:hidden;border-radius:18px;touch-action:pan-y}
+    .tp-track{display:flex;transition:transform .6s cubic-bezier(.4,0,.2,1)}
+    .tp-ad{flex:0 0 100%;min-width:0;background:var(--blue);border-radius:16px;padding:14px 56px;display:grid;grid-template-columns:minmax(200px,.9fr) 1.6fr;grid-template-areas:"tit mini" "desde mini" "cta mini";column-gap:20px;row-gap:10px;align-content:center}
+    .tp-ad h3{grid-area:tit}.tp-ad .tp-desde{grid-area:desde}.tp-ad .tp-mini{grid-area:mini;align-self:center}.tp-ad .tp-ad-cta{grid-area:cta}
+    .tp-ad h3{font-family:var(--display);font-size:15px;line-height:1.25}
+    .tp-ad .tp-desde{font-size:13px;color:#E6EDFF}
+    .tp-ad .tp-desde b{background:var(--lime);color:var(--navy);padding:2px 8px;border-radius:6px}
+    .tp-nav{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:2px solid rgba(255,255,255,.7);cursor:pointer;background:rgba(11,30,64,.35);color:#fff;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center}
+    .tp-nav:hover{background:rgba(255,255,255,.18)}
+    .tp-nav.prev{left:10px}.tp-nav.next{right:10px}
+    .tp-dots{display:flex;gap:7px;justify-content:center;margin:-6px 0 14px}
+    .tp-dot{width:10px;height:10px;border-radius:50%;border:none;background:rgba(255,255,255,.35);cursor:pointer;padding:0;transition:all .2s}
+    .tp-dot.on{background:var(--lime);width:26px;border-radius:999px}
+    .tp-mini{display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .tp-mini.show{display:grid}
+    .tp-prod{background:#fff;border-radius:14px;overflow:hidden;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s;min-width:0}
+    .tp-prod:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.2)}
+    .tp-prod img{width:100%;height:68px;object-fit:contain;background:#fff;padding:8px}
+    .tp-prod .tpn{font-size:11.5px;line-height:1.3;padding:0 9px;height:45px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;color:var(--muted)}
+    .tp-prod .tpp{font-family:var(--display);font-size:14px;color:var(--blue);padding:6px 9px 10px}
+    .tp-srv{background:#fff;border-radius:14px;color:var(--ink);font-size:12.5px;font-weight:700;text-align:center;padding:12px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:92px;line-height:1.3}
+    .tp-srv span{font-size:24px}
+    .tp-ad-cta{justify-self:start;align-self:start;display:inline-flex;align-items:center;min-height:36px;background:#fff;color:var(--blue);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;padding:8px 18px;border-radius:999px}
+    .tp-ad-cta:hover{background:var(--lime);color:var(--navy)}
+
+    /* ── Layout ── */
+    .main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 280px;max-width:1180px;width:100%;margin:0 auto;padding:24px 20px 48px;gap:20px;align-items:start}
+    .chat-wrap{display:flex;flex-direction:column;gap:14px;min-width:0}
+
+    /* Tarjetas base */
+    .wisphub-card,.pagos-card,.guia-card,.soporte-card{background:#fff;border-radius:20px;border:1px solid var(--line);overflow:hidden;box-shadow:0 4px 16px rgba(11,30,64,.04)}
+
+    /* ── Consulta WispHub ── */
+    .wh-head{background:var(--blue);padding:12px 18px;display:flex;align-items:center;gap:14px}
+    .wh-head-av{width:36px;height:36px;border-radius:11px;background:var(--lime);color:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .wh-head-av svg{width:20px;height:20px}
+    .wh-head h2{font-family:var(--display);color:#fff;font-size:16px;line-height:1.2}
+    .wh-head p{color:#DCE5FF;font-size:12.5px}
+    .wh-body{padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+    .wh-buscar{display:flex;gap:10px}
+    .wh-input{flex:1;min-width:0;border:2px solid var(--line);border-radius:999px;padding:9px 16px;font-size:15px;outline:none;font-family:inherit;background:var(--bg);color:var(--ink);transition:border-color .15s,background .15s}
+    .wh-input:focus{border-color:var(--blue);background:#fff}
+    .wh-btn{min-height:42px;padding:9px 20px;background:var(--lime);color:var(--navy);border:none;border-radius:999px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:background .15s;white-space:nowrap}
+    .wh-btn:hover{background:#9BD34C}
+    .wh-btn:disabled{opacity:.5;cursor:not-allowed}
+    .wh-tabs{display:flex;gap:6px;background:var(--bg);padding:5px;border-radius:999px}
+    .wh-tab{flex:1;min-height:34px;padding:6px;border-radius:999px;border:none;background:transparent;color:var(--muted);font-size:13px;font-weight:600;cursor:pointer;text-align:center;transition:all .15s}
+    .wh-tab.activo{background:var(--blue);color:#fff;box-shadow:0 4px 10px rgba(30,80,214,.25)}
+    .wh-resultado{display:none;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+    .wh-resultado.show{display:block}
+    .wh-res-head{background:var(--soft);padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+    .wh-res-av{width:42px;height:42px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:700;flex-shrink:0}
+    .wh-res-nombre{font-size:15px;font-weight:700;color:var(--ink)}
+    .wh-res-plan{font-size:13px;color:var(--muted)}
+    .wh-status{margin-left:auto;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700}
+    .wh-status.activo{background:#E7F4D6;color:var(--lime-dark)}
+    .wh-status.suspendido{background:#FDECEC;color:#B42318}
+    .wh-filas{padding:8px 18px 12px;display:flex;flex-direction:column;background:#fff}
+    .wh-fila{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+    .wh-fila:last-child{border:none}
+    .wh-fila-label{color:var(--muted)}
+    .wh-fila-valor{font-weight:700;color:var(--ink);text-align:right}
+    .wh-fila-valor.deuda{color:#B42318;font-size:16px}
+    .wh-fila-valor.ok{color:var(--lime-dark)}
+    .wh-error{padding:12px 16px;background:#FDECEC;color:#B42318;font-size:14px;border-radius:12px;display:none;border:1px solid #F8C9C5}
+    .wh-error.show{display:block}
+    .wh-loading{display:none;align-items:center;gap:10px;padding:12px 4px;font-size:14px;color:var(--muted)}
+    .wh-loading.show{display:flex}
+    .spin{width:20px;height:20px;border:3px solid var(--soft);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite;flex-shrink:0}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ── Mis pagos ── */
+    .pagos-card{display:none}
+    .pagos-card.show{display:block}
+    .pagos-head{background:var(--navy);padding:14px 22px;font-family:var(--display);font-size:17px;color:#fff}
+    .pago-fila{display:flex;align-items:center;gap:12px;padding:14px 22px;border-bottom:1px solid var(--line);font-size:14px;flex-wrap:wrap}
+    .pago-fila:last-child{border:none}
+    .pago-info{flex:1;min-width:140px}
+    .pago-monto{font-family:var(--display);color:var(--ink);font-size:16px}
+    .pago-meta{font-size:12.5px;color:var(--muted)}
+    .pago-acciones{display:flex;gap:6px;flex-shrink:0;flex-wrap:wrap}
+    .pago-btn{min-height:38px;display:inline-flex;align-items:center;padding:7px 14px;border-radius:999px;border:2px solid var(--blue);background:#fff;color:var(--blue);font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;text-decoration:none;font-family:inherit}
+    .pago-btn:hover{background:var(--blue);color:#fff}
+    .pago-btn.facturado{border-color:var(--line);color:#8A94A6;cursor:default}
+    .pago-btn.facturado:hover{background:#fff;color:#8A94A6}
+    .pago-vacio{padding:22px;text-align:center;font-size:13.5px;color:var(--muted)}
+
+    /* ── Modales ── */
+    .modal-bg{display:none;position:fixed;inset:0;background:rgba(11,30,64,.55);z-index:9999;align-items:center;justify-content:center;padding:16px}
+    .modal-bg.show{display:flex}
+    .modal-box{background:#fff;border-radius:22px;padding:26px;max-width:440px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+    .modal-box h3{font-family:var(--display);font-size:20px;color:var(--blue);margin-bottom:6px;padding-right:36px}
+    .modal-box .sub{font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5}
+    .modal-close{position:absolute;top:14px;right:14px;width:40px;height:40px;border:none;background:var(--bg);cursor:pointer;font-size:16px;color:var(--muted);line-height:1;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .modal-close:hover{background:var(--line);color:var(--ink)}
+    .mf-group{margin-bottom:14px}
+    .mf-group label{display:block;font-size:13px;color:var(--ink);margin-bottom:5px;font-weight:600}
+    .mf-group input,.mf-group select{width:100%;min-height:46px;padding:10px 14px;border:2px solid var(--line);border-radius:12px;font-size:16px;outline:none;font-family:inherit;background:#fff;color:var(--ink)}
+    .mf-group input:focus,.mf-group select:focus{border-color:var(--blue)}
+    #modal-clave-input{border:2px solid var(--line)!important;border-radius:14px!important}
+    #modal-clave-input:focus{border-color:var(--blue)!important;outline:none}
+    .modal-err{background:#FDECEC;color:#B42318;font-size:13px;padding:10px 12px;border-radius:12px;margin-bottom:12px;display:none;border:1px solid #F8C9C5}
+    .modal-err.show{display:block}
+    .modal-ok{background:#E7F4D6;color:var(--lime-dark);font-size:13px;padding:10px 12px;border-radius:12px;margin-bottom:12px;display:none;line-height:1.5}
+    .modal-ok.show{display:block}
+    .modal-ok a{color:var(--lime-dark);font-weight:700}
+    .modal-btns{display:flex;gap:10px;margin-top:8px}
+    .modal-btns button{flex:1;min-height:48px;padding:11px;border-radius:999px;border:none;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+    .mb-cancelar{background:var(--bg);color:var(--muted)}
+    .mb-cancelar:hover{background:var(--line)}
+    .mb-enviar{background:var(--blue);color:#fff}
+    .mb-enviar:hover{background:var(--blue-dark)}
+    .mb-enviar:disabled{opacity:.6;cursor:not-allowed}
+    .opt-persona{padding:16px;border:2px solid var(--line);border-radius:16px;background:#fff;font-size:15px;font-weight:700;cursor:pointer;text-align:left;font-family:inherit;color:var(--ink)}
+    .opt-persona:hover{border-color:var(--blue);background:var(--soft)}
+    .opt-persona span{display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:2px}
+    .btn-sec{width:100%;min-height:46px;padding:10px;border:2px solid var(--line);border-radius:999px;background:#fff;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--muted)}
+    .btn-sec:hover{background:var(--bg)}
+    .aviso-box{border-radius:16px;padding:18px;margin-bottom:16px;text-align:center}
+    .aviso-box.amarillo{background:#FFF7E0;border:1px solid #FFE08A}
+    .aviso-box.verde{background:#EEF7E1;border:1px solid #CFE8AE}
+    .aviso-box .ab-ico{font-size:32px;margin-bottom:8px}
+    .aviso-box .ab-tit{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:6px}
+    .aviso-box .ab-txt{font-size:13.5px;color:var(--muted);line-height:1.55}
+    .btn-wa{display:inline-flex;align-items:center;gap:8px;margin-top:14px;min-height:48px;padding:12px 24px;background:#25D366;color:#fff;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none}
+    .btn-wa:hover{background:#1EBE5A}
+
+    /* ── Guía de facturación ── */
+    .guia-toggle{width:100%;min-height:50px;background:#fff;border:none;padding:10px 18px;display:flex;align-items:center;gap:12px;cursor:pointer;font-family:inherit;font-size:14.5px;font-weight:700;color:var(--ink);text-align:left}
+    .guia-toggle:hover{background:var(--bg)}
+    .guia-toggle .gt-ico{width:30px;height:30px;border-radius:12px;background:var(--soft);color:var(--blue);display:flex;align-items:center;justify-content:center;flex:none}
+    .guia-toggle .gt-ico svg{width:20px;height:20px}
+    .guia-toggle .gt-arrow{margin-left:auto;font-size:12px;color:var(--blue);transition:transform .2s}
+    .guia-toggle.abierto .gt-arrow{transform:rotate(180deg)}
+    .guia-body{display:none;padding:20px 22px;border-top:1px solid var(--line)}
+    .guia-body.show{display:block}
+    .guia-paso{display:flex;gap:14px;margin-bottom:18px;align-items:flex-start}
+    .guia-paso:last-child{margin-bottom:0}
+    .guia-num{width:32px;height:32px;border-radius:50%;background:var(--lime);color:var(--navy);font-family:var(--display);font-size:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .guia-paso-txt{font-size:14px;color:var(--muted);line-height:1.6}
+    .guia-paso-txt strong{color:var(--ink)}
+    .guia-nota{background:#FFF7E0;border:1px solid #FFE08A;border-radius:14px;padding:12px 14px;font-size:13px;color:#5D4300;margin-top:16px;line-height:1.55}
+    .guia-nota a{color:#5D4300!important}
+    .guia-dato{background:var(--soft);border-radius:12px;padding:10px 14px;font-size:13px;color:var(--navy);margin-top:10px;line-height:1.7}
+
+    /* ── Chat de soporte ── */
+    .soporte-card{display:flex;flex-direction:column;min-height:380px;max-height:540px}
+    .chat-head{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;flex-shrink:0;background:#fff}
+    .bot-av{width:36px;height:36px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .bot-av svg{width:24px;height:24px}
+    .chat-head h2{font-family:var(--display);font-size:16px;color:var(--ink);line-height:1.2}
+    .chat-head p{font-size:13px;color:var(--muted)}
+    .modo-badge{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;background:#E7F4D6;color:var(--lime-dark);flex-shrink:0}
+    .modo-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime)}
+    #msgs{flex:1;overflow-y:auto;padding:16px 16px 8px;display:flex;flex-direction:column;gap:10px;background:var(--bg);min-height:0}
+    #msgs::-webkit-scrollbar{width:4px}
+    #msgs::-webkit-scrollbar-thumb{background:#C9D2E0;border-radius:4px}
+    .msg{display:flex;align-items:flex-end;gap:8px}
+    .msg.u{flex-direction:row-reverse}
+    .mav{width:30px;height:30px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:15px}
+    .mav.b{background:#fff;border:1px solid var(--line)}
+    .mav.u{background:var(--lime);font-size:13px}
+    .bur{max-width:82%;padding:9px 13px;font-size:14px;line-height:1.55;border-radius:16px;white-space:pre-wrap;word-break:break-word}
+    .msg.b .bur{background:#fff;border:1px solid var(--line);border-radius:4px 16px 16px 16px;color:var(--ink)}
+    .msg.u .bur{background:var(--blue);color:#fff;border-radius:16px 16px 4px 16px}
+    #opciones{display:flex;flex-direction:column;gap:6px;padding:8px 16px 14px;background:var(--bg);flex-shrink:0}
+    #opciones:empty{display:none}
+    .op-btn{min-height:40px;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:600;color:var(--navy);cursor:pointer;text-align:left;transition:background .15s,border-color .15s;font-family:inherit;line-height:1.3;display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .op-btn:hover{border-color:var(--blue);background:var(--soft)}
+    .op-btn span{color:var(--blue);font-size:18px;flex-shrink:0}
+    .pts{display:flex;gap:4px;padding:5px 2px;align-items:center}
+    .pts span{width:7px;height:7px;border-radius:50%;background:var(--blue);opacity:.6;animation:bd 1.2s infinite}
+    .pts span:nth-child(2){animation-delay:.2s}
+    .pts span:nth-child(3){animation-delay:.4s}
+    @keyframes bd{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+    .esc-bar{display:none;flex-direction:column;gap:8px;background:var(--navy);padding:14px 18px;font-size:14px;color:#fff;flex-shrink:0}
+    .esc-bar.show{display:flex}
+    .esc-bar p{color:#C9D5EE;font-size:13px}
+    .esc-btns{display:flex;gap:8px;flex-wrap:wrap}
+    .bwa,.btel{flex:1;min-width:130px;min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:none;font-size:14px;font-weight:700;cursor:pointer;text-align:center;text-decoration:none}
+    .bwa{background:#25D366;color:#fff}
+    .btel{background:var(--lime);color:var(--navy)}
+    .inp-bar{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--line);background:#fff;flex-shrink:0}
+    #ci{flex:1;min-width:0;border:2px solid var(--line);border-radius:999px;padding:11px 18px;font-size:16px;outline:none;font-family:inherit;background:var(--bg);color:var(--ink);transition:border-color .15s}
+    #ci:focus{border-color:var(--blue);background:#fff}
+    #csend{width:48px;height:48px;border-radius:50%;background:var(--blue);border:none;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background .15s}
+    #csend:hover{background:var(--blue-dark)}
+    #csend svg{width:18px;height:18px;fill:#fff}
+
+    /* ── Sidebar ── */
+    aside{display:flex;flex-direction:column;gap:16px;min-width:0}
+    .card{background:#fff;border-radius:18px;padding:16px 18px;border:1px solid var(--line)}
+    .card h3{display:flex;align-items:center;gap:8px;font-family:var(--display);font-size:15px;color:var(--blue);margin-bottom:12px;line-height:1.2}
+    .card h3 svg{width:19px;height:19px;flex:none}
+    .card ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .card li{font-size:13.5px;color:var(--muted);display:flex;align-items:flex-start;gap:8px;line-height:1.45}
+    .card li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lime);flex-shrink:0;margin-top:7px}
+    .plan-fila{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+    .plan-fila:last-child{border:none}
+    .plan-fila .pn{font-weight:700;color:var(--ink)}
+    .plan-fila .pv2{color:var(--muted);font-size:12.5px}
+    .plan-fila .pp{font-family:var(--display);color:var(--blue);font-size:16px}
+    .plan-aviso{font-size:12.5px;color:#B42318;margin-top:10px;line-height:1.45}
+    .card-verde{background:var(--navy);border-color:var(--navy)}
+    .card-verde h3{color:#fff}
+    .card-verde h3 svg{color:var(--lime)}
+    .card-verde a{display:flex;align-items:center;gap:10px;min-height:40px;background:rgba(255,255,255,.08);border-radius:14px;padding:10px 14px;color:#fff;text-decoration:none;font-size:14px;font-weight:600;margin-bottom:8px;transition:background .15s;overflow-wrap:anywhere;min-width:0}
+    .card-verde a svg{color:var(--lime);flex:none}
+    .card-verde a:last-of-type{margin-bottom:0}
+    .card-verde a:hover{background:rgba(255,255,255,.16)}
+    .card-horario{font-size:12.5px;color:#C9D5EE;margin-top:12px;line-height:1.5}
+    .card-tienda{background:var(--lime);border-color:var(--lime)}
+    .card-tienda h3{color:var(--navy)}
+    .card-tienda p{font-size:13.5px;color:var(--navy);line-height:1.5;margin-bottom:14px}
+    .card-tienda a{display:flex;align-items:center;justify-content:center;min-height:40px;text-align:center;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em;padding:10px;border-radius:999px}
+    .card-tienda a:hover{background:var(--blue)}
+
+    /* ── Footer ── */
+    footer{background:var(--navy);color:#C9D5EE;font-size:14px}
+    footer .f-in{max-width:1180px;margin:0 auto;padding:20px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    footer .brand-text b{color:#fff}
+    footer .brand-text small{color:var(--lime)}
+    footer nav{display:flex;gap:18px;flex-wrap:wrap}
+    footer a{color:#fff;text-decoration:none}
+    footer a:hover{color:var(--lime)}
+
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:52px;height:52px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+    .wa-float svg{width:26px;height:26px}
+
+    /* ── Responsivo ── */
+    @media(max-width:960px){
+      .main{grid-template-columns:1fr;padding:24px 16px 48px}
+      aside{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    }
+    @media(max-width:720px){
+      .brand-sep,.h-link,.h-online{display:none}
+      .h-volver{padding:8px 14px;font-size:12px}
+      .page-hero .ph-in{padding:28px 16px 88px}
+      .tienda-promo{width:calc(100% - 24px);border-radius:20px}
+      .tp-top{padding:18px 16px 12px;gap:14px}
+      .tp-icon{width:48px;height:48px}
+      .tp-cta{width:100%}
+      .tp-chips{padding:0 16px 14px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+      .tp-chips::-webkit-scrollbar{display:none}
+      .tp-chip{white-space:nowrap}
+      .tp-ads{margin:0 16px 18px}
+      .tp-ad{grid-template-columns:1fr;grid-template-areas:"tit" "desde" "mini" "cta";padding:18px 16px}
+      .tp-ad h3{font-size:16px}
+      .tp-ad-cta{justify-self:stretch;justify-content:center}
+      .tp-nav{display:none}
+      .tp-prod img{height:72px}
+      .tp-prod .tpn{font-size:11px}
+      aside{grid-template-columns:1fr}
+      .wh-head,.wh-body,.chat-head,.guia-toggle,.guia-body{padding-left:16px;padding-right:16px}
+      .wh-buscar{flex-direction:column}
+      .wh-btn{width:100%}
+      .wh-input,#ci{font-size:16px}
+      .soporte-card{max-height:none;min-height:0}
+      #msgs{max-height:60vh;min-height:0}
+      .modal-box{padding:22px 18px}
+      footer .f-in{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:420px){
+      .tp-mini{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .tp-mini > :nth-child(3){display:none}
+      .brand-text b{font-size:20px}
+      .brand svg{width:38px;height:38px}
+    }
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+    /* ── Íconos que reemplazan a los emojis ── */
+    .ei{display:inline-block;width:1.15em;height:1.15em;vertical-align:-.2em;flex:none;color:var(--blue);margin-right:.15em}
+    .ei-ok{color:var(--lime-dark)}.ei-bad{color:#B42318}.ei-warn{color:#B7791F}
+    .msg.u .ei,.tp-ad .ei,.esc-bar .ei,.btn-wa .ei,.card-verde .ei,.wh-head .ei{color:inherit}
+    .tp-chip .ei,.tp-ad h3 .ei{color:var(--lime)}
+    .tp-srv .ei{width:28px;height:28px;margin:0;color:var(--blue)}
+    .op-btn .ei{color:var(--blue);margin-right:.4em}
+    .aviso-box .ab-ico .ei{width:34px;height:34px;margin:0}
+    .aviso-box.amarillo .ab-ico .ei{color:#B7791F}
+    .mav .ei{margin:0;width:16px;height:16px}
+    .mav.b{background:var(--blue)!important;border:none!important}
+    .mav.b .ei{color:#fff}
+    .mav.u .ei{color:var(--navy)}
+    .ei-num{display:inline-flex;align-items:center;justify-content:center;width:1.35em;height:1.35em;border-radius:50%;background:var(--lime);color:var(--navy);font-size:.78em;font-weight:800;vertical-align:.05em;margin-right:.35em}
+    .op-btn{justify-content:flex-start}
+    .op-btn > span:last-child{margin-left:auto}
+  </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="globe-clip"><circle cx="60" cy="70" r="38"/></clipPath>
+    <symbol id="mark-light" viewBox="0 0 120 120">
+      <circle cx="60" cy="70" r="38" fill="#1E50D6"/>
+      <g clip-path="url(#globe-clip)" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="4"><ellipse cx="60" cy="70" rx="20" ry="38"/><path d="M18 88 Q60 104 102 88"/></g>
+      <g fill="none" stroke-linecap="round"><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#fff" stroke-width="14"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#fff" stroke-width="14"/><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#6BA30F" stroke-width="8"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#6BA30F" stroke-width="8"/></g>
+      <polygon points="60,64 51,98 69,98" fill="#6BA30F" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="60" r="8" fill="#6BA30F" stroke="#fff" stroke-width="3"/>
+    </symbol>
+    <symbol id="mark-dark" viewBox="0 0 120 120">
+      <circle cx="60" cy="70" r="38" fill="#2A6CE8"/>
+      <g clip-path="url(#globe-clip)" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="4"><ellipse cx="60" cy="70" rx="20" ry="38"/><path d="M18 88 Q60 104 102 88"/></g>
+      <g fill="none" stroke-linecap="round"><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#0B1E40" stroke-width="14"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#0B1E40" stroke-width="14"/><path d="M47.3 47.3 A18 18 0 0 1 72.7 47.3" stroke="#8CC63F" stroke-width="8"/><path d="M37.4 37.4 A32 32 0 0 1 82.6 37.4" stroke="#8CC63F" stroke-width="8"/></g>
+      <polygon points="60,64 51,98 69,98" fill="#8CC63F" stroke="#0B1E40" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="60" cy="60" r="8" fill="#8CC63F" stroke="#0B1E40" stroke-width="3"/>
+    </symbol>
+    <symbol id="signal" viewBox="0 0 120 120">
+      <g fill="none" stroke="#8CC63F" stroke-linecap="round" stroke-width="10"><path d="M44.4 46.4 A22 22 0 0 1 75.6 46.4"/><path d="M33.1 35.1 A38 38 0 0 1 86.9 35.1"/></g>
+      <polygon points="60,68 50,100 70,100" fill="#fff"/>
+      <circle cx="60" cy="62" r="10" fill="#8CC63F"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.85 9.85 0 0 0 12.04 2Zm5.8 14.03c-.24.68-1.42 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.83 0-1.34.7-2 .95-2.28.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.92.86 2.06.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.06.11.06.66-.18 1.34Z"/></symbol>
+    <symbol id="e-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></g></symbol>
+    <symbol id="e-x" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6M9 9l6 6"/></g></symbol>
+    <symbol id="e-alert" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></g></symbol>
+    <symbol id="e-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></g></symbol>
+    <symbol id="e-dot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.5" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="e-clipboard" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 12h6M9 16h4"/></g></symbol>
+    <symbol id="e-phone-m" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></g></symbol>
+    <symbol id="e-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-6-6 6 6 6-6"/></g></symbol>
+    <symbol id="e-up" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-6 6 6-6 6 6"/></g></symbol>
+    <symbol id="e-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></g></symbol>
+    <symbol id="e-zap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></g></symbol>
+    <symbol id="e-package" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5M12 13v8"/></g></symbol>
+    <symbol id="e-store" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0Z"/><path d="M5 14v6h14v-6"/></g></symbol>
+    <symbol id="e-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></g></symbol>
+    <symbol id="e-wifi" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor"/></g></symbol>
+    <symbol id="e-help" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></g></symbol>
+    <symbol id="e-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2Z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></g></symbol>
+    <symbol id="e-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+    <symbol id="e-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></g></symbol>
+    <symbol id="e-refresh" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5"/></g></symbol>
+    <symbol id="e-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
+    <symbol id="e-hash" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></g></symbol>
+    <symbol id="e-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></g></symbol>
+    <symbol id="e-wrench" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9l-3.8 3.8Z"/></g></symbol>
+    <symbol id="e-gauge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14-4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></g></symbol>
+    <symbol id="e-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/></g></symbol>
+    <symbol id="e-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></symbol>
+    <symbol id="e-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></g></symbol>
+    <symbol id="e-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4"/></g></symbol>
+    <symbol id="e-tv" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/></g></symbol>
+    <symbol id="e-game" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/></g></symbol>
+    <symbol id="e-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></g></symbol>
+    <symbol id="e-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+    <symbol id="e-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></g></symbol>
+    <symbol id="e-sparkle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2Z"/></g></symbol>
+    <symbol id="e-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></g></symbol>
+    <symbol id="e-receipt" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2V2Z"/><path d="M9 7h6M9 11h6M9 15h4"/></g></symbol>
+    <symbol id="e-plug" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a6 6 0 0 1-12 0V8Z"/></g></symbol>
+    <symbol id="e-bulb" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/></g></symbol>
+    <symbol id="e-moon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></g></symbol>
+    <symbol id="e-laptop" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="12" rx="2"/><path d="M2 20h20"/></g></symbol>
+    <symbol id="e-rain" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.6A5 5 0 0 0 18 7h-1.3A8 8 0 1 0 4 15.3M16 14v6M8 14v6M12 16v6"/></g></symbol>
+    <symbol id="e-truck" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.6a1 1 0 0 0-.2-.6l-3.5-4.4a1 1 0 0 0-.8-.4H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></g></symbol>
+    <symbol id="e-snow" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></g></symbol>
+    <symbol id="e-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-4-.9L3 21l1.9-5A8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></g></symbol>
+    <symbol id="e-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+    <symbol id="e-scissors" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></g></symbol>
+    <symbol id="e-bot" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 4v4M9 13v2M15 13v2M2 14h2M20 14h2"/><circle cx="12" cy="3.5" r="1"/></g></symbol>
+    <symbol id="e-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g></symbol>
+    <symbol id="e-on" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6" fill="currentColor" stroke="none"/></g></symbol>
+    <symbol id="e-off" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="6" fill="currentColor" stroke="none"/></g></symbol>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="header-row">
+    <a class="brand" href="index.html" aria-label="Gree Networks, ir a la página principal">
+      <svg aria-hidden="true"><use href="#mark-light"/></svg>
+      <span class="brand-text"><b>GREE</b><small>NETWORKS</small></span>
+    </a>
+    <span class="brand-sep">Soporte</span>
+    <div class="h-right">
+      <div class="h-online"><span class="pv"></span>En línea</div>
+      <a class="h-link" href="index.html">Inicio</a>
+      <a class="h-volver" href="https://tavgreenetworksti.net/panel/login.php">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></g></svg>
+        Panel de control
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <svg class="deco" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#fff" stroke-width="2"><ellipse cx="950" cy="160" rx="460" ry="110" transform="rotate(-10 950 160)"/><ellipse cx="950" cy="160" rx="360" ry="80" transform="rotate(-10 950 160)"/></g></svg>
+  <div class="ph-in">
+    <h1>Soporte <span>técnico</span></h1>
+    <p>Consulta tu cuenta, solicita tu factura o resuelve un problema con nuestro asistente.</p>
+  </div>
+</section>
+
+<!-- Promo Tienda Gree Networks -->
+<section class="tienda-promo" aria-label="Tienda Gree Networks">
+  <div class="tp-top">
+    <div class="tp-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L21 8H6"/></g></svg></div>
+    <div class="tp-txt">
+      <span class="tp-badge">#TiendaGreeNetworks</span>
+      <h2>En nuestra tienda encontrarás de todo</h2>
+      <p>Repetidores WiFi, cámaras de seguridad, gadgets UGREEN, energía solar e instalación de minisplits — con la confianza de tu proveedor de internet.</p>
+    </div>
+    <a class="tp-cta" href="https://tienda.tavgreenetworksti.net/">Ver la tienda →</a>
+  </div>
+  <div class="tp-chips">
+    <span class="tp-chip"><svg class="ei" aria-hidden="true"><use href="#e-truck"/></svg> Entrega a domicilio en Chihuahua</span>
+    <span class="tp-chip"><svg class="ei" aria-hidden="true"><use href="#e-wrench"/></svg> Opción con instalación</span>
+    <span class="tp-chip"><svg class="ei" aria-hidden="true"><use href="#e-card"/></svg> Tarjeta, SPEI o WhatsApp</span>
+  </div>
+  <div class="tp-ads" id="tp-ads" aria-roledescription="carrusel">
+    <div class="tp-track" id="tp-track">
+    <div class="tp-ad">
+      <h3><svg class="ei" aria-hidden="true"><use href="#e-wifi"/></svg> ¿Necesitas expandir la señal de WiFi en tu casa?</h3>
+      <div class="tp-desde" id="tp-desde-wifi">Desde <b>$301</b> con IVA</div>
+      <div class="tp-mini" id="tp-mini-wifi"></div>
+      <a class="tp-ad-cta" href="https://tienda.tavgreenetworksti.net/?cat=Repetidores%20de%20se%C3%B1al%20WiFi">Ver repetidores →</a>
+    </div>
+    <div class="tp-ad">
+      <h3><svg class="ei" aria-hidden="true"><use href="#e-video"/></svg> ¿Necesitas proteger tu casa con cámaras de seguridad?</h3>
+      <div class="tp-desde" id="tp-desde-cam">Desde <b>$58</b> con IVA</div>
+      <div class="tp-mini" id="tp-mini-cam"></div>
+      <a class="tp-ad-cta" href="https://tienda.tavgreenetworksti.net/?cat=C%C3%A1maras%20de%20Seguridad">Ver cámaras →</a>
+    </div>
+    <div class="tp-ad">
+      <h3><svg class="ei" aria-hidden="true"><use href="#e-plug"/></svg> ¿Buscas cargadores, cables y gadgets UGREEN?</h3>
+      <div class="tp-desde" id="tp-desde-ugreen">Desde <b>$96</b> con IVA</div>
+      <div class="tp-mini" id="tp-mini-ugreen"></div>
+      <a class="tp-ad-cta" href="https://tienda.tavgreenetworksti.net/?cat=Accesorios">Ver gadgets UGREEN →</a>
+    </div>
+    <div class="tp-ad">
+      <h3><svg class="ei" aria-hidden="true"><use href="#e-sun"/></svg> ¿Quieres ahorrar luz con paneles solares e inversores?</h3>
+      <div class="tp-desde" id="tp-desde-solar">Desde <b>$1,742</b> con IVA</div>
+      <div class="tp-mini" id="tp-mini-solar"></div>
+      <a class="tp-ad-cta" href="https://tienda.tavgreenetworksti.net/?cat=Energ%C3%ADa%20Solar">Ver energía solar →</a>
+    </div>
+    <div class="tp-ad">
+      <h3><svg class="ei" aria-hidden="true"><use href="#e-snow"/></svg> ¿Necesitas instalar tu minisplit?</h3>
+      <div class="tp-desde">Instalación de minisplits en Chihuahua. Cotiza sin compromiso.</div>
+      <div class="tp-mini tp-servicio show">
+        <div class="tp-srv"><span><svg class="ei" aria-hidden="true"><use href="#e-snow"/></svg></span>Instalación de minisplits</div>
+        <div class="tp-srv"><span><svg class="ei" aria-hidden="true"><use href="#e-pin"/></svg></span>Servicio en Chihuahua</div>
+        <div class="tp-srv"><span><svg class="ei" aria-hidden="true"><use href="#e-chat"/></svg></span>Cotiza por WhatsApp</div>
+      </div>
+      <a class="tp-ad-cta" href="https://wa.me/526144757914?text=Hola%2C%20quiero%20cotizar%20la%20instalaci%C3%B3n%20de%20un%20minisplit" target="_blank" rel="noopener">Cotizar instalación →</a>
+    </div>
+    </div>
+    <button class="tp-nav prev" type="button" aria-label="Anterior">‹</button>
+    <button class="tp-nav next" type="button" aria-label="Siguiente">›</button>
+  </div>
+  <div class="tp-dots" id="tp-dots"></div>
+</section>
+
+<div class="main">
+
+  <!-- ── Chat principal (izquierda) ── -->
+  <div class="chat-wrap">
+
+    <!-- Consulta WispHub -->
+    <div class="wisphub-card">
+      <div class="wh-head">
+        <div class="wh-head-av"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></g></svg></div>
+        <div>
+          <h2>Consultar mi cuenta</h2>
+          <p>Busca por teléfono o número de servicio</p>
+        </div>
+      </div>
+      <div class="wh-body">
+        <div class="wh-tabs">
+          <button class="wh-tab activo" onclick="setTipo('telefono',this)">Por Teléfono</button>
+          <button class="wh-tab" onclick="setTipo('usuario',this)">Por Usuario</button>
+        </div>
+        <div class="wh-buscar">
+          <input class="wh-input" id="wh-input" type="text" placeholder="Ej: 6141234567" maxlength="20" autocomplete="off">
+          <button class="wh-btn" id="wh-btn" onclick="consultarCliente()">Consultar</button>
+        </div>
+        <div class="wh-loading" id="wh-loading"><div class="spin"></div>Consultando en WispHub...</div>
+        <div class="wh-error" id="wh-error"></div>
+        <div class="wh-resultado" id="wh-resultado">
+          <div class="wh-res-head">
+            <div class="wh-res-av" id="wh-av">JG</div>
+            <div>
+              <div class="wh-res-nombre" id="wh-nombre">—</div>
+              <div class="wh-res-plan" id="wh-plan">—</div>
+            </div>
+            <span class="wh-status" id="wh-status">—</span>
+          </div>
+          <div class="wh-filas">
+            <div class="wh-fila"><span class="wh-fila-label"><svg class="ei" aria-hidden="true"><use href="#e-calendar"/></svg> Fecha de pago</span><span class="wh-fila-valor" id="wh-fecha-pago">—</span></div>
+            <div class="wh-fila"><span class="wh-fila-label"><svg class="ei" aria-hidden="true"><use href="#e-scissors"/></svg> Fecha de corte</span><span class="wh-fila-valor" id="wh-fecha-corte">—</span></div>
+            <div class="wh-fila"><span class="wh-fila-label"><svg class="ei" aria-hidden="true"><use href="#e-card"/></svg> Saldo pendiente</span><span class="wh-fila-valor" id="wh-saldo">—</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mis pagos / comprobantes / factura CFDI -->
+    <div class="pagos-card" id="pagos-card">
+      <div class="pagos-head"><svg class="ei" aria-hidden="true"><use href="#e-card"/></svg> Mis pagos</div>
+      <div id="pagos-lista"></div>
+    </div>
+
+    <!-- Guía: Cómo generar mi factura -->
+    <div class="guia-card">
+      <button class="guia-toggle" onclick="toggleGuia(this)" type="button">
+        <span class="gt-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12v20l-3-2-3 2-3-2-3 2V2Z"/><path d="M9 7h6M9 11h6M9 15h4"/></g></svg></span>¿Cómo solicitar mi factura CFDI?
+        <span class="gt-arrow">▼</span>
+      </button>
+      <div class="guia-body">
+
+        <div class="guia-paso">
+          <div class="guia-num">1</div>
+          <div class="guia-paso-txt">
+            <strong>Consulta tu cuenta</strong><br>
+            En la sección <em>"Consultar mi cuenta"</em> ingresa tu número de teléfono o número de servicio y presiona <strong>Consultar</strong>. Aparecerá tu información y la sección <em>"Mis pagos"</em>.
+          </div>
+        </div>
+
+        <div class="guia-paso">
+          <div class="guia-num">2</div>
+          <div class="guia-paso-txt">
+            <strong>Verifica tu identidad</strong><br>
+            Ingresa los <strong>últimos 4 dígitos de tu número de teléfono</strong> registrado con Gree Networks. Por ejemplo, si tu número es 614&nbsp;123&nbsp;<strong>4567</strong>, ingresa <strong>4567</strong>.
+          </div>
+        </div>
+
+        <div class="guia-paso">
+          <div class="guia-num">3</div>
+          <div class="guia-paso-txt">
+            <strong>Haz clic en "<svg class="ei" aria-hidden="true"><use href="#e-receipt"/></svg> Solicitar factura"</strong><br>
+            Aparece junto al pago que deseas facturar. Solo puedes solicitarla <strong>dentro del mismo mes</strong> en que realizaste el pago. Pagos de meses anteriores aparecen como <em>"<svg class="ei" aria-hidden="true"><use href="#e-clock"/></svg> Fuera de plazo"</em>.
+          </div>
+        </div>
+
+        <div class="guia-paso">
+          <div class="guia-num">4</div>
+          <div class="guia-paso-txt">
+            <strong>Llena tus datos fiscales</strong><br>
+            Ingresa los siguientes datos <strong>exactamente como aparecen en tu Constancia de Situación Fiscal (CSF)</strong> del SAT:
+            <div class="guia-dato">
+              <svg class="ei" aria-hidden="true"><use href="#e-file"/></svg> <strong>RFC</strong> — Ej: XAXX010101000<br>
+              <svg class="ei" aria-hidden="true"><use href="#e-building"/></svg> <strong>Razón social / Nombre completo</strong><br>
+              <svg class="ei" aria-hidden="true"><use href="#e-mail"/></svg> <strong>Código postal fiscal</strong> (el de tu domicilio ante el SAT)<br>
+              <svg class="ei" aria-hidden="true"><use href="#e-clipboard"/></svg> <strong>Régimen fiscal</strong> — Selecciona el que corresponde<br>
+              <svg class="ei" aria-hidden="true"><use href="#e-clipboard"/></svg> <strong>Uso de CFDI</strong> — Para servicio de internet: <em>G03 - Gastos en general</em><br>
+              <svg class="ei" aria-hidden="true"><use href="#e-card"/></svg> <strong>Forma de pago</strong> — Cómo realizaste tu pago<br>
+              <svg class="ei" aria-hidden="true"><use href="#e-mail"/></svg> <strong>Correo electrónico</strong> — Donde recibirás la factura
+            </div>
+          </div>
+        </div>
+
+        <div class="guia-paso">
+          <div class="guia-num">5</div>
+          <div class="guia-paso-txt">
+            <strong>Genera y descarga tu factura</strong><br>
+            Presiona <strong>"Generar factura"</strong>. En segundos recibirás el <strong>PDF y XML</strong> en tu correo. También podrás descargarlos desde la sección <em>"Mis pagos"</em> con el botón <em>"<svg class="ei ei-ok" aria-hidden="true"><use href="#e-check"/></svg> Ver factura"</em>.
+          </div>
+        </div>
+
+        <div class="guia-nota">
+          <svg class="ei ei-warn" aria-hidden="true"><use href="#e-alert"/></svg> <strong>Importante:</strong> Solo se puede generar <strong>una factura por pago</strong> y únicamente durante el mes en curso. Si tienes dudas o necesitas factura de un mes anterior, contáctanos por WhatsApp al <a href="https://wa.me/526144757914" target="_blank" style="color:#5d4037;font-weight:600">614 475 7914</a>.
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bot de soporte -->
+    <div class="soporte-card">
+      <div class="chat-head">
+        <div class="bot-av"><svg aria-hidden="true"><use href="#signal"/></svg></div>
+        <div>
+          <h2>Asistente Virtual</h2>
+          <p>Selecciona una opción para continuar</p>
+        </div>
+        <span class="modo-badge">En línea</span>
+      </div>
+      <div id="msgs" role="log" aria-live="polite"></div>
+      <div id="opciones"></div>
+      <div class="esc-bar" id="esc-bar">
+        <strong><svg class="ei" aria-hidden="true"><use href="#e-wrench"/></svg> ¿Necesitas atención personalizada?</strong>
+        <p>Nuestro equipo te atiende directamente:</p>
+        <div class="esc-btns">
+          <a class="bwa" href="https://wa.me/526144757914" target="_blank" rel="noopener"><svg class="ei" aria-hidden="true"><use href="#e-chat"/></svg> WhatsApp</a>
+          <a class="btel" href="tel:6144757914"><svg class="ei" aria-hidden="true"><use href="#e-phone"/></svg> 614 475 7914</a>
+        </div>
+      </div>
+
+      <!-- Input para captura de datos - oculto por defecto -->
+      <div class="inp-bar" id="inp-bar" style="display:none;">
+        <input id="ci" type="text" placeholder="Escribe aquí..." autocomplete="off" maxlength="200">
+        <button id="csend" aria-label="Enviar">
+          <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff;"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Sidebar ── -->
+  <aside>
+    <div class="card card-tienda">
+      <h3><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/><path d="M1.5 9a15 15 0 0 1 21 0"/></g></svg>¿Señal débil en algún cuarto?</h3>
+      <p>Lleva el WiFi a toda tu casa con un repetidor o router. Te lo llevamos a domicilio y te lo dejamos funcionando.</p>
+      <a href="https://tienda.tavgreenetworksti.net/?cat=Repetidores%20de%20se%C3%B1al%20WiFi">Ver repetidores WiFi →</a>
+    </div>
+    <div class="card">
+      <h3><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2Z"/></g></svg>Solución rápida</h3>
+      <ul>
+        <li>Desconecta tu router 30 segundos.</li>
+        <li>Vuelve a conectarlo y espera 2 min.</li>
+        <li>Reinicia tu celular o computadora.</li>
+        <li>Verifica el cable de alimentación.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V14M10 20V9M16 20V4M22 20H2"/></g></svg>Planes</h3>
+      <div class="plan-fila"><span class="pn">Básico</span><span class="pv2">2 dispositivos</span><span class="pp">$250</span></div>
+      <div class="plan-fila"><span class="pn">Estándar</span><span class="pv2">4 dispositivos</span><span class="pp">$350</span></div>
+      <div class="plan-fila"><span class="pn">Premium</span><span class="pv2">Hasta 7 disp.</span><span class="pp">$500</span></div>
+      <p class="plan-aviso"><svg class="ei ei-warn" aria-hidden="true"><use href="#e-alert"/></svg> No compartas tu contraseña con vecinos para evitar lentitud.</p>
+    </div>
+    <div class="card card-verde">
+      <h3><svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></g></svg>Contacto</h3>
+      <a href="https://wa.me/526144757914" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"></path><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.978-1.418A9.956 9.956 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.333-1.279l-.311-.185-3.224.918.934-3.144-.202-.323A7.946 7.946 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z"></path></svg>
+        614 475 7914
+      </a>
+      <a href="tel:6144757914">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"></path></svg>
+        614 475 7914
+      </a>
+      <a href="mailto:contac@tavgreenetworksti.net">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path></svg>
+        contac@tavgreenetworksti.net
+      </a>
+      <div class="card-horario">Atención a clientes: lunes a sábado, 8:00 am a 5:30 pm<br>Soporte técnico: 24 horas</div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="f-in">
+    <a class="brand" href="index.html" aria-label="Gree Networks, página principal">
+      <svg aria-hidden="true"><use href="#mark-dark"/></svg>
+      <span class="brand-text"><b>GREE</b><small>NETWORKS</small></span>
+    </a>
+    <nav aria-label="Pie de página">
+      <a href="index.html">Página principal</a>
+      <a href="index.html#planes">Planes</a>
+      <a href="https://tienda.tavgreenetworksti.net/">Tienda</a>
+      <a href="https://tavgreenetworksti.net/soporte/privacidad.html">Política de privacidad</a>
+    </nav>
+    <span>Gree Networks · Internet inalámbrico en Chihuahua · 2026 ©</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/526144757914" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<!-- Modal: verificación por teléfono -->
+<div class="modal-bg" id="modal-clave" onclick="if(event.target===this)cerrarModalClave()">
+  <div class="modal-box" style="max-width:340px">
+    <button class="modal-close" onclick="cerrarModalClave()" title="Cerrar">✕</button>
+    <h3><svg class="ei" aria-hidden="true"><use href="#e-lock"/></svg> Verificación</h3>
+    <p class="sub" id="modal-clave-msg">Ingresa los <strong>últimos 4 dígitos</strong> de tu número de teléfono registrado.</p>
+    <input id="modal-clave-input" type="tel" inputmode="numeric" maxlength="4" placeholder="_ _ _ _" style="width:100%;padding:10px 12px;border:2px solid #E3E8F0;border-radius:14px;font-size:28px;letter-spacing:8px;text-align:center;font-family:monospace;margin-bottom:8px" onkeydown="if(event.key==='Enter') confirmarClave()">
+    <div id="modal-clave-err" style="color:#B42318;font-size:13px;margin-bottom:8px"></div>
+    <div class="modal-btns">
+      <button type="button" class="mb-cancelar" onclick="cerrarModalClave()">Cancelar</button>
+      <button type="button" class="mb-enviar" id="modal-clave-btn" onclick="confirmarClave()">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: solicitar factura CFDI -->
+<div class="modal-bg" id="modal-cfdi" onclick="if(event.target===this)cerrarModalCfdi()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="cerrarModalCfdi()" title="Cerrar">✕</button>
+    <h3><svg class="ei" aria-hidden="true"><use href="#e-receipt"/></svg> Solicitar factura</h3>
+
+    <!-- Paso 1: Selección tipo de persona -->
+    <div id="cfdi-paso-tipo">
+      <p class="sub">¿Cómo vas a facturar?</p>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px">
+        <button type="button" class="opt-persona" onclick="seleccionarTipoPersona('fisica')">
+          <svg class="ei" aria-hidden="true"><use href="#e-user"/></svg> Persona Física
+          <span>RFC personal, RESICO, actividad empresarial, etc.</span>
+        </button>
+        <button type="button" class="opt-persona" onclick="seleccionarTipoPersona('moral')">
+          <svg class="ei" aria-hidden="true"><use href="#e-building"/></svg> Persona Moral
+          <span>Empresa, S.A., S. de R.L., etc.</span>
+        </button>
+      </div>
+      <button type="button" class="btn-sec" onclick="cerrarModalCfdi()">Cancelar</button>
+    </div>
+
+    <!-- Mensaje Persona Moral -->
+    <div id="cfdi-moral" style="display:none">
+      <div class="aviso-box amarillo">
+        <div class="ab-ico"><svg class="ei" aria-hidden="true"><use href="#e-building"/></svg></div>
+        <p class="ab-tit">Facturación para Persona Moral</p>
+        <p class="ab-txt">La facturación para empresas requiere un proceso especial con retenciones de IVA e ISR.<br><br>Comunícate con nosotros por WhatsApp para gestionarla:</p>
+        <a href="https://wa.me/526144757914?text=Hola,%20necesito%20factura%20CFDI%20como%20persona%20moral%20por%20mi%20servicio%20de%20internet" target="_blank" rel="noopener" class="btn-wa">
+          <svg class="ei" aria-hidden="true"><use href="#e-phone-m"/></svg> WhatsApp 614 475 7914
+        </a>
+      </div>
+      <button type="button" class="btn-sec" onclick="regresarTipoPersona()">← Regresar</button>
+    </div>
+
+    <!-- Paso 2: Formulario Persona Física (CFDI no activado) -->
+    <div id="cfdi-fisica-wa" style="display:none">
+      <div class="aviso-box verde">
+        <div class="ab-ico"><svg class="ei" aria-hidden="true"><use href="#e-user"/></svg></div>
+        <p class="ab-tit">Facturación Persona Física</p>
+        <p class="ab-txt">Por el momento la facturación automática está en proceso de activación.<br><br>Contáctanos por WhatsApp y con gusto te generamos tu factura:</p>
+        <a href="https://wa.me/526144757914?text=Hola,%20necesito%20factura%20CFDI%20como%20persona%20f%C3%ADsica%20por%20mi%20servicio%20de%20internet" target="_blank" rel="noopener" class="btn-wa">
+          <svg class="ei" aria-hidden="true"><use href="#e-phone-m"/></svg> WhatsApp 614 475 7914
+        </a>
+      </div>
+      <button type="button" class="btn-sec" onclick="regresarTipoPersona()">← Regresar</button>
+    </div>
+
+    <!-- Paso 2: Formulario Persona Física -->
+    <div id="cfdi-form-pf" style="display:none">
+    <p class="sub">Factura fiscal (CFDI) de este pago. Solo se puede generar una factura por cada pago.<br><svg class="ei ei-warn" aria-hidden="true"><use href="#e-alert"/></svg> <strong>Solo puedes solicitarla dentro del mismo mes en que realizaste el pago.</strong></p>
+    <div class="modal-err" id="cfdi-err"></div>
+    <div class="modal-ok" id="cfdi-ok"></div>
+    <form id="form-cfdi" onsubmit="return enviarCfdi(event)">
+      <div class="mf-group"><label>RFC</label><input id="cfdi-rfc" maxlength="13" placeholder="XAXX010101000" required=""></div>
+      <div class="mf-group"><label>Razón social / Nombre completo</label><input id="cfdi-razon" placeholder="Tal como aparece en tu constancia fiscal" required=""></div>
+      <div class="mf-group"><label>Código postal fiscal</label><input id="cfdi-cp" maxlength="5" inputmode="numeric" placeholder="31000" required=""></div>
+      <div class="mf-group">
+        <label>Régimen fiscal</label>
+        <select id="cfdi-regimen" onchange="toggleOtroRegimen(this)" required="">
+          <option value="">Selecciona...</option>
+          <optgroup label="── Personas Físicas ──">
+          <option value="605">605 - Sueldos y Salarios e Ingresos Asimilados</option>
+          <option value="606">606 - Arrendamiento</option>
+          <option value="607">607 - Enajenación o Adquisición de Bienes</option>
+          <option value="608">608 - Demás ingresos</option>
+          <option value="611">611 - Ingresos por Dividendos</option>
+          <option value="612">612 - Personas Físicas con Act. Empresariales y Profesionales</option>
+          <option value="614">614 - Ingresos por Intereses</option>
+          <option value="615">615 - Ingresos por Obtención de Premios</option>
+          <option value="616">616 - Sin obligaciones fiscales</option>
+          <option value="621">621 - Incorporación Fiscal</option>
+          <option value="625">625 - Actividades Empresariales con Plataformas Tecnológicas</option>
+          <option value="626">626 - Régimen Simplificado de Confianza (RESICO)</option>
+          </optgroup>
+          <optgroup label="── Personas Morales ──">
+          <option value="601">601 - General de Ley Personas Morales</option>
+          <option value="603">603 - Personas Morales con Fines no Lucrativos</option>
+          <option value="620">620 - Sociedades Cooperativas de Producción</option>
+          <option value="622">622 - Actividades Agrícolas, Ganaderas, Silvícolas y Pesqueras</option>
+          <option value="623">623 - Opcional para Grupos de Sociedades</option>
+          <option value="624">624 - Coordinados</option>
+          </optgroup>
+          <optgroup label="── Ambos ──">
+          <option value="610">610 - Residentes en el Extranjero sin Establecimiento en México</option>
+          </optgroup>
+          <option value="OTRO">Otro (especificar)</option>
+        </select>
+        <input id="cfdi-regimen-otro" type="text" placeholder="Escribe tu régimen fiscal" maxlength="100" style="display:none;margin-top:6px;width:100%;padding:9px 11px;border:2px solid #E3E8F0;border-radius:12px;font-size:16px;font-family:inherit;min-height:46px">
+      </div>
+      <div class="mf-group">
+        <label>Uso de CFDI</label>
+        <select id="cfdi-uso" onchange="toggleOtroUso(this)" required="">
+          <option value="">Selecciona...</option>
+          <optgroup label="── Gastos e Inversiones ──">
+          <option value="G01">G01 - Adquisición de mercancías</option>
+          <option value="G02">G02 - Devoluciones, descuentos o bonificaciones</option>
+          <option value="G03">G03 - Gastos en general</option>
+          <option value="I01">I01 - Construcciones</option>
+          <option value="I02">I02 - Mobiliario y equipo de oficina por inversiones</option>
+          <option value="I03">I03 - Equipo de transporte</option>
+          <option value="I04">I04 - Equipo de cómputo y accesorios</option>
+          <option value="I05">I05 - Dados, troqueles, moldes, matrices y herramental</option>
+          <option value="I06">I06 - Comunicaciones telefónicas</option>
+          <option value="I07">I07 - Comunicaciones satelitales</option>
+          <option value="I08">I08 - Otra maquinaria y equipo</option>
+          </optgroup>
+          <optgroup label="── Deducciones Personales ──">
+          <option value="D01">D01 - Honorarios médicos, dentales y gastos hospitalarios</option>
+          <option value="D02">D02 - Gastos médicos por incapacidad o discapacidad</option>
+          <option value="D03">D03 - Gastos funerales</option>
+          <option value="D04">D04 - Donativos</option>
+          <option value="D05">D05 - Intereses por créditos hipotecarios (casa habitación)</option>
+          <option value="D06">D06 - Aportaciones voluntarias al SAR</option>
+          <option value="D07">D07 - Primas por seguros de gastos médicos</option>
+          <option value="D08">D08 - Gastos de transportación escolar obligatoria</option>
+          <option value="D09">D09 - Depósitos en cuentas para el ahorro / planes de pensiones</option>
+          <option value="D10">D10 - Pagos por servicios educativos (colegiaturas)</option>
+          </optgroup>
+          <optgroup label="── Generales ──">
+          <option value="S01">S01 - Sin efectos fiscales</option>
+          <option value="CP01">CP01 - Pagos</option>
+          <option value="CN01">CN01 - Nómina</option>
+          </optgroup>
+          <option value="OTRO">Otro (especificar)</option>
+        </select>
+        <input id="cfdi-uso-otro" type="text" placeholder="Escribe el uso de CFDI" maxlength="100" style="display:none;margin-top:6px;width:100%;padding:9px 11px;border:2px solid #E3E8F0;border-radius:12px;font-size:16px;font-family:inherit;min-height:46px">
+      </div>
+      <div class="mf-group">
+        <label>Forma de pago</label>
+        <select id="cfdi-forma-pago" required="">
+          <option value="">Selecciona...</option>
+          <option value="03">03 - Transferencia electrónica</option>
+          <option value="01">01 - Efectivo</option>
+          <option value="04">04 - Tarjeta de crédito</option>
+          <option value="28">28 - Tarjeta de débito</option>
+          <option value="17">17 - OXXO / Tienda de conveniencia</option>
+          <option value="99">99 - Por definir</option>
+        </select>
+      </div>
+      <div class="mf-group"><label>Correo para enviarte la factura</label><input id="cfdi-email" type="email" placeholder="tucorreo@ejemplo.com" required=""></div>
+      <div class="modal-btns">
+        <button type="button" class="mb-cancelar" onclick="cerrarModalCfdi()">Cancelar</button>
+        <button type="submit" class="mb-enviar" id="cfdi-submit">Generar factura</button>
+      </div>
+    </form>
+    </div><!-- /cfdi-form-pf -->
+  </div>
+</div>
+
+<script>
+/* ── WispHub ─────────────────────────────────────────── */
+var PROXY = 'https://tavgreenetworksti.net/soporte/gree-proxy.php';
+var tipoBusqueda = 'telefono';
+var telefonoActual = '';
+var idServicioActual = '';
+var cfdiDisponible = false;
+var pagoSeleccionado = null;
+var tieneClaveActual = false;
+var claveVerificada = '';
+var clienteIdActual = '';
+
+function paramsIdentificacion() {
+  var p = '';
+  if (telefonoActual) { p += '&tel=' + encodeURIComponent(telefonoActual); }
+  if (idServicioActual) { p += '&srv=' + encodeURIComponent(idServicioActual); }
+  return p;
+}
+
+/* ── Mis pagos / Comprobante / Factura CFDI ───────────────── */
+async function cargarPagos(telefono, idServicio) {
+  var cont = document.getElementById('pagos-lista');
+  var card = document.getElementById('pagos-card');
+  try {
+    var res = await fetch(PROXY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ accion: 'listar_pagos', telefono: telefono || '', id_servicio: idServicio || '' })
+    });
+    var data = await res.json();
+
+    if (data.error || !data.encontrado || !data.pagos || !data.pagos.length) {
+      card.classList.remove('show');
+      return;
+    }
+
+    // El backend confirma cuál teléfono/servicio corresponde de verdad al cliente local
+    if (data.telefono) { telefonoActual = data.telefono; }
+    if (data.id_servicio) { idServicioActual = data.id_servicio; }
+
+    tieneClaveActual = !!data.tiene_clave;
+    clienteIdActual = data.cliente_id ? String(data.cliente_id) : '';
+    claveVerificada = '';
+    // La clave NO se guarda entre sesiones; se pide cada vez que se abre el portal
+    cfdiDisponible = !!data.facturacion_cfdi_disponible;
+    window._datosFiscalesGuardados = data.datos_fiscales || null;
+
+    var html = '';
+    data.pagos.forEach(function(p) {
+      var fecha = p.fecha_pago ? new Date(p.fecha_pago + 'T00:00:00').toLocaleDateString('es-MX') : '—';
+      html += '<div class="pago-fila">' +
+        '<div class="pago-info">' +
+          '<div class="pago-monto">$' + parseFloat(p.monto).toFixed(2) + ' MXN</div>' +
+          '<div class="pago-meta">' + fecha + (p.mes ? ' · ' + p.mes : '') + '</div>' +
+        '</div>' +
+        '<div class="pago-acciones">' +
+          '<a class="pago-btn" href="javascript:void(0)" onclick="abrirComprobante(' + p.id + ')">📄 Comprobante</a>' +
+          (p.tiene_factura
+            ? (p.facturama_id
+                ? '<a class="pago-btn" href="javascript:void(0)" data-fid="' + p.facturama_id.replace(/"/g,'&quot;') + '" onclick="abrirFactura(this.dataset.fid)">✅ Ver factura</a>'
+                : '<span class="pago-btn facturado">✅ Facturado</span>')
+            : (esMismoMes(p.fecha_pago)
+                ? '<a class="pago-btn" href="javascript:void(0)" onclick="abrirModalCfdi(' + p.id + ')">🧾 Solicitar factura</a>'
+                : '<span class="pago-btn facturado" title="Solo se puede facturar dentro del mismo mes del pago">⏰ Fuera de plazo</span>')
+          ) +
+        '</div>' +
+      '</div>';
+    });
+
+    cont.innerHTML = html;
+    card.classList.add('show');
+  } catch (e) {
+    card.classList.remove('show');
+  }
+}
+
+function pedirClave(callback) {
+  if (claveVerificada) { callback(claveVerificada); return; }
+  document.getElementById('modal-clave-msg').innerHTML = 'Ingresa los <strong>últimos 4 dígitos</strong> de tu número de teléfono registrado.';
+  document.getElementById('modal-clave-input').style.display = '';
+  document.getElementById('modal-clave-input').value = '';
+  document.getElementById('modal-clave-btn').style.display = '';
+  document.getElementById('modal-clave-err').textContent = '';
+  document.getElementById('modal-clave').classList.add('show');
+  window._claveCallback = callback;
+}
+
+function confirmarClave() {
+  var c = document.getElementById('modal-clave-input').value.trim();
+  if (!c || c.replace(/\D/g,'').length !== 4) { document.getElementById('modal-clave-err').textContent = 'Ingresa exactamente 4 dígitos.'; return; }
+
+  var btn = document.getElementById('modal-clave-btn');
+  var errEl = document.getElementById('modal-clave-err');
+  btn.disabled = true;
+  errEl.textContent = 'Verificando…';
+
+  var params = { accion: 'verificar_clave', clave: c };
+  if (telefonoActual) params.telefono = telefonoActual;
+  if (idServicioActual) params.id_servicio = idServicioActual;
+
+  fetch(PROXY, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(params) })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      btn.disabled = false;
+      if (data.ok) {
+        claveVerificada = c; // válida solo para esta sesión de página
+        document.getElementById('modal-clave').classList.remove('show');
+        errEl.textContent = '';
+        if (window._claveCallback) { window._claveCallback(c); window._claveCallback = null; }
+      } else {
+        errEl.textContent = data.error || 'Clave incorrecta. Intenta de nuevo.';
+        document.getElementById('modal-clave-input').select();
+      }
+    })
+    .catch(function() {
+      btn.disabled = false;
+      errEl.textContent = 'Error de conexión. Intenta de nuevo.';
+    });
+}
+
+function cerrarModalClave() {
+  document.getElementById('modal-clave').classList.remove('show');
+  window._claveCallback = null;
+}
+
+function toggleGuia(btn) {
+  btn.classList.toggle('abierto');
+  var body = btn.nextElementSibling;
+  body.classList.toggle('show');
+}
+
+function esMismoMes(fechaPago) {
+  if (!fechaPago) return false;
+  var hoy = new Date();
+  var pago = new Date(fechaPago + 'T00:00:00');
+  return pago.getFullYear() === hoy.getFullYear() && pago.getMonth() === hoy.getMonth();
+}
+
+function toggleOtroRegimen(sel) {
+  var otro = document.getElementById('cfdi-regimen-otro');
+  if (sel.value === 'OTRO') { otro.style.display = ''; otro.required = true; }
+  else { otro.style.display = 'none'; otro.required = false; otro.value = ''; }
+}
+
+function toggleOtroUso(sel) {
+  var otro = document.getElementById('cfdi-uso-otro');
+  if (sel.value === 'OTRO') { otro.style.display = ''; otro.required = true; }
+  else { otro.style.display = 'none'; otro.required = false; otro.value = ''; }
+}
+
+function abrirComprobante(pagoId) {
+  pedirClave(function(clave) {
+    var url = 'comprobante.php?pago_id=' + pagoId + paramsIdentificacion() + '&clave=' + encodeURIComponent(clave);
+    window.open(url, '_blank');
+  });
+}
+
+function abrirFactura(facturamaId) {
+  pedirClave(function(clave) {
+    var url = 'cfdi-descarga.php?id=' + encodeURIComponent(facturamaId) + '&tipo=pdf' + paramsIdentificacion() + '&clave=' + encodeURIComponent(clave);
+    window.open(url, '_blank');
+  });
+}
+
+function abrirModalCfdi(pagoId) {
+  pedirClave(function(clave) {
+    claveVerificada = clave;
+    _abrirModalCfdiReal(pagoId);
+  });
+}
+
+function _abrirModalCfdiReal(pagoId) {
+  pagoSeleccionado = pagoId;
+  document.getElementById('cfdi-err').classList.remove('show');
+  document.getElementById('cfdi-ok').classList.remove('show');
+  document.getElementById('cfdi-submit').disabled = false;
+
+  // Siempre mostrar primero la selección de tipo de persona
+  document.getElementById('cfdi-paso-tipo').style.display = 'block';
+  document.getElementById('cfdi-moral').style.display = 'none';
+  document.getElementById('cfdi-form-pf').style.display = 'none';
+
+  // Pre-cargar datos fiscales para cuando elija Persona Física
+  if (cfdiDisponible) {
+    var df = window._datosFiscalesGuardados;
+    document.getElementById('cfdi-rfc').value     = df ? df.rfc : '';
+    document.getElementById('cfdi-razon').value   = df ? df.razon_social : '';
+    document.getElementById('cfdi-cp').value      = df ? df.codigo_postal : '';
+    document.getElementById('cfdi-regimen').value = df ? df.regimen_fiscal : '';
+    document.getElementById('cfdi-uso').value     = df ? df.uso_cfdi : '';
+    document.getElementById('cfdi-email').value   = df ? df.email : '';
+  }
+
+  document.getElementById('modal-cfdi').classList.add('show');
+}
+
+function seleccionarTipoPersona(tipo) {
+  document.getElementById('cfdi-paso-tipo').style.display = 'none';
+  if (tipo === 'moral') {
+    document.getElementById('cfdi-moral').style.display = 'block';
+    document.getElementById('cfdi-form-pf').style.display = 'none';
+  } else {
+    document.getElementById('cfdi-moral').style.display = 'none';
+    document.getElementById('cfdi-form-pf').style.display = 'block';
+    // Si CFDI no está activado, redirigir a WhatsApp
+    if (!cfdiDisponible) {
+      document.getElementById('cfdi-form-pf').style.display = 'none';
+      document.getElementById('cfdi-fisica-wa').style.display = 'block';
+    } else {
+      document.getElementById('form-cfdi').style.display = '';
+    }
+  }
+}
+
+function regresarTipoPersona() {
+  document.getElementById('cfdi-paso-tipo').style.display = 'block';
+  document.getElementById('cfdi-moral').style.display = 'none';
+  document.getElementById('cfdi-form-pf').style.display = 'none';
+  document.getElementById('cfdi-fisica-wa').style.display = 'none';
+}
+
+function cerrarModalCfdi() {
+  document.getElementById('modal-cfdi').classList.remove('show');
+  // Resetear al paso inicial
+  setTimeout(function() {
+    document.getElementById('cfdi-paso-tipo').style.display = 'block';
+    document.getElementById('cfdi-moral').style.display = 'none';
+    document.getElementById('cfdi-form-pf').style.display = 'none';
+    document.getElementById('cfdi-fisica-wa').style.display = 'none';
+  }, 300);
+}
+
+async function enviarCfdi(ev) {
+  ev.preventDefault();
+  var btn = document.getElementById('cfdi-submit');
+  var err = document.getElementById('cfdi-err');
+  var ok  = document.getElementById('cfdi-ok');
+  err.classList.remove('show');
+  ok.classList.remove('show');
+  btn.disabled = true;
+  btn.textContent = 'Generando...';
+
+  try {
+    var res = await fetch(PROXY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        accion: 'solicitar_cfdi',
+        pago_id: pagoSeleccionado,
+        clave: claveVerificada,
+        rfc: document.getElementById('cfdi-rfc').value.trim(),
+        razon_social: document.getElementById('cfdi-razon').value.trim(),
+        codigo_postal: document.getElementById('cfdi-cp').value.trim(),
+        regimen_fiscal: document.getElementById('cfdi-regimen').value === 'OTRO'
+          ? document.getElementById('cfdi-regimen-otro').value.trim()
+          : document.getElementById('cfdi-regimen').value,
+        uso_cfdi: document.getElementById('cfdi-uso').value === 'OTRO'
+          ? document.getElementById('cfdi-uso-otro').value.trim()
+          : document.getElementById('cfdi-uso').value,
+        forma_pago: document.getElementById('cfdi-forma-pago').value,
+        email: document.getElementById('cfdi-email').value.trim()
+      })
+    });
+    var data = await res.json();
+    btn.disabled = false;
+    btn.textContent = 'Generar factura';
+
+    if (data.error) {
+      if (/clave/i.test(data.error)) { claveVerificada = ''; }
+      err.textContent = '⚠️ ' + data.error; err.classList.add('show'); return;
+    }
+
+    document.getElementById('form-cfdi').style.display = 'none';
+    var pdfUrl = data.facturama_id ? ('cfdi-descarga.php?id=' + encodeURIComponent(data.facturama_id) + '&tipo=pdf' + paramsIdentificacion() + '&clave=' + encodeURIComponent(claveVerificada)) : '';
+    var xmlUrl = data.facturama_id ? ('cfdi-descarga.php?id=' + encodeURIComponent(data.facturama_id) + '&tipo=xml' + paramsIdentificacion() + '&clave=' + encodeURIComponent(claveVerificada)) : '';
+    ok.innerHTML = '✅ Factura generada correctamente.' +
+      (pdfUrl ? ' <a href="' + pdfUrl + '" target="_blank">Descargar PDF</a>' : '') +
+      (xmlUrl ? ' · <a href="' + xmlUrl + '" target="_blank">Descargar XML</a>' : '');
+    ok.classList.add('show');
+
+    cargarPagos(telefonoActual, idServicioActual);
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = 'Generar factura';
+    err.textContent = '⚠️ No se pudo conectar. Intenta de nuevo.';
+    err.classList.add('show');
+  }
+  return false;
+}
+
+function setTipo(tipo, btn) {
+  tipoBusqueda = tipo;
+  document.querySelectorAll('.wh-tab').forEach(function(b){ b.classList.remove('activo'); });
+  btn.classList.add('activo');
+  var inp = document.getElementById('wh-input');
+  inp.placeholder = tipo === 'telefono' ? 'Ej: 6141234567' : 'Ej: 1042';
+  inp.value = '';
+  inp.type = tipo === 'telefono' ? 'tel' : 'number';
+  document.getElementById('wh-resultado').classList.remove('show');
+  document.getElementById('wh-error').classList.remove('show');
+}
+
+async function consultarCliente() {
+  var val = document.getElementById('wh-input').value.trim();
+  if (!val) {
+    mostrarError('Por favor ingresa tu ' + (tipoBusqueda === 'telefono' ? 'número de teléfono' : 'número de servicio') + '.');
+    return;
+  }
+
+  document.getElementById('wh-resultado').classList.remove('show');
+  document.getElementById('wh-error').classList.remove('show');
+  document.getElementById('wh-loading').classList.add('show');
+  document.getElementById('wh-btn').disabled = true;
+
+  try {
+    var body = tipoBusqueda === 'telefono'
+      ? { accion: 'buscar_telefono', telefono: val }
+      : { accion: 'buscar_servicio', id_servicio: val };
+
+    var res = await fetch(PROXY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    var data = await res.json();
+
+    document.getElementById('wh-loading').classList.remove('show');
+    document.getElementById('wh-btn').disabled = false;
+
+    if (data.error) { mostrarError('Error: ' + data.error); return; }
+    if (!data.encontrado) { mostrarError(data.mensaje || 'No se encontró el cliente.'); return; }
+
+    var nombre = data.nombre || 'Cliente';
+    var iniciales = nombre.split(' ').map(function(w){ return w[0]; }).join('').substring(0,2).toUpperCase();
+    document.getElementById('wh-av').textContent = iniciales;
+    document.getElementById('wh-nombre').textContent = nombre;
+    document.getElementById('wh-plan').textContent = (data.plan || 'Sin plan') + ' · Servicio #' + (data.id_servicio || '—');
+
+    var statusEl = document.getElementById('wh-status');
+    statusEl.textContent = data.suspendido ? '🔴 Suspendido' : '🟢 Activo';
+    statusEl.className = 'wh-status ' + (data.suspendido ? 'suspendido' : 'activo');
+
+    document.getElementById('wh-fecha-pago').textContent   = data.fecha_pago   || 'No disponible';
+    document.getElementById('wh-fecha-corte').textContent  = data.fecha_corte  || 'No disponible';
+
+    var saldo = parseFloat(data.saldo_total) || 0;
+    var saldoEl = document.getElementById('wh-saldo');
+    if (saldo > 0) {
+      saldoEl.textContent = '$' + saldo.toFixed(2) + ' MXN';
+      saldoEl.className = 'wh-fila-valor deuda';
+    } else {
+      saldoEl.textContent = 'Sin adeudo ✅';
+      saldoEl.className = 'wh-fila-valor ok';
+    }
+
+    document.getElementById('wh-resultado').classList.add('show');
+
+    if (saldo > 0 || data.suspendido) {
+      setTimeout(function(){ irA('adeudo_pagar'); }, 700);
+    }
+
+    telefonoActual = tipoBusqueda === 'telefono' ? val : (data.telefono || '');
+    idServicioActual = data.id_servicio || (tipoBusqueda === 'usuario' ? val : '');
+    if (telefonoActual || idServicioActual) { cargarPagos(telefonoActual, idServicioActual); }
+
+  } catch(e) {
+    document.getElementById('wh-loading').classList.remove('show');
+    document.getElementById('wh-btn').disabled = false;
+    mostrarError('No se pudo conectar. Verifica tu internet e intenta de nuevo.');
+  }
+}
+
+function mostrarError(msg) {
+  var el = document.getElementById('wh-error');
+  el.textContent = '⚠️ ' + msg;
+  el.classList.add('show');
+  document.getElementById('wh-loading').classList.remove('show');
+  document.getElementById('wh-btn').disabled = false;
+}
+
+document.getElementById('wh-input').addEventListener('keydown', function(e){ if(e.key==='Enter') consultarCliente(); });
+
+/* ── Telegram ────────────────────────────────────────── */
+var instDatos      = { nombre: '', telefono: '', tipoCasa: '', plan: '' };
+var mantDatos      = { nombre: '', telefono: '' };
+var upgradeDatos   = { nombre: '', telefono: '', plan: '' };
+var mantLentoDatos = { nombre: '', telefono: '', plan: '', dispositivos: '' };
+var capturandoCampo = null;
+
+function generarFolio() {
+  var fecha = new Date();
+  var y = fecha.getFullYear();
+  var m = String(fecha.getMonth()+1).padStart(2,'0');
+  var d = String(fecha.getDate()).padStart(2,'0');
+  var h = String(fecha.getHours()).padStart(2,'0');
+  var min = String(fecha.getMinutes()).padStart(2,'0');
+  var rand = Math.floor(Math.random()*900)+100;
+  return 'GN-' + y + m + d + '-' + h + min + '-' + rand;
+}
+
+async function enviarTelegram(mensaje) {
+  try {
+    await fetch(PROXY, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ accion: 'telegram', mensaje: mensaje })
+    });
+  } catch(e) { console.log('Telegram error:', e); }
+}
+
+function guardarDatoInstalacion(clave, valor) {
+  instDatos[clave] = valor;
+}
+
+/* ── Árbol de decisiones ─────────────────────────────── */
+var ARBOL = {
+  inicio:{texto:'¡Hola! 👋 Soy el asistente de Gree Networks.\n¿Con qué te puedo ayudar hoy?',opciones:[{texto:'🔌 No tengo internet',siguiente:'sin_internet_inicio'},{texto:'🐢 Internet lento',siguiente:'lento_inicio'},{texto:'💳 Pagos y facturación',siguiente:'pagos'},{texto:'📶 Planes y precios',siguiente:'planes'},{texto:'🔑 Cambiar contraseña WiFi',siguiente:'cambiar_contrasena'},{texto:'📅 Agendar instalación',siguiente:'inst_tipo_casa'},{texto:'📞 Hablar con un técnico',siguiente:'escalar_manual'}]},
+  sin_internet_inicio:{texto:'¿Cuándo se fue el internet?',opciones:[{texto:'Hace unos minutos',siguiente:'sin_internet_reinicio'},{texto:'Desde ayer o más',siguiente:'sin_internet_largo'},{texto:'Va y viene seguido',siguiente:'sin_internet_intermitente'}]},
+  sin_internet_reinicio:{texto:'📋 Sigue estos pasos:\n\n1️⃣ Desconecta tu router del contacto.\n2️⃣ Espera 30 segundos.\n3️⃣ Vuelve a conectarlo.\n4️⃣ Espera 2 minutos.\n\n¿Funcionó?',opciones:[{texto:'✅ Sí, ya funciona',siguiente:'resuelto'},{texto:'❌ Sigue sin internet',siguiente:'sin_internet_revisa_luces'}]},
+  sin_internet_revisa_luces:{texto:'🔦 Revisa las luces de tu router:',opciones:[{texto:'🔴 Luz roja o naranja',siguiente:'sin_internet_luz_roja'},{texto:'💤 Apagado / sin luz',siguiente:'sin_internet_apagado'},{texto:'🟢 Todas las luces verdes',siguiente:'sin_internet_luces_ok'}]},
+  sin_internet_luz_roja:{texto:'¿La luz roja o naranja está parpadeando?',opciones:[{texto:'⚡ Sí está parpadeando',siguiente:'sin_internet_luz_parpadeando'},{texto:'🔴 No, está fija sin parpadear',siguiente:'sin_internet_luz_fija'}]},sin_internet_luz_parpadeando:{texto:'⚠️ La luz parpadeando indica que tu antena está desconectada.\n\nPor favor verifica lo siguiente:\n\n1️⃣ Revisa que TODOS los cables de tus equipos estén bien conectados (router, antena, fuente de poder).\n2️⃣ Verifica que todos los focos/luces de los equipos estén encendidos.\n3️⃣ Si algún equipo está apagado, conéctalo y espera 2 minutos.\n\n¿Todos los equipos están conectados y con los focos encendidos?',opciones:[{texto:'✅ Sí, todo está conectado',siguiente:'parpadeo_conectado'},{texto:'❌ Encontré algo desconectado',siguiente:'parpadeo_desconectado'}]},
+  parpadeo_desconectado:{texto:'¡Bien! Conecta ese equipo correctamente, espera 2 minutos y verifica si la luz dejó de parpadear. ¿Se resolvió?',opciones:[{texto:'✅ Sí, ya funciona el internet',siguiente:'resuelto'},{texto:'❌ Sigue parpadeando',siguiente:'parpadeo_conectado'}]},
+  parpadeo_conectado:{texto:'Entendido, ya seguiste los pasos. Para generar tu folio y ponernos en contacto contigo necesitamos tus datos.',opciones:[{texto:'📝 Ingresar mis datos',siguiente:'parpadeo_pide_nombre'}]},
+  parpadeo_pide_nombre:{texto:'__CAPTURA_NOMBRE_MANT__',tipo:'captura_mant',campo:'nombre_mant',siguiente:'parpadeo_pide_tel'},
+  parpadeo_pide_tel:{texto:'__CAPTURA_TEL_MANT__',tipo:'captura_mant',campo:'tel_mant',siguiente:'parpadeo_folio'},
+  parpadeo_folio:{texto:'__FOLIO__',escalar:true,esFolio:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},sin_internet_luz_fija:{texto:'Si la luz está fija, prueba reiniciar tus equipos:\n\n1️⃣ Apaga y desconecta tu router del contacto.\n2️⃣ Espera 30 segundos.\n3️⃣ Vuelve a conectarlo.\n4️⃣ Espera 2 minutos.\n\n¿Cambió el estado de la luz o ya tienes internet?',opciones:[{texto:'✅ Sí, ya funciona',siguiente:'resuelto'},{texto:'❌ Sigue igual',siguiente:'escalar_tecnico'}]},
+  sin_internet_apagado:{texto:'Si el router está apagado:\n\n1️⃣ Verifica el cable de alimentación.\n2️⃣ Prueba otro contacto eléctrico.\n3️⃣ Revisa que no haya ido la luz.\n\n¿Prendió?',opciones:[{texto:'✅ Sí, ya hay internet',siguiente:'resuelto'},{texto:'❌ Sigue apagado',siguiente:'escalar_tecnico'}]},
+  sin_internet_luces_ok:{texto:'Luces verdes pero sin internet. ¿Desde qué dispositivo?',opciones:[{texto:'📱 Celular por WiFi',siguiente:'dispositivo_wifi'},{texto:'💻 Computadora con cable',siguiente:'dispositivo_cable'},{texto:'📡 Todos los dispositivos',siguiente:'escalar_tecnico'}]},
+  dispositivo_wifi:{texto:'En el celular:\n\n1️⃣ Activa/desactiva modo avión.\n2️⃣ Ajustes → WiFi → olvida la red y reconéctate.\n3️⃣ Reinicia el celular.\n\n¿Funcionó?',opciones:[{texto:'✅ Sí funciona',siguiente:'resuelto'},{texto:'❌ Sigue sin conectar',siguiente:'escalar_tecnico'}]},
+  dispositivo_cable:{texto:'En la computadora:\n\n1️⃣ Desconecta y reconecta el cable.\n2️⃣ Prueba otro cable.\n3️⃣ Reinicia la computadora.\n\n¿Funcionó?',opciones:[{texto:'✅ Sí funciona',siguiente:'resuelto'},{texto:'❌ Sigue sin conectar',siguiente:'escalar_tecnico'}]},
+  sin_internet_largo:{texto:'Llevas más de un día sin servicio. ¿Hay adeudo en tu cuenta?',opciones:[{texto:'✅ Estoy al corriente',siguiente:'sin_internet_reinicio'},{texto:'❓ No sé / puede que sí',siguiente:'adeudo_info'},{texto:'⚠️ Sí tengo adeudo',siguiente:'adeudo_pagar'}]},
+  sin_internet_intermitente:{texto:'¿Cuándo ocurre más la falla?',opciones:[{texto:'🌅 En las mañanas',siguiente:'escalar_tecnico'},{texto:'🌆 En tardes/noches',siguiente:'intermitente_tarde'},{texto:'🔄 Todo el tiempo',siguiente:'escalar_tecnico'}]},
+  intermitente_tarde:{texto:'Las fallas en tardes/noches suelen ser por alta demanda. Prueba reiniciar el router en ese horario.\n\nSi continúa más de 3 días, necesita revisión técnica.',opciones:[{texto:'📲 Que revisen mi señal',siguiente:'escalar_tecnico'},{texto:'👍 Entendido',siguiente:'resuelto'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  lento_inicio:{texto:'Vamos a ayudarte. Primero dinos, ¿qué plan de internet tienes contratado?',opciones:[{texto:'📦 Plan Básico — 2 dispositivos — $250',siguiente:'lento_disp_basico'},{texto:'📦 Plan Estándar — 4 dispositivos — $350',siguiente:'lento_disp_estandar'},{texto:'📦 Plan Premium — 7 dispositivos — $500',siguiente:'lento_disp_premium'},{texto:'❓ No sé qué plan tengo',siguiente:'lento_no_sabe_plan'}]},
+  lento_no_sabe_plan:{texto:'No te preocupes. ¿Cuántos dispositivos tienes conectados al WiFi ahorita?',opciones:[{texto:'1 a 2 dispositivos',siguiente:'lento_dentro_limite'},{texto:'3 a 4 dispositivos',siguiente:'lento_dentro_limite'},{texto:'5 a 7 dispositivos',siguiente:'lento_excede_basico'},{texto:'Más de 7 dispositivos',siguiente:'lento_excede_premium'}]},
+  lento_disp_basico:{texto:'Tu plan Básico soporta hasta 2 dispositivos. ¿Cuántos tienes conectados ahorita?',opciones:[{texto:'1 a 2 dispositivos',siguiente:'lento_dentro_limite'},{texto:'3 o más dispositivos',siguiente:'lento_excede_basico'}]},
+  lento_disp_estandar:{texto:'Tu plan Estándar soporta hasta 4 dispositivos. ¿Cuántos tienes conectados ahorita?',opciones:[{texto:'1 a 4 dispositivos',siguiente:'lento_dentro_limite'},{texto:'5 o más dispositivos',siguiente:'lento_excede_estandar'}]},
+  lento_disp_premium:{texto:'Tu plan Premium soporta hasta 7 dispositivos. ¿Cuántos tienes conectados ahorita?',opciones:[{texto:'1 a 7 dispositivos',siguiente:'lento_dentro_limite'},{texto:'8 o más dispositivos',siguiente:'lento_excede_premium'}]},
+  lento_excede_basico:{texto:'⚠️ Tu plan Básico está diseñado para hasta 2 dispositivos. Con más conectados el internet se pone lento.\n\nTe recomendamos subir de plan:\n\n🔹 Estándar — 4 dispositivos — $350/mes\n🔹 Premium — 7 dispositivos — $500/mes\n\n¿Te gustaría subir de plan?',opciones:[{texto:'✅ Sí, quiero subir de plan',siguiente:'lento_elegir_plan'},{texto:'❌ No por ahora, ver otra solución',siguiente:'lento_reinicio'}]},
+  lento_excede_estandar:{texto:'⚠️ Tu plan Estándar está diseñado para hasta 4 dispositivos. Con más conectados el internet se pone lento.\n\nTe recomendamos subir al:\n\n🔹 Premium — 7 dispositivos — $500/mes\n\n¿Te gustaría subir de plan?',opciones:[{texto:'✅ Sí, quiero subir al Premium',siguiente:'lento_elegir_plan'},{texto:'❌ No por ahora, ver otra solución',siguiente:'lento_reinicio'}]},
+  lento_excede_premium:{texto:'⚠️ Con más de 7 dispositivos conectados simultáneamente cualquier plan puede verse afectado.\n\nTe recomendamos:\n\n🚀 Plan 50 Mbps — $750/mes\n⚡ Plan 100 Mbps — $1,000/mes\n\n¿Te gustaría subir de plan?',opciones:[{texto:'🚀 Sí, quiero el de 50 Mbps',siguiente:'lento_elegir_plan'},{texto:'⚡ Sí, quiero el de 100 Mbps',siguiente:'lento_elegir_plan'},{texto:'❌ No por ahora',siguiente:'lento_reinicio'}]},
+  lento_elegir_plan:{texto:'¿A cuál plan te gustarías cambiar?',opciones:[{texto:'🔹 Estándar — 4 dispositivos — $350/mes',siguiente:'lento_upgrade_datos'},{texto:'🔹 Premium — 7 dispositivos — $500/mes',siguiente:'lento_upgrade_datos'},{texto:'🚀 50 Mbps — $750/mes',siguiente:'lento_upgrade_datos'},{texto:'⚡ 100 Mbps — $1,000/mes',siguiente:'lento_upgrade_datos'}]},
+  lento_upgrade_datos:{texto:'¡Perfecto! Para procesar el cambio necesitamos tus datos.',opciones:[{texto:'📝 Ingresar mis datos',siguiente:'lento_upgrade_pide_nombre'}]},
+  lento_upgrade_pide_nombre:{texto:'__CAPTURA_UPGRADE_NOMBRE__',tipo:'captura_upgrade',campo:'upgrade_nombre',siguiente:'lento_upgrade_pide_tel'},
+  lento_upgrade_pide_tel:{texto:'__CAPTURA_UPGRADE_TEL__',tipo:'captura_upgrade',campo:'upgrade_tel',siguiente:'lento_upgrade_folio'},
+  lento_upgrade_folio:{texto:'__FOLIO_UPGRADE__',esFolioUpgrade:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  lento_dentro_limite:{texto:'Tus dispositivos están dentro del límite de tu plan. El problema puede ser temporal. Prueba reiniciar tu router:\n\n1️⃣ Desconéctalo 30 segundos.\n2️⃣ Vuelve a conectarlo.\n3️⃣ Espera 2 minutos.\n\n¿Mejoró?',opciones:[{texto:'✅ Sí mejoró',siguiente:'resuelto'},{texto:'❌ Sigue lento',siguiente:'lento_mant_datos'}]},
+  lento_mant_datos:{texto:'Vamos a registrar un reporte de mantenimiento para que nuestro equipo revise tu conexión. Necesitamos tus datos.',opciones:[{texto:'📝 Ingresar mis datos',siguiente:'lento_mant_pide_nombre'}]},
+  lento_mant_pide_nombre:{texto:'__CAPTURA_MANT_LENTO_NOMBRE__',tipo:'captura_mant_lento',campo:'mant_lento_nombre',siguiente:'lento_mant_pide_tel'},
+  lento_mant_pide_tel:{texto:'__CAPTURA_MANT_LENTO_TEL__',tipo:'captura_mant_lento',campo:'mant_lento_tel',siguiente:'lento_mant_folio'},
+  lento_mant_folio:{texto:'__FOLIO_MANT_LENTO__',esFolioMantLento:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  lento_reinicio:{texto:'Prueba reiniciar tu router:\n\n1️⃣ Desconéctalo 30 segundos.\n2️⃣ Vuelve a conectarlo.\n3️⃣ Espera 2 minutos.\n\n¿Mejoró?',opciones:[{texto:'✅ Sí mejoró',siguiente:'resuelto'},{texto:'❌ Sigue lento',siguiente:'lento_mant_datos'}]},
+  lento_siempre:{texto:'¿Para qué usas más el internet?',opciones:[{texto:'🎬 Streaming / Netflix',siguiente:'lento_uso_alto'},{texto:'🎮 Videojuegos online',siguiente:'lento_uso_alto'},{texto:'💼 Trabajo / videollamadas',siguiente:'lento_uso_medio'},{texto:'📱 Redes sociales',siguiente:'lento_uso_bajo'}]},
+  lento_uso_alto:{texto:'Para streaming o videojuegos recomendamos el Plan Premium (20 Mbps).',opciones:[{texto:'📋 Ver planes',siguiente:'planes'},{texto:'📲 Hablar con soporte',siguiente:'escalar_tecnico'}]},
+  lento_uso_medio:{texto:'Para videollamadas recomendamos el Plan Estándar (10 Mbps) como mínimo.',opciones:[{texto:'📋 Ver planes',siguiente:'planes'},{texto:'📲 Hablar con soporte',siguiente:'escalar_tecnico'}]},
+  lento_uso_bajo:{texto:'Para redes sociales el Plan Básico (5 Mbps) es suficiente. El problema puede ser de señal.',opciones:[{texto:'✅ Que lo revisen',siguiente:'lento_mant_datos'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  lento_momentos:{texto:'¿En qué momento está más lento?',opciones:[{texto:'🌆 Tardes y noches',siguiente:'intermitente_tarde'},{texto:'📺 Cuando ven Netflix/TV',siguiente:'lento_excede_basico'},{texto:'🌧️ Cuando llueve',siguiente:'escalar_tecnico'}]},
+  pagos:{texto:'¿Qué necesitas saber sobre pagos?',opciones:[{texto:'¿Cómo y dónde pago?',siguiente:'pagos_metodos'},{texto:'Ya pagué ¿cuándo se reactiva?',siguiente:'pagos_reactivar'},{texto:'Me cortaron el servicio',siguiente:'adeudo_pagar'},{texto:'¿Cuánto debo?',siguiente:'consultar_cuenta'}]},
+  consultar_cuenta:{texto:'Para consultar tu saldo usa la sección "Consultar mi cuenta" en la parte de arriba 👆\n\nIngresa tu número de teléfono o usuario y verás tu saldo pendiente en tiempo real desde nuestro sistema.',opciones:[{texto:'💳 Ver métodos de pago',siguiente:'pagos_metodos'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  pagos_metodos:{texto:'💳 Métodos de pago:\n\n📌 Transferencia BBVA\nTarjeta: 4152 3138 3090 1216\nBeneficiario: Jesús Rubio\n\n🏪 Pago en OXXO\nTarjeta: 4217 4700 5294 1503\n\n📲 Envía comprobante al:\nWhatsApp 614 475 7914',opciones:[{texto:'✅ Entendido',siguiente:'resuelto'},{texto:'❓ Otra duda',siguiente:'pagos'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  pagos_reactivar:{texto:'Después de pagar:\n\n1️⃣ Envía tu comprobante al WhatsApp 614 475 7914.\n2️⃣ Se reactiva en menos de 2 horas hábiles.\n\n¿Ya enviaste el comprobante?',opciones:[{texto:'✅ Sí, ya lo envié',siguiente:'pagos_espera'},{texto:'❌ Aún no',siguiente:'pagos_metodos'}]},
+  pagos_espera:{texto:'Perfecto 👍 En breve procesamos tu pago y reactivamos el servicio. Si en 2 horas no tienes internet contáctanos.',opciones:[{texto:'📲 Contactar ahora',siguiente:'escalar_tecnico'},{texto:'✅ Esperaré',siguiente:'resuelto'}]},
+  adeudo_info:{texto:'Puedes verificar tu saldo en la sección "Consultar mi cuenta" 👆\nSolo ingresa tu número de teléfono o usuario.',opciones:[{texto:'💳 Ver métodos de pago',siguiente:'pagos_metodos'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  adeudo_pagar:{texto:'⚠️ Para reactivar tu servicio:\n\n1️⃣ Realiza tu pago (BBVA u OXXO).\n2️⃣ Envía comprobante al WhatsApp 614 475 7914.\n3️⃣ Se reactiva en menos de 2 horas hábiles.',opciones:[{texto:'💳 Ver métodos de pago',siguiente:'pagos_metodos'},{texto:'📲 Hablar con atención',siguiente:'escalar_atencion'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  planes:{texto:'📶 Planes Gree Networks:\n\n🔹 Básico — 2 dispositivos — $250/mes\n🔹 Estándar — 4 dispositivos — $350/mes\n🔹 Premium — Hasta 7 dispositivos — $500/mes\n\n⚠️ No compartas tu contraseña WiFi con vecinos, esto hace que tu internet se ponga lento.\n\nSin plazo forzoso, prepago, IVA incluido.',opciones:[{texto:'📲 Quiero contratar',siguiente:'contratar'},{texto:'📍 ¿Llegan a mi zona?',siguiente:'cobertura'},{texto:'🔑 Cambiar contraseña WiFi',siguiente:'cambiar_contrasena'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  contratar:{texto:'¡Qué gusto que quieras unirte! Verificaremos cobertura y agendaremos tu instalación.',opciones:[{texto:'📲 Contactar para contratar',siguiente:'escalar_contratar'},{texto:'📍 Ver cobertura',siguiente:'cobertura'}]},
+  cobertura:{texto:'Tenemos cobertura en varias zonas de Chihuahua.\n\nEscríbenos tu dirección para confirmarte.',opciones:[{texto:'📲 Enviar mi dirección',siguiente:'escalar_contratar'},{texto:'📶 Ver planes',siguiente:'planes'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  cambiar_contrasena:{texto:'¿Qué tipo de router tienes en casa?',opciones:[{texto:'📦 Router blanco con 2 antenas (TP-Link TL-WR840N)',siguiente:'contrasena_tplink'},{texto:'📦 Router negro con 4 antenas (Ruijie)',siguiente:'contrasena_ruijie'},{texto:'📦 Router Mercusys',siguiente:'contrasena_mercusys'},{texto:'❓ No sé qué router tengo',siguiente:'contrasena_nosabe'}]},
+  contrasena_tplink:{texto:'Tu router es el TP-Link TL-WR840N (blanco con 2 antenas). Puedes cambiar el nombre y contraseña WiFi tú mismo desde tu celular siguiendo este videotutorial:\n\n📹 https://www.youtube.com/watch?v=k5d0fE9aXjA\n\n¿Pudiste cambiarla con el video?',opciones:[{texto:'✅ Sí, ya cambié mi contraseña',siguiente:'contrasena_ok'},{texto:'❌ No pude, necesito ayuda',siguiente:'contrasena_tecnico'}]},
+  contrasena_mercusys:{texto:'Tu router es el Mercusys. Puedes cambiar el nombre y contraseña WiFi tú mismo desde tu celular siguiendo este videotutorial:\n\n📹 https://www.youtube.com/watch?v=eg5gDc59l2c\n\n¿Pudiste cambiarla con el video?',opciones:[{texto:'✅ Sí, ya cambié mi contraseña',siguiente:'contrasena_ok'},{texto:'❌ No pude, necesito ayuda',siguiente:'contrasena_tecnico'}]},
+  contrasena_ruijie:{texto:'Tu router es el Ruijie (negro con 4 antenas). Para este equipo el cambio de contraseña se hace remotamente por nuestro equipo. Escríbenos por WhatsApp y te la cambiamos en minutos. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  contrasena_nosabe:{texto:'No te preocupes, descríbenos tu router por WhatsApp y te ayudamos a identificarlo y cambiar tu contraseña. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  contrasena_ok:{texto:'¡Perfecto! 🎉 Recuerda no compartir tu nueva contraseña con vecinos para mantener la velocidad de tu internet.\n\n⚠️ Entre más dispositivos conectados, más lento se pone el internet.',opciones:[{texto:'🔄 Tengo otra duda',siguiente:'inicio'}]},
+  contrasena_tecnico:{texto:'Sin problema, podemos enviarte un técnico para configurar tu router.\n\n💰 Costo de visita técnica: $200 pesos\n\nContáctanos para agendar. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  inst_tipo_casa:{texto:'¡Excelente que quieras unirte a Gree Networks! 🎉\n\nPrimero dinos, ¿la casa donde se instalará el internet es propia o rentada?',opciones:[{texto:'🏠 Casa propia',siguiente:'inst_casa_propia'},{texto:'🏘️ Casa rentada',siguiente:'inst_casa_rentada'}]},
+  inst_casa_propia:{texto:'Para instalación en casa propia el costo es de $700 pesos e incluye la instalación completa del equipo.\n\n📋 Necesitarás presentar un comprobante de domicilio (recibo de luz, agua, predial o cualquier documento que valide tu dirección).\n\n¿Tienes tu comprobante de domicilio?',opciones:[{texto:'✅ Sí tengo comprobante',siguiente:'inst_uso'},{texto:'❓ ¿Qué documentos acepta?',siguiente:'inst_documentos'},{texto:'❌ No tengo por ahora',siguiente:'inst_sin_comprobante'}]},
+  inst_documentos:{texto:'Aceptamos cualquiera de estos documentos:\n\n📄 Recibo de luz (CFE)\n📄 Recibo de agua\n📄 Recibo de predial\n📄 Estado de cuenta bancario\n📄 Contrato de arrendamiento\n📄 Credencial de elector (INE) con domicilio visible\n\n¿Tienes alguno de estos?',opciones:[{texto:'✅ Sí tengo',siguiente:'inst_uso'},{texto:'❌ No tengo ninguno',siguiente:'inst_sin_comprobante'}]},
+  inst_sin_comprobante:{texto:'No te preocupes, puedes conseguirlo y contactarnos cuando lo tengas. También puedes escribirnos por WhatsApp para buscar otra solución. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  inst_casa_rentada:{texto:'Para instalación en casa rentada el costo es de $2,000 pesos, lo cual incluye:\n\n📡 Equipo de instalación (es tuyo)\n✅ Primera mensualidad incluida\n🔧 Instalación completa\n\n¿Deseas continuar?',opciones:[{texto:'✅ Sí, quiero continuar',siguiente:'inst_uso'},{texto:'❓ Tengo una pregunta',siguiente:'escalar_contratar'},{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  inst_uso:{texto:'Para recomendarte el mejor plan, ¿para qué usarás principalmente el internet?',opciones:[{texto:'🎮 Jugar videojuegos en línea',siguiente:'inst_uso_juegos'},{texto:'🎬 Ver películas y series (Netflix, YouTube)',siguiente:'inst_uso_peliculas'},{texto:'💼 Trabajo y videollamadas',siguiente:'inst_uso_trabajo'},{texto:'📱 Redes sociales y uso general',siguiente:'inst_uso_basico'}]},
+  inst_uso_juegos:{texto:'Para videojuegos en línea se recomienda buena velocidad y baja latencia. ¿Cuántos dispositivos se conectarán en total en tu casa?',opciones:[{texto:'1 a 2 dispositivos',siguiente:'inst_rec_estandar'},{texto:'3 a 4 dispositivos',siguiente:'inst_rec_premium'},{texto:'5 o más dispositivos',siguiente:'inst_rec_50'}]},
+  inst_uso_peliculas:{texto:'Para ver películas y series en buena calidad necesitas velocidad estable. ¿Cuántos dispositivos se conectarán en total?',opciones:[{texto:'1 a 2 dispositivos',siguiente:'inst_rec_estandar'},{texto:'3 a 4 dispositivos',siguiente:'inst_rec_premium'},{texto:'5 o más dispositivos',siguiente:'inst_rec_50'}]},
+  inst_uso_trabajo:{texto:'Para trabajo y videollamadas necesitas una conexión estable. ¿Cuántos dispositivos se conectarán en total?',opciones:[{texto:'1 a 2 dispositivos',siguiente:'inst_rec_estandar'},{texto:'3 a 4 dispositivos',siguiente:'inst_rec_premium'},{texto:'5 o más dispositivos',siguiente:'inst_rec_50'}]},
+  inst_uso_basico:{texto:'Para redes sociales y uso general el Plan Básico es suficiente. ¿Cuántos dispositivos se conectarán en total?',opciones:[{texto:'1 a 2 dispositivos',siguiente:'inst_rec_basico'},{texto:'3 a 4 dispositivos',siguiente:'inst_rec_estandar'},{texto:'5 o más dispositivos',siguiente:'inst_rec_premium'}]},
+  inst_rec_basico:{texto:'🔹 Te recomendamos el Plan Básico\n\n• 5 Mbps de velocidad\n• Hasta 2 dispositivos\n• $250/mes\n• Sin plazo forzoso\n\n¿Te interesa este plan?',opciones:[{texto:'✅ Sí, me interesa',siguiente:'inst_datos'},{texto:'📋 Ver otros planes',siguiente:'inst_ver_planes'}]},
+  inst_rec_estandar:{texto:'🔹 Te recomendamos el Plan Estándar\n\n• 10 Mbps de velocidad\n• Hasta 4 dispositivos\n• $350/mes\n• Sin plazo forzoso\n\n⚠️ Si planeas jugar en línea o ver videos en HD con varios dispositivos a la vez, considera el Plan Premium.',opciones:[{texto:'✅ Sí, me interesa',siguiente:'inst_datos'},{texto:'📋 Ver otros planes',siguiente:'inst_ver_planes'}]},
+  inst_rec_premium:{texto:'🔹 Te recomendamos el Plan Premium\n\n• 20 Mbps de velocidad\n• Hasta 7 dispositivos\n• $500/mes\n• Sin plazo forzoso\n\n¿Te interesa este plan?',opciones:[{texto:'✅ Sí, me interesa',siguiente:'inst_datos'},{texto:'📋 Ver otros planes',siguiente:'inst_ver_planes'}]},
+  inst_rec_50:{texto:'Con 5 o más dispositivos conectados simultáneamente, los planes de 20 Mbps o menos pueden ponerse lentos. Te recomendamos:\n\n🚀 Plan 50 Mbps — $750/mes\n⚡ Plan 100 Mbps — $1,000/mes\n\nEstos planes están disponibles según cobertura en tu zona. ¿Cuál te interesa?',opciones:[{texto:'🚀 Plan 50 Mbps — $750/mes',siguiente:'inst_datos'},{texto:'⚡ Plan 100 Mbps — $1,000/mes',siguiente:'inst_datos'},{texto:'💰 Prefiero el de $500/mes (20 Mbps)',siguiente:'inst_advertencia_20'}]},
+  inst_advertencia_20:{texto:'⚠️ Aviso importante:\n\nCon 5 o más dispositivos conectados en el Plan de 20 Mbps ($500), es probable que el internet se ponga lento, especialmente si varios dispositivos están viendo videos o jugando al mismo tiempo.\n\n¿Aun así deseas el Plan de 20 Mbps?',opciones:[{texto:'✅ Sí, lo quiero de todas formas',siguiente:'inst_datos'},{texto:'🔄 Ver planes de mayor velocidad',siguiente:'inst_rec_50'}]},
+  inst_ver_planes:{texto:'📶 Todos nuestros planes:\n\n🔹 Básico — 2 dispositivos — $250/mes\n🔹 Estándar — 4 dispositivos — $350/mes\n🔹 Premium — 7 dispositivos — $500/mes\n🚀 50 Mbps — múltiples dispositivos — $750/mes\n⚡ 100 Mbps — sin límite — $1,000/mes\n\n¿Cuál te interesa?',opciones:[{texto:'✅ Ya elegí mi plan',siguiente:'inst_datos'},{texto:'📲 Hablar con un asesor',siguiente:'escalar_contratar'}]},
+  inst_datos:{texto:'¡Perfecto! 😊 Para agendar tu instalación necesitamos tus datos.',opciones:[{texto:'📝 Ingresar mis datos',siguiente:'inst_pide_nombre'}]},
+  inst_pide_nombre:{texto:'Por favor escribe tu nombre completo en el campo de abajo y toca Enviar:',tipo:'captura',campo:'nombre',siguiente:'inst_pide_tel'},
+  inst_pide_tel:{texto:'Gracias. Ahora escribe tu número de teléfono de contacto (10 dígitos):',tipo:'captura',campo:'telefono',siguiente:'inst_confirmar'},
+  inst_confirmar:{texto:'✅ ¡Listo! Hemos recibido tu solicitud de instalación.\n\nUn técnico de Gree Networks se pondrá en contacto contigo en las próximas horas para confirmar la fecha y hora de tu instalación.\n\n¡Bienvenido a la familia Gree Networks! 🌐',opciones:[{texto:'🔄 Tengo otra duda',siguiente:'inicio'}]},
+  resuelto:{texto:'¡Me alegra que se haya resuelto! 😊\n\nSi tienes otro problema no dudes en escribirnos.\n¡Buen día! — Gree Networks 🌐',opciones:[{texto:'🔄 Tengo otra duda',siguiente:'inicio'}]},
+  escalar_tecnico:{texto:'Tu caso necesita revisión de nuestro equipo técnico. Contáctanos y te atendemos lo antes posible. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  escalar_atencion:{texto:'Nuestro equipo de atención a clientes te ayudará. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  escalar_contratar:{texto:'¡Perfecto! Escríbenos para verificar cobertura y agendar instalación. Lun–Sáb 8am–5:30pm. 👇',escalar:true,opciones:[{texto:'🏠 Inicio',siguiente:'inicio'}]},
+  escalar_manual:{texto:'¿Con qué área necesitas hablar?',opciones:[{texto:'🔧 Soporte técnico',siguiente:'escalar_tecnico'},{texto:'💳 Atención a clientes',siguiente:'escalar_atencion'},{texto:'🏠 Nueva instalación',siguiente:'escalar_contratar'}]},
+};
+
+var msgsEl = document.getElementById('msgs');
+var opsEl  = document.getElementById('opciones');
+var escEl  = document.getElementById('esc-bar');
+
+function addMsg(rol, texto) {
+  var w = document.createElement('div');
+  w.className = 'msg ' + (rol==='usuario'?'u':'b');
+  var av = document.createElement('div');
+  av.className = 'mav ' + (rol==='usuario'?'u':'b');
+  av.textContent = rol==='usuario' ? '👤' : '🤖';
+  w.appendChild(av);
+  var b = document.createElement('div');
+  b.className = 'bur';
+  b.textContent = texto;
+  w.appendChild(b);
+  msgsEl.appendChild(w);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+}
+
+function renderOps(nodo) {
+  opsEl.innerHTML = '';
+  escEl.classList.remove('show');
+  if (nodo.escalar) escEl.classList.add('show');
+  if (!nodo.opciones) return;
+  nodo.opciones.forEach(function(op) {
+    var btn = document.createElement('button');
+    btn.className = 'op-btn';
+    btn.innerHTML = op.texto + '<span>›</span>';
+    btn.addEventListener('click', function() {
+      addMsg('usuario', op.texto);
+      // Guardar plan elegido para upgrade
+      if (op.siguiente === 'lento_upgrade_datos') {
+        upgradeDatos.plan = op.texto;
+      }
+      irA(op.siguiente);
+    });
+    opsEl.appendChild(btn);
+  });
+}
+
+function irA(id) {
+  var nodo = ARBOL[id];
+  if (!nodo) return;
+
+  // Guardar datos de instalación según el nodo
+  if (id === 'inst_casa_propia' || id === 'inst_documentos') instDatos.tipoCasa = 'Casa propia ($700)';
+  // Guardar plan de upgrade según el botón que tocó el usuario (se captura en renderOps)
+  if (id === 'inst_casa_rentada') instDatos.tipoCasa = 'Casa rentada ($2,000)';
+  if (id === 'inst_rec_basico')   instDatos.plan = 'Básico 5 Mbps - $250/mes';
+  if (id === 'inst_rec_estandar') instDatos.plan = 'Estándar 10 Mbps - $350/mes';
+  if (id === 'inst_rec_premium')  instDatos.plan = 'Premium 20 Mbps - $500/mes';
+  if (id === 'inst_rec_50')       instDatos.plan = 'Por definir (50 o 100 Mbps)';
+  if (id === 'inst_advertencia_20') instDatos.plan = 'Premium 20 Mbps - $500/mes (avisado de limitaciones)';
+
+  opsEl.innerHTML = '';
+  escEl.classList.remove('show');
+
+  // Nodo de captura de nombre
+  if (id === 'inst_pide_nombre') {
+    capturandoCampo = 'nombre';
+    var typing2 = document.createElement('div');
+    typing2.className = 'msg b'; typing2.id = 'ty';
+    typing2.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(typing2); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t2 = document.getElementById('ty'); if(t2) t2.remove();
+      addMsg('bot', '¿Cuál es tu nombre completo?');
+      // Limpiar opciones y habilitar input
+      opsEl.innerHTML = '';
+      escEl.classList.remove('show');
+      habilitarInput('Escribe tu nombre completo...');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+
+  // Nodo de captura de teléfono
+  if (id === 'inst_pide_tel') {
+    capturandoCampo = 'telefono';
+    var typing3 = document.createElement('div');
+    typing3.className = 'msg b'; typing3.id = 'ty';
+    typing3.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(typing3); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t3 = document.getElementById('ty'); if(t3) t3.remove();
+      addMsg('bot', '¡Gracias ' + instDatos.nombre + '! Ahora escribe tu número de teléfono de contacto (10 dígitos):');
+      habilitarInput('Ej: 6141234567');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+
+  // ── Upgrade de plan ──────────────────────────────────────
+  if (id === 'lento_upgrade_pide_nombre') {
+    capturandoCampo = 'upgrade_nombre';
+    var tup1 = document.createElement('div');
+    tup1.className = 'msg b'; tup1.id = 'ty';
+    tup1.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tup1); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', '¿Cuál es tu nombre completo?');
+      opsEl.innerHTML = ''; escEl.classList.remove('show');
+      habilitarInput('Escribe tu nombre completo...');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+  if (id === 'lento_upgrade_pide_tel') {
+    capturandoCampo = 'upgrade_tel';
+    var tup2 = document.createElement('div');
+    tup2.className = 'msg b'; tup2.id = 'ty';
+    tup2.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tup2); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', 'Gracias ' + upgradeDatos.nombre + '. ¿Cuál es tu número de celular (10 dígitos)?');
+      opsEl.innerHTML = ''; escEl.classList.remove('show');
+      habilitarInput('Ej: 6141234567');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+  if (id === 'lento_upgrade_folio') {
+    var folioUp = generarFolio();
+    var msgUp = '📦 <b>SOLICITUD DE CAMBIO DE PLAN</b>\n\n'
+      + '📋 <b>Folio:</b> ' + folioUp + '\n'
+      + '👤 <b>Nombre:</b> ' + upgradeDatos.nombre + '\n'
+      + '📞 <b>Teléfono:</b> ' + upgradeDatos.telefono + '\n'
+      + '📶 <b>Plan solicitado:</b> ' + upgradeDatos.plan + '\n'
+      + '⏰ <b>Fecha:</b> ' + new Date().toLocaleString('es-MX');
+    enviarTelegram(msgUp);
+    var nodoUp = ARBOL['lento_upgrade_folio'];
+    nodoUp.texto = '✅ ¡Solicitud registrada!\n\n📋 Tu folio es:\n🔢 ' + folioUp + '\n\n⚠️ Copia o anota este folio, te lo pediremos al contactarte.\n\nHola ' + upgradeDatos.nombre + ', te enviaremos un mensaje de confirmación por WhatsApp al ' + upgradeDatos.telefono + ' cuando tu plan esté actualizado.\n\n¡Gracias por preferir Gree Networks! 🌐';
+    upgradeDatos = { nombre: '', telefono: '', plan: '' };
+    var tup3 = document.createElement('div');
+    tup3.className = 'msg b'; tup3.id = 'ty';
+    tup3.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tup3); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', nodoUp.texto);
+      renderOps(nodoUp);
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 800);
+    return;
+  }
+
+  // ── Mantenimiento internet lento ──────────────────────────
+  if (id === 'lento_mant_pide_nombre') {
+    capturandoCampo = 'mant_lento_nombre';
+    var tml1 = document.createElement('div');
+    tml1.className = 'msg b'; tml1.id = 'ty';
+    tml1.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tml1); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', '¿Cuál es tu nombre completo?');
+      opsEl.innerHTML = ''; escEl.classList.remove('show');
+      habilitarInput('Escribe tu nombre completo...');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+  if (id === 'lento_mant_pide_tel') {
+    capturandoCampo = 'mant_lento_tel';
+    var tml2 = document.createElement('div');
+    tml2.className = 'msg b'; tml2.id = 'ty';
+    tml2.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tml2); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', 'Gracias ' + mantLentoDatos.nombre + '. ¿Cuál es tu número de celular (10 dígitos)?');
+      opsEl.innerHTML = ''; escEl.classList.remove('show');
+      habilitarInput('Ej: 6141234567');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+  if (id === 'lento_mant_folio') {
+    var folioML = generarFolio();
+    var msgML = '🐢 <b>MANTENIMIENTO — INTERNET LENTO</b>\n\n'
+      + '📋 <b>Folio:</b> ' + folioML + '\n'
+      + '👤 <b>Nombre:</b> ' + mantLentoDatos.nombre + '\n'
+      + '📞 <b>Teléfono:</b> ' + mantLentoDatos.telefono + '\n'
+      + '⏰ <b>Fecha:</b> ' + new Date().toLocaleString('es-MX');
+    enviarTelegram(msgML);
+    var nodoML = ARBOL['lento_mant_folio'];
+    nodoML.texto = '📋 Tu folio de reporte es:\n\n🔢 ' + folioML + '\n\n⚠️ Copia o anota este folio, te lo pediremos al contactarte.\n\nHola ' + mantLentoDatos.nombre + ', nuestro equipo técnico revisará tu conexión y se pondrá en contacto contigo al ' + mantLentoDatos.telefono + ' a la brevedad. 🌐';
+    mantLentoDatos = { nombre: '', telefono: '' };
+    var tml3 = document.createElement('div');
+    tml3.className = 'msg b'; tml3.id = 'ty';
+    tml3.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tml3); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', nodoML.texto);
+      renderOps(nodoML);
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 800);
+    return;
+  }
+
+  // Captura nombre para mantenimiento antena
+  if (id === 'parpadeo_pide_nombre') {
+    capturandoCampo = 'nombre_mant';
+    var tpm1 = document.createElement('div');
+    tpm1.className = 'msg b'; tpm1.id = 'ty';
+    tpm1.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tpm1); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', '¿Cuál es tu nombre completo?');
+      opsEl.innerHTML = '';
+      escEl.classList.remove('show');
+      habilitarInput('Escribe tu nombre completo...');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+
+  // Captura teléfono para mantenimiento
+  if (id === 'parpadeo_pide_tel') {
+    capturandoCampo = 'tel_mant';
+    var tpm2 = document.createElement('div');
+    tpm2.className = 'msg b'; tpm2.id = 'ty';
+    tpm2.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(tpm2); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', 'Gracias ' + mantDatos.nombre + '. ¿Cuál es tu número de celular (10 dígitos)?');
+      opsEl.innerHTML = '';
+      escEl.classList.remove('show');
+      habilitarInput('Ej: 6141234567');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 600);
+    return;
+  }
+
+  // Nodo de folio de mantenimiento
+  if (id === 'parpadeo_folio') {
+    var folio = generarFolio();
+    var msgTelegram = '🔧 <b>REPORTE DE MANTENIMIENTO</b>\n\n'
+      + '📋 <b>Folio:</b> ' + folio + '\n'
+      + '👤 <b>Nombre:</b> ' + mantDatos.nombre + '\n'
+      + '📞 <b>Teléfono:</b> ' + mantDatos.telefono + '\n'
+      + '🔴 <b>Problema:</b> Luz parpadeando en antena\n'
+      + '✅ <b>Estado:</b> Cliente verificó conexiones, problema persiste\n'
+      + '⏰ <b>Fecha:</b> ' + new Date().toLocaleString('es-MX');
+    enviarTelegram(msgTelegram);
+
+    // Reemplazar el texto del nodo con el folio real
+    var nodoFolio = ARBOL['parpadeo_folio'];
+    nodoFolio.texto = '📋 Tu folio de soporte es:\n\n🔢 ' + folio + '\n\n⚠️ Por favor copia o anota este número de folio, te lo pediremos cuando te contactemos.\n\nHola ' + mantDatos.nombre + ', nuestro equipo técnico se pondrá en contacto contigo al ' + mantDatos.telefono + ' a la brevedad.\n\nTambién puedes escribirnos por WhatsApp indicando tu folio. 👇';
+
+    var typing_f = document.createElement('div');
+    typing_f.className = 'msg b'; typing_f.id = 'ty';
+    typing_f.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+    msgsEl.appendChild(typing_f); msgsEl.scrollTop = msgsEl.scrollHeight;
+    setTimeout(function() {
+      var t = document.getElementById('ty'); if(t) t.remove();
+      addMsg('bot', nodoFolio.texto);
+      renderOps(nodoFolio);
+      escEl.classList.add('show');
+      // Actualizar el link de WhatsApp con el folio
+      var waLink = escEl.querySelector('.bwa');
+      if (waLink) waLink.href = 'https://wa.me/526144757914?text=' + encodeURIComponent('Hola, mi folio de soporte es: ' + folio + '. Ya verifiqué las conexiones de mis equipos pero la luz sigue parpadeando.');
+      msgsEl.scrollTop = msgsEl.scrollHeight;
+    }, 800);
+    return;
+  }
+
+  // Nodo de confirmación — enviar a Telegram
+  if (id === 'inst_confirmar') {
+    var msg = '📅 <b>NUEVA SOLICITUD DE INSTALACIÓN</b>\n\n'
+      + '👤 <b>Nombre:</b> ' + instDatos.nombre + '\n'
+      + '📞 <b>Teléfono:</b> ' + instDatos.telefono + '\n'
+      + '🏠 <b>Tipo de casa:</b> ' + instDatos.tipoCasa + '\n'
+      + '📶 <b>Plan de interés:</b> ' + instDatos.plan + '\n\n'
+      + '⏰ Recibido: ' + new Date().toLocaleString('es-MX');
+    enviarTelegram(msg);
+    instDatos = { nombre: '', telefono: '', tipoCasa: '', plan: '' };
+  }
+
+  var nodo2 = ARBOL[id];
+  if (!nodo2) return;
+  var typing = document.createElement('div');
+  typing.className = 'msg b'; typing.id = 'ty';
+  typing.innerHTML = '<div class="mav b">🤖</div><div class="bur"><div class="pts"><span></span><span></span><span></span></div></div>';
+  msgsEl.appendChild(typing); msgsEl.scrollTop = msgsEl.scrollHeight;
+  var d = Math.min(500 + nodo2.texto.length * 9, 1600);
+  setTimeout(function() {
+    var t = document.getElementById('ty'); if(t) t.remove();
+    addMsg('bot', nodo2.texto);
+    renderOps(nodo2);
+    msgsEl.scrollTop = msgsEl.scrollHeight;
+  }, d);
+}
+
+function habilitarInput(placeholder) {
+  var bar = document.getElementById('inp-bar');
+  var ci  = document.getElementById('ci');
+  var cs  = document.getElementById('csend');
+  if (bar) bar.style.display = 'flex';
+  if (ci)  { ci.disabled = false; ci.placeholder = placeholder; }
+  if (cs)  cs.disabled = false;
+  setTimeout(function(){ if(ci) ci.focus(); }, 150);
+}
+
+function ocultarInput() {
+  var bar = document.getElementById('inp-bar');
+  var ci  = document.getElementById('ci');
+  if (bar) bar.style.display = 'none';
+  if (ci)  { ci.value = ''; ci.placeholder = 'Escribe aquí...'; }
+}
+
+function procesarCaptura(texto) {
+  if (capturandoCampo === 'nombre') {
+    instDatos.nombre = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('inst_pide_tel');
+  } else if (capturandoCampo === 'upgrade_nombre') {
+    upgradeDatos.nombre = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('lento_upgrade_pide_tel');
+  } else if (capturandoCampo === 'upgrade_tel') {
+    if (!/^[0-9]{10}$/.test(texto.replace(/\s/g,''))) {
+      addMsg('bot', '⚠️ Por favor ingresa un número de 10 dígitos. Ejemplo: 6141234567');
+      return;
+    }
+    upgradeDatos.telefono = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('lento_upgrade_folio');
+  } else if (capturandoCampo === 'mant_lento_nombre') {
+    mantLentoDatos.nombre = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('lento_mant_pide_tel');
+  } else if (capturandoCampo === 'mant_lento_tel') {
+    if (!/^[0-9]{10}$/.test(texto.replace(/\s/g,''))) {
+      addMsg('bot', '⚠️ Por favor ingresa un número de 10 dígitos. Ejemplo: 6141234567');
+      return;
+    }
+    mantLentoDatos.telefono = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('lento_mant_folio');
+  } else if (capturandoCampo === 'nombre_mant') {
+    mantDatos.nombre = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('parpadeo_pide_tel');
+  } else if (capturandoCampo === 'tel_mant') {
+    if (!/^[0-9]{10}$/.test(texto.replace(/\s/g,''))) {
+      addMsg('bot', '⚠️ Por favor ingresa un número de 10 dígitos. Ejemplo: 6141234567');
+      return;
+    }
+    mantDatos.telefono = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('parpadeo_folio');
+  } else if (capturandoCampo === 'telefono') {
+    if (!/^[0-9]{10}$/.test(texto.replace(/\s/g,''))) {
+      addMsg('bot', '⚠️ Por favor ingresa un número de 10 dígitos. Ejemplo: 6141234567');
+      return;
+    }
+    instDatos.telefono = texto;
+    capturandoCampo = null;
+    ocultarInput();
+    irA('inst_confirmar');
+  }
+}
+
+setTimeout(function(){ irA('inicio'); }, 300);
+
+// Listeners del input de captura
+setTimeout(function() {
+  var csendBtn = document.getElementById('csend');
+  var ciInput  = document.getElementById('ci');
+
+  if (csendBtn) {
+    csendBtn.addEventListener('click', function() {
+      if (!capturandoCampo) return;
+      var val = ciInput ? ciInput.value.trim() : '';
+      if (!val) return;
+      ciInput.value = '';
+      addMsg('usuario', val);
+      procesarCaptura(val);
+    });
+  }
+
+  if (ciInput) {
+    ciInput.addEventListener('keydown', function(e) {
+      if (e.key !== 'Enter' || !capturandoCampo) return;
+      var val = ciInput.value.trim();
+      if (!val) return;
+      ciInput.value = '';
+      addMsg('usuario', val);
+      procesarCaptura(val);
+    });
+  }
+}, 500);
+</script>
+<script>
+/* ── Publicidad de la tienda: los 3 repetidores y las 3 cámaras más económicos ── */
+(function () {
+  if (!window.fetch) return;
+  var TIENDA = 'https://tienda.tavgreenetworksti.net/';
+  function esc(t) { var d = document.createElement('div'); d.textContent = t == null ? '' : String(t); return d.innerHTML; }
+  function fmt(n) { return '$' + Number(n).toLocaleString('es-MX', { maximumFractionDigits: 0 }); }
+  function txt(p) { return ((p.nombre || '') + ' ' + (p.categoria || '')).toLowerCase(); }
+  var esRepetidor = function (p) {
+    return /repetidor|extensor|range extender/i.test(p.nombre || '') || /repetidor/i.test(p.categoria || '');
+  };
+  // Cámaras y kits de cámaras; se excluyen accesorios (soportes, cajas, cables, fuentes, DVR/NVR solos…)
+  var esCamara = function (p) {
+    var n = (p.nombre || '').toLowerCase();
+    if (!/c[aá]mara|\bkit\b/.test(n)) return false;
+    if (/soporte|montaje|brazo|caja|cable|fuente|conector|balun|adaptador|base|lente|carcasa|domo protector|grabador|dvr|nvr|disco|micro ?sd|memoria|monitor/.test(n) && !/\bkit\b/.test(n)) return false;
+    return /c[aá]mara|seguridad|video/.test(txt(p));
+  };
+  function pintar(lista, idMini, idDesde) {
+    var cont = document.getElementById(idMini), desde = document.getElementById(idDesde);
+    if (!lista.length) return;
+    lista.sort(function (a, b) { return a.precio - b.precio; });
+    desde.innerHTML = 'Desde <b>' + fmt(lista[0].precio) + '</b> con IVA';
+    cont.innerHTML = lista.slice(0, 3).map(function (p) {
+      var img = /^https?:/i.test(p.img) ? p.img : TIENDA + p.img;
+      return '<a class="tp-prod" href="' + TIENDA + '?p=' + encodeURIComponent(p.id) + '">' +
+        '<img src="' + esc(img) + '" alt="" loading="lazy" onerror="this.style.visibility=\'hidden\'">' +
+        '<span class="tpn">' + esc(p.nombre) + '</span>' +
+        '<span class="tpp">' + fmt(p.precio) + '</span></a>';
+    }).join('');
+    cont.classList.add('show');
+  }
+  fetch('/tienda/productos.php').then(function (r) { return r.json(); }).then(function (data) {
+    var lista = (data.productos || []).filter(function (p) { return p.img && p.precio > 0; });
+    pintar(lista.filter(esRepetidor), 'tp-mini-wifi', 'tp-desde-wifi');
+    pintar(lista.filter(function (p) { return !esRepetidor(p) && esCamara(p); }), 'tp-mini-cam', 'tp-desde-cam');
+    pintar(lista.filter(function (p) { return /ugreen/i.test((p.marca || '') + ' ' + (p.nombre || '')); }), 'tp-mini-ugreen', 'tp-desde-ugreen');
+    pintar(lista.filter(function (p) {
+      var n = (p.nombre || '').toLowerCase();
+      return /panel(es)? solar|m[oó]dulo solar|fotovoltaic|inversor|microinversor|kit solar/.test(n) &&
+             !/soporte|montaje|estructura|riel|cable|conector|abrazadera|tornill|fusible|protector/.test(n);
+    }), 'tp-mini-solar', 'tp-desde-solar');
+  }).catch(function () { /* sin productos: los anuncios se muestran solo con texto y botón */ });
+
+  /* Carrusel (roll bar): cambia de anuncio cada 6 s; se pausa con el mouse encima; se desliza con el dedo */
+  var wrap = document.getElementById('tp-ads'), track = document.getElementById('tp-track'), dotsBox = document.getElementById('tp-dots');
+  if (!wrap || !track) return;
+  var n = track.children.length, i = 0, timer = null;
+  for (var k = 0; k < n; k++) {
+    var d = document.createElement('button'); d.type = 'button'; d.className = 'tp-dot'; d.setAttribute('aria-label', 'Anuncio ' + (k + 1));
+    d.onclick = (function (k) { return function () { ir(k); reiniciar(); }; })(k);
+    dotsBox.appendChild(d);
+  }
+  function ir(k) {
+    i = (k + n) % n;
+    track.style.transform = 'translateX(' + (-100 * i) + '%)';
+    [].forEach.call(dotsBox.children, function (d, j) { d.className = 'tp-dot' + (j === i ? ' on' : ''); });
+  }
+  function reiniciar() { clearInterval(timer); timer = setInterval(function () { ir(i + 1); }, 6000); }
+  wrap.querySelector('.prev').onclick = function () { ir(i - 1); reiniciar(); };
+  wrap.querySelector('.next').onclick = function () { ir(i + 1); reiniciar(); };
+  wrap.addEventListener('mouseenter', function () { clearInterval(timer); });
+  wrap.addEventListener('mouseleave', reiniciar);
+  var x0 = null;
+  wrap.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; clearInterval(timer); }, { passive: true });
+  wrap.addEventListener('touchend', function (e) {
+    if (x0 !== null) { var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) ir(i + (dx < 0 ? 1 : -1)); }
+    x0 = null; reiniciar();
+  });
+  ir(0); reiniciar();
+})();
+</script>
+<script>
+/* Reemplaza emojis por íconos SVG en el texto que generan los scripts (chat, pagos, etc.) */
+(function () {
+  var MAP = {"✅": ["check", "ok"], "👍": ["check", "ok"], "❌": ["x", "bad"], "⚠️": ["alert", "warn"], "⚠": ["alert", "warn"], "🏠": ["home", ""], "🏘️": ["home", ""], "🏘": ["home", ""], "🔹": ["dot", ""], "📌": ["dot", ""], "📋": ["clipboard", ""], "📝": ["clipboard", ""], "🗂️": ["clipboard", ""], "🗂": ["clipboard", ""], "📲": ["phone-m", ""], "📱": ["phone-m", ""], "👇": ["down", ""], "👆": ["up", ""], "📄": ["file", ""], "⚡": ["zap", ""], "📦": ["package", ""], "🏪": ["store", ""], "💳": ["card", ""], "💰": ["card", ""], "📶": ["wifi", ""], "📡": ["wifi", ""], "❓": ["help", ""], "🚀": ["rocket", ""], "⏰": ["clock", ""], "🕐": ["clock", ""], "📞": ["phone", ""], "🔄": ["refresh", ""], "👤": ["user", ""], "🔢": ["hash", ""], "🌐": ["globe", ""], "🔧": ["wrench", ""], "🐢": ["gauge", ""], "🔑": ["key", ""], "🔐": ["lock", ""], "📅": ["calendar", ""], "🌆": ["building", ""], "🏢": ["building", ""], "🌅": ["sun", ""], "☀️": ["sun", ""], "☀": ["sun", ""], "🎬": ["tv", ""], "📺": ["tv", ""], "📹": ["video", ""], "🎮": ["game", ""], "💼": ["briefcase", ""], "📍": ["pin", ""], "🎉": ["sparkle", "ok"], "😊": ["smile", ""], "👋": ["smile", ""], "🧾": ["receipt", ""], "🔌": ["plug", ""], "🔦": ["bulb", ""], "💡": ["bulb", ""], "💤": ["moon", ""], "💻": ["laptop", ""], "🌧️": ["rain", ""], "🌧": ["rain", ""], "🚚": ["truck", ""], "❄️": ["snow", ""], "❄": ["snow", ""], "💬": ["chat", ""], "📮": ["mail", ""], "📧": ["mail", ""], "✂️": ["scissors", ""], "✂": ["scissors", ""], "🔒": ["lock", ""], "🤖": ["bot", ""], "🟢": ["on", "ok"], "🔴": ["off", "bad"], "🛒": ["store", ""], "🔍": ["help", ""]};
+  var RE = new RegExp('(' + Object.keys(MAP).sort(function (a, b) { return b.length - a.length; })
+    .map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + '|[0-9#]\ufe0f?\u20e3)\ufe0f?', 'g');
+  var NS = 'http://www.w3.org/2000/svg', SKIP = { SCRIPT: 1, STYLE: 1, TEXTAREA: 1, OPTION: 1, OPTGROUP: 1, INPUT: 1 };
+  function icon(k) {
+    if (/\u20e3/.test(k)) { var b = document.createElement('span'); b.className = 'ei-num'; b.textContent = k.charAt(0); return b; }
+    var m = MAP[k], s = document.createElementNS(NS, 'svg'), u = document.createElementNS(NS, 'use');
+    s.setAttribute('class', 'ei' + (m[1] ? ' ei-' + m[1] : '')); s.setAttribute('aria-hidden', 'true');
+    u.setAttribute('href', '#e-' + m[0]); s.appendChild(u); return s;
+  }
+  function fixText(node) {
+    var t = node.nodeValue; RE.lastIndex = 0;
+    if (!node.parentNode || SKIP[node.parentNode.nodeName] || !RE.test(t)) return;
+    RE.lastIndex = 0;
+    var frag = document.createDocumentFragment(), last = 0, m;
+    while ((m = RE.exec(t))) {
+      if (m.index > last) frag.appendChild(document.createTextNode(t.slice(last, m.index)));
+      frag.appendChild(icon(m[1])); last = m.index + m[0].length;
+    }
+    if (last < t.length) frag.appendChild(document.createTextNode(t.slice(last)));
+    node.parentNode.replaceChild(frag, node);
+  }
+  function walk(root) {
+    if (root.nodeType === 3) { fixText(root); return; }
+    if (root.nodeType !== 1 || SKIP[root.nodeName]) return;
+    var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), list = [], n;
+    while ((n = w.nextNode())) list.push(n);
+    list.forEach(fixText);
+  }
+  walk(document.body);
+  new MutationObserver(function (muts) {
+    muts.forEach(function (m) {
+      if (m.type === 'characterData') fixText(m.target);
+      else m.addedNodes.forEach(walk);
+    });
+  }).observe(document.body, { childList: true, subtree: true, characterData: true });
+})();
+</script>
+
+
+</body></html>
